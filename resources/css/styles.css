@@ -29,7 +29,7 @@ body {
 
 *:focus {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 
 ::-moz-selection {
@@ -419,7 +419,7 @@ caption {
 .btn.secondary {
   background-color: var(--krds-white);
   border: 1px solid var(--krds-primary);
-  color: #1d56bc;
+  color: #aa2126;
 }
 .btn.secondary:hover {
   background-color: var(--krds-primary-5);
@@ -429,7 +429,7 @@ caption {
 }
 .btn.secondary:focus {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .btn.secondary[disabled] {
   background-color: var(--krds-gray-30);
@@ -457,7 +457,7 @@ caption {
 }
 .btn.tertiary:focus {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .btn.tertiary[disabled] {
   background-color: var(--krds-gray-30);
@@ -514,7 +514,7 @@ caption {
 }
 .btn-ico:focus {
   outline-offset: 0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .btn-ico[class*=ico-] {
   width: 4rem;
@@ -615,7 +615,7 @@ caption {
 }
 .btn-txt:focus {
   outline-offset: 0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .btn-txt[disabled] {
   color: var(--krds-gray-50);
@@ -1271,7 +1271,7 @@ caption {
 }
 .btn.btn-helper:focus {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .btn.btn-helper.expand::before {
   margin-right: var(--krds-spacer-default2);
@@ -2103,7 +2103,7 @@ caption {
 }
 .form-switch [type=checkbox]:focus ~ label {
   outline-offset: 0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 
 /* **** checkbox : chip type **** */
@@ -2113,7 +2113,7 @@ caption {
 }
 .form-chip .checkbox:focus ~ .form-chip-outline {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
   border-radius: var(--krds-chkChipOutline-rd-lg);
 }
 .form-chip.md .checkbox:focus ~ .form-chip-outline {
@@ -2139,7 +2139,7 @@ caption {
 }
 .datepicker-wrap:focus {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .datepicker-wrap.bottom {
   top: auto;
@@ -2659,7 +2659,7 @@ input[type=checkbox] {
 .form-check input[type=radio]:focus ~ label,
 .form-check input[type=checkbox]:focus ~ label {
   outline-offset: 0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
 }
 .form-check input[type=radio]:disabled + label,
 .form-check input[type=checkbox]:disabled + label {
@@ -3122,7 +3122,7 @@ input[type=checkbox] {
 }
 .form-chip .radio:focus ~ .form-chip-outline {
   outline-offset: -0.4rem;
-  outline: 2px solid rgba(36, 107, 235, 0.8);
+  outline: 2px solid rgba(212, 41, 48, 0.8);
   border-radius: var(--krds-chkChipOutline-rd-lg);
 }
 .form-chip.md .radio:focus ~ .form-chip-outline {
@@ -3300,8 +3300,9 @@ input[type=checkbox] {
   }
 }
 #header #logo {
-  transform: scale(0.8);
-  transform-origin: 0 50%;
+  display: flex;
+  justify-content: center;
+  width: 200px;
 }
 @media (min-width: 1024px) {
   #header #logo {
@@ -3311,9 +3312,9 @@ input[type=checkbox] {
 }
 #header #logo a {
   display: block;
-  width: 200px;
-  height: 35px;
-  background: url(../../../resources/img/pattern/common/head-logo.png) no-repeat 0 0/contain;
+  width: 102px;
+  height: 102px;
+  background: url(../../../resources/img/pattern/3000로고.jfif) no-repeat 0 0/contain;
 }
 #header #logo span {
   position: absolute !important;
@@ -3343,7 +3344,7 @@ input[type=checkbox] {
   position: relative;
 }
 #gnb .gnb__depth1 > li:hover > a > span {
-  color: #246beb;
+  color: #d42930;
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
@@ -3380,7 +3381,7 @@ input[type=checkbox] {
   transform: translateX(-50%);
   width: 0;
   height: 5px;
-  background-color: #246beb;
+  background-color: #d42930;
   transition: all 0.3s;
 }
 #gnb .gnb__depth2 {
@@ -3604,7 +3605,7 @@ input[type=checkbox] {
   display: inline-block;
   margin-top: 20px;
   padding: 7px 20px;
-  background: #246beb;
+  background: #d42930;
   color: #fff;
 }
 .slide-intro .swiper-slide img {
