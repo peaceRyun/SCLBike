@@ -1,0 +1,31 @@
+#main {
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-tit {
+    padding-top: 220px;
+}
+
+.tit {
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 42px;
+    color: #551013;
+}
+
+.snd-letter1 {
+    color: #b45151;
+}
+
+.subtit {
+    font-weight: 400;
+    font-size: 22px;
+    color: $gray-70;
+}

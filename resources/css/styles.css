@@ -3181,9 +3181,9 @@ input[type=checkbox] {
 .inner {
   position: relative;
   width: 100%;
-  max-width: 1340px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 350px;
+  margin: 0 20px;
+  padding: 0;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .inner {
@@ -3302,7 +3302,9 @@ input[type=checkbox] {
 #header #logo {
   display: flex;
   justify-content: center;
-  width: 200px;
+  width: 73px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   #header #logo {
@@ -3312,8 +3314,8 @@ input[type=checkbox] {
 }
 #header #logo a {
   display: block;
-  width: 102px;
-  height: 102px;
+  width: 73px;
+  height: 73px;
   background: url(../../../resources/img/pattern/3000로고.jfif) no-repeat 0 0/contain;
 }
 #header #logo span {
@@ -3667,4 +3669,35 @@ input[type=checkbox] {
 }
 .slide-studio .swiper-pagination {
   bottom: -100px;
+}
+
+#main {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.main-tit {
+  padding-top: 220px;
+}
+
+.tit {
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  font-size: 42px;
+  color: #551013;
+}
+
+.snd-letter1 {
+  color: #b45151;
+}
+
+.subtit {
+  font-weight: 400;
+  font-size: 22px;
+  color: #555555;
 }/*# sourceMappingURL=styles.css.map */
