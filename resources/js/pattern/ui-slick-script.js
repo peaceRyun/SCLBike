@@ -5,6 +5,7 @@ $('.fade').slick({
     fade: true,
     cssEase: 'linear',
     autoplay: true,
+    arrows: false,
 });
 
 $('.single').slick({

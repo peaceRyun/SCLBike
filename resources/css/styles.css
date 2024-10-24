@@ -3694,6 +3694,11 @@ input[type=checkbox] {
   display: block;
   overflow: hidden;
 }
+@media (min-width: 600px) {
+  .fade {
+    max-height: 1080px;
+  }
+}
 .fade img {
   display: block;
   width: 100%;
@@ -3775,6 +3780,11 @@ img {
 
 .fade.intro-slide img {
   height: 787px;
+}
+@media (min-width: 600px) {
+  .fade.intro-slide img {
+    height: 1080px;
+  }
 }
 .fade.intro-slide .tit-cont {
   position: absolute;

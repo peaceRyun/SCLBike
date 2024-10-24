@@ -19,6 +19,9 @@
 .fade {
     z-index: 3;
     max-height: 787px;
+    @include mobileMore {
+        max-height: 1080px;
+    }
     width: 100%;
     height: auto;
     display: block;
@@ -107,6 +110,9 @@ img {
 .fade.intro-slide {
     img {
         height: 787px;
+        @include mobileMore {
+            height: 1080px;
+        }
     }
     .tit-cont {
         position: absolute;
