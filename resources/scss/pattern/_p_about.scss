@@ -1,4 +1,11 @@
 // 공통
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #main {
     // height: 1000vh;
     background: #f4f3ef;
@@ -22,13 +29,6 @@
         height: 500px;
         object-fit: cover;
     }
-}
-
-@font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
 
 .object1 {
@@ -68,6 +68,10 @@
     }
 }
 
+img {
+    filter: saturate(150%) brightness(90%);
+}
+
 // button
 .main-btn-cont {
     gap: 35px;
@@ -103,6 +107,32 @@
 .fade.intro-slide {
     img {
         height: 787px;
+    }
+    .tit-cont {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        color: $white;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0 20px;
+    }
+}
+
+.intro-slide-cont {
+    position: relative;
+}
+.control-cont {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    z-index: 4;
+    padding: 0 20px;
+    .pause {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: url(/resources/img/pattern/ico-pause.svg) no-repeat 0 -32px;
     }
 }
 
@@ -193,6 +223,29 @@
 .txt2 {
     margin-top: 11px;
     font-size: 16px;
+}
+
+.mask-objects {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    color: transparent;
+    background: url('/resources/img/pattern/mask1.jpg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    span {
+        font-size: 180px;
+        font-weight: 700;
+        line-height: 120px;
+        margin: 30px -10px;
+        text-align: center;
+        &:first-child {
+            margin: 10px 0px 30px;
+        }
+    }
 }
 
 // section 03
