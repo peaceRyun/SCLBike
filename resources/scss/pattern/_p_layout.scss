@@ -7,9 +7,8 @@
 .inner {
     position: relative;
     width: 100%;
-    max-width: $grid-m;
-    margin: 0 $p-mobile;
-    padding: 0;
+    margin: 0;
+    padding: 0 $p-mobile;
     @include tablet {
         padding: 0 $p-tablet;
     }
