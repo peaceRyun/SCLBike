@@ -3671,9 +3671,12 @@ input[type=checkbox] {
 }
 
 #main {
-  height: 1000vh;
   background: #f4f3ef;
   z-index: -2;
+}
+
+.main-content {
+  padding-bottom: 160px;
 }
 
 .fade {
@@ -3878,6 +3881,7 @@ input[type=checkbox] {
   height: auto;
   display: block;
   overflow: hidden;
+  margin-top: 50px;
 }
 .single img {
   display: block;
@@ -3888,4 +3892,50 @@ input[type=checkbox] {
 }
 .single .slick-dots {
   margin-top: 30px;
+}
+
+#footer {
+  height: 100vh;
+  background: #000;
+  position: relative;
+}
+#footer .footer-inner {
+  position: absolute;
+  bottom: 10%;
+}
+#footer .footer-content {
+  padding: 0 20px;
+  color: #ebebeb;
+}
+#footer .ul-list-top {
+  font-size: 26px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+#footer .ul-list-btm {
+  font-size: 16px;
+  margin-top: 38px;
+}
+#footer .ul-list-btm li {
+  margin: 20px 0px 0px;
+}
+#footer .ul-list-btm li:first-child {
+  margin: 0px;
+}
+#footer .ul-list-btm .footer-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#footer .ul-list-btm img {
+  display: block;
+  width: 140px;
+  height: 62px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#footer .copy {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 100px;
 }/*# sourceMappingURL=styles.css.map */
