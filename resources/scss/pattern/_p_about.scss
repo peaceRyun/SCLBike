@@ -228,6 +228,10 @@
     .slick-dots {
         margin-top: 30px;
         bottom: 0px;
+        li button:before {
+            width: 10px;
+            height: 10px;
+        }
     }
 }
 
@@ -309,14 +313,16 @@
 
 .home-key {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 60px;
+    right: 20px;
+    z-index: 10;
     &:before {
-        content: '\f0aa';
-        font-size: 45px;
+        content: '\f062';
+        font-size: 19px;
         font-family: 'Line Awesome Free';
         font-weight: 900;
         background: $white;
-        border-radius: 45px;
+        border-radius: 19px;
+        padding: 10px;
     }
 }

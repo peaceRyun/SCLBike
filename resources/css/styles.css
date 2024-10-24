@@ -3895,6 +3895,10 @@ input[type=checkbox] {
   margin-top: 30px;
   bottom: 0px;
 }
+.single .slick-dots li button:before {
+  width: 10px;
+  height: 10px;
+}
 
 #footer {
   height: 100vh;
@@ -3970,14 +3974,16 @@ input[type=checkbox] {
 
 .home-key {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 60px;
+  right: 20px;
+  z-index: 10;
 }
 .home-key:before {
-  content: "\f0aa";
-  font-size: 45px;
+  content: "\f062";
+  font-size: 19px;
   font-family: "Line Awesome Free";
   font-weight: 900;
   background: #fff;
-  border-radius: 45px;
+  border-radius: 19px;
+  padding: 10px;
 }/*# sourceMappingURL=styles.css.map */
