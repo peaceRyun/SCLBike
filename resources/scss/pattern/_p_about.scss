@@ -218,6 +218,7 @@
     display: block;
     overflow: hidden;
     margin-top: 50px;
+    padding-bottom: 30px;
     img {
         display: block;
         width: 100%;
@@ -226,6 +227,7 @@
     }
     .slick-dots {
         margin-top: 30px;
+        bottom: 0px;
     }
 }
 
@@ -237,6 +239,7 @@
     .footer-inner {
         position: absolute;
         bottom: 10%;
+        width: 100%;
     }
     .footer-content {
         padding: 0 20px;
@@ -246,8 +249,14 @@
         font-size: 26px;
         font-weight: 400;
         text-decoration: underline;
+        li {
+            &:last-child {
+                margin-top: 16px;
+            }
+        }
     }
     .ul-list-btm {
+        position: relative;
         font-size: 16px;
         margin-top: 38px;
         li {
@@ -258,19 +267,56 @@
         }
         .footer-logo {
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 0;
+            right: 0;
         }
         img {
             display: block;
             width: 140px;
             height: 62px;
             object-fit: contain;
+            object-position: bottom;
         }
     }
+    .sns-list {
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+        li {
+            &::before {
+                font-family: 'Line Awesome Brands';
+                color: #ebebeb;
+                font-size: 24px;
+            }
+            &:first-child::before {
+                content: '\f167';
+            }
+            &:nth-child(2)::before {
+                content: '\f16d';
+            }
+            &:last-child::before {
+                content: '\f39e';
+            }
+        }
+    }
+
     .copy {
         font-size: 12px;
         color: #aaaaaa;
         margin-top: 100px;
+    }
+}
+
+.home-key {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    &:before {
+        content: '\f0aa';
+        font-size: 45px;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+        background: $white;
+        border-radius: 45px;
     }
 }

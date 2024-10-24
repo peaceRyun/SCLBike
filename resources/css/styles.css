@@ -3882,6 +3882,7 @@ input[type=checkbox] {
   display: block;
   overflow: hidden;
   margin-top: 50px;
+  padding-bottom: 30px;
 }
 .single img {
   display: block;
@@ -3892,6 +3893,7 @@ input[type=checkbox] {
 }
 .single .slick-dots {
   margin-top: 30px;
+  bottom: 0px;
 }
 
 #footer {
@@ -3902,6 +3904,7 @@ input[type=checkbox] {
 #footer .footer-inner {
   position: absolute;
   bottom: 10%;
+  width: 100%;
 }
 #footer .footer-content {
   padding: 0 20px;
@@ -3912,7 +3915,11 @@ input[type=checkbox] {
   font-weight: 400;
   text-decoration: underline;
 }
+#footer .ul-list-top li:last-child {
+  margin-top: 16px;
+}
 #footer .ul-list-btm {
+  position: relative;
   font-size: 16px;
   margin-top: 38px;
 }
@@ -3924,8 +3931,8 @@ input[type=checkbox] {
 }
 #footer .ul-list-btm .footer-logo {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
 }
 #footer .ul-list-btm img {
   display: block;
@@ -3933,9 +3940,44 @@ input[type=checkbox] {
   height: 62px;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+#footer .sns-list {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+#footer .sns-list li::before {
+  font-family: "Line Awesome Brands";
+  color: #ebebeb;
+  font-size: 24px;
+}
+#footer .sns-list li:first-child::before {
+  content: "\f167";
+}
+#footer .sns-list li:nth-child(2)::before {
+  content: "\f16d";
+}
+#footer .sns-list li:last-child::before {
+  content: "\f39e";
 }
 #footer .copy {
   font-size: 12px;
   color: #aaaaaa;
   margin-top: 100px;
+}
+
+.home-key {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.home-key:before {
+  content: "\f0aa";
+  font-size: 45px;
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  background: #fff;
+  border-radius: 45px;
 }/*# sourceMappingURL=styles.css.map */
