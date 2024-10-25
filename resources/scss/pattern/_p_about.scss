@@ -12,15 +12,15 @@
 }
 
 .main-content {
-    padding: 0 300px 160px;
+    padding: 0 0 160px;
 }
 
 .fade {
     z-index: 3;
-    max-height: 787px;
-    @include mobileMore {
-        max-height: 1080px;
-    }
+    // max-height: 787px;
+    // @include mobileMore {
+    //     max-height: 1080px;
+    // }
     width: 100%;
     height: auto;
     display: block;
@@ -29,6 +29,9 @@
         display: block;
         width: 100%;
         height: 500px;
+        @include tabletMore {
+            height: 1000px;
+        }
         object-fit: cover;
     }
 }
@@ -172,6 +175,9 @@ img {
     @include mobileMore {
         width: 436.8px;
     }
+    @include tabletMore {
+        width: 478px;
+    }
 }
 
 .img-wrap:after {
@@ -185,23 +191,19 @@ img {
     background: #002b49;
 }
 
-.bike1 {
-    position: absolute;
-    width: 171.5px;
-    height: 199px;
-    object-fit: contain;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 25%);
-}
-
 .txt1 {
     margin-top: 11px;
     font-size: 18px;
+    @include tabletMore {
+        font-size: 22px;
+    }
 }
 
 // section 01
 .sec-1 {
+    @include tabletMore {
+        padding: 0 300px;
+    }
     position: relative;
     .inner {
         &::before {
@@ -221,29 +223,51 @@ img {
                 scale: (0.9);
             }
             @include tabletMore {
-                left: calc(100% - 120px);
-                transform: translateX(-100%);
-                scale: (0.5);
+                left: calc(100% - 80px);
+                transform: translateX(-75%);
+                scale: (0.7);
             }
         }
     }
 }
 
+.bike1 {
+    position: absolute;
+    width: 171.5px;
+    height: 199px;
+    @include tabletMore {
+        width: 470px;
+        height: 500px;
+        bottom: 17px;
+    }
+    object-fit: contain;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 25%);
+}
+
 .main01-list {
     margin-top: 130px;
     li {
-        @include tabletMore {
-            margin-left: auto;
-        }
-
+        width: 55%;
         &:nth-child(even) {
             margin-top: 120px;
+            @include tabletMore {
+                margin-top: 180px;
+            }
         }
         &:nth-child(odd) {
             margin-top: 120px;
+            @include tabletMore {
+                margin-top: 180px;
+                margin-left: auto;
+            }
         }
         &:last-child {
             padding-bottom: 120px;
+            @include tabletMore {
+                padding-bottom: 180px;
+            }
         }
     }
 }
@@ -254,6 +278,9 @@ img {
 
 // section 02
 .sec-2 {
+    @include tabletMore {
+        padding: 0 300px;
+    }
     position: relative;
     .inner {
         &::before {
@@ -271,6 +298,10 @@ img {
             @include mobileMore {
                 left: 60%;
                 scale: (0.8);
+            }
+            @include tabletMore {
+                left: calc(100% - 80px);
+                transform: translateX(-58%);
             }
         }
     }
@@ -318,6 +349,9 @@ img {
 
 // section 03
 .sec-3 {
+    @include tabletMore {
+        padding: 0 300px;
+    }
     position: relative;
     .inner {
         &::before {
