@@ -7,13 +7,12 @@
 }
 
 #main {
-    // height: 1000vh;
     background: #f4f3ef;
     z-index: -2;
 }
 
 .main-content {
-    padding-bottom: 160px;
+    padding: 0 300px 160px;
 }
 
 .fade {
@@ -34,16 +33,12 @@
     }
 }
 
-.object1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-}
-
 .main-tit {
     position: relative;
     padding-top: 220px;
+    @include mobileMore {
+        padding-top: 465px;
+    }
     z-index: 1;
 }
 
@@ -51,6 +46,9 @@
     font-family: 'GmarketSansMedium';
     font-weight: 700;
     font-size: 42px;
+    @include tabletMore {
+        font-size: 120px;
+    }
     color: #551013;
     line-height: 0.5;
     br {
@@ -63,12 +61,11 @@
 .subtit {
     font-weight: 400;
     font-size: 22px;
-    color: $gray-70;
-    br {
-        content: '';
-        display: block;
-        margin-bottom: -5px;
+    @include tabletMore {
+        font-size: 50px;
     }
+    color: $gray-70;
+    line-height: 1.1;
 }
 
 img {
@@ -150,6 +147,9 @@ img {
 
 .num {
     font-size: 70px;
+    @include tabletMore {
+        font-size: 180px;
+    }
     color: $primary-80;
     margin-bottom: -17px;
 }
@@ -157,6 +157,9 @@ img {
 .title {
     font-weight: 700;
     font-size: 22px;
+    @include tabletMore {
+        font-size: 30px;
+    }
     color: #b45151;
 }
 
@@ -166,6 +169,9 @@ img {
     right: 0;
     width: 210px;
     height: 350px;
+    @include mobileMore {
+        width: 436.8px;
+    }
 }
 
 .img-wrap:after {
@@ -195,16 +201,50 @@ img {
 }
 
 // section 01
+.sec-1 {
+    position: relative;
+    .inner {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: translateX(-50%);
+            transform-origin: top left;
+            background: url(/resources/img/pattern/d_sec-1_object1.png) no-repeat top/ contain;
+            scale: (0.8);
+            @include mobileMore {
+                left: 55%;
+                scale: (0.9);
+            }
+            @include tabletMore {
+                left: calc(100% - 120px);
+                transform: translateX(-100%);
+                scale: (0.5);
+            }
+        }
+    }
+}
+
 .main01-list {
     margin-top: 130px;
-    li:nth-child(even) {
-        margin-top: 120px;
-    }
-    li:nth-child(odd) {
-        margin-top: 120px;
-    }
-    li:last-child {
-        padding-bottom: 120px;
+    li {
+        @include tabletMore {
+            margin-left: auto;
+        }
+
+        &:nth-child(even) {
+            margin-top: 120px;
+        }
+        &:nth-child(odd) {
+            margin-top: 120px;
+        }
+        &:last-child {
+            padding-bottom: 120px;
+        }
     }
 }
 
@@ -213,8 +253,31 @@ img {
 }
 
 // section 02
+.sec-2 {
+    position: relative;
+    .inner {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 65%;
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: translateX(-50%);
+            transform-origin: top left;
+            background: url(/resources/img/pattern/d_sec-2_object1.png) no-repeat top/ contain;
+            scale: (0.7);
+            @include mobileMore {
+                left: 60%;
+                scale: (0.8);
+            }
+        }
+    }
+}
+
 .main02-list {
-    margin-top: 80px;
+    margin: 80px 0 0 20px;
     padding-left: 130px;
     margin-bottom: 134px;
     li {
@@ -233,28 +296,50 @@ img {
 
 .mask-objects {
     position: absolute;
-    top: 50%;
+    bottom: -30px;
     left: 0;
     display: flex;
     flex-direction: column;
-    color: transparent;
     background: url('/resources/img/pattern/mask1.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
+    font-size: 180px;
+    font-weight: 700;
+    text-align: center;
+    color: transparent;
     span {
-        font-size: 180px;
-        font-weight: 700;
-        line-height: 120px;
-        margin: 30px -10px;
-        text-align: center;
-        &:first-child {
-            margin: 10px 0px 30px;
+        line-height: 1;
+        @include mobileMore {
+            line-height: 0.9;
         }
     }
 }
 
 // section 03
+.sec-3 {
+    position: relative;
+    .inner {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 65%;
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: translateX(-50%);
+            transform-origin: top left;
+            background: url(/resources/img/pattern/d_sec-3_object1.png) no-repeat top/ contain;
+            scale: (0.7);
+            @include mobileMore {
+                left: 60%;
+                scale: (0.8);
+            }
+        }
+    }
+}
+
 .snd-letter3 {
     color: #b76d44;
 }
@@ -276,8 +361,8 @@ img {
     height: auto;
     display: block;
     overflow: hidden;
-    margin-top: 50px;
     padding-bottom: 30px;
+    margin: 50px 0px 0px;
     img {
         display: block;
         width: 100%;
@@ -285,12 +370,19 @@ img {
         object-fit: cover;
     }
     .slick-dots {
+        display: none;
+        @include tabletMore {
+            display: block;
+        }
         margin-top: 30px;
         bottom: 0px;
         li button:before {
             width: 10px;
             height: 10px;
         }
+    }
+    .slick-slide {
+        margin: 0px 20px;
     }
 }
 
@@ -331,12 +423,16 @@ img {
         .footer-logo {
             position: absolute;
             bottom: 0;
-            right: 0;
+            left: calc(50% + 30px);
         }
         img {
             display: block;
             width: 140px;
             height: 62px;
+            @include mobileMore {
+                width: 223px;
+                height: 62px;
+            }
             object-fit: contain;
             object-position: bottom;
         }

@@ -10,7 +10,7 @@ $('.fade').slick({
 
 $('.single').slick({
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
 });
