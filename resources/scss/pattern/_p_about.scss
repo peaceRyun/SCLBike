@@ -13,8 +13,16 @@
 
 .main-content {
     padding: 0 0 160px;
+    @include tabletMore {
+        padding: 0 0 200px;
+    }
 }
 
+img {
+    filter: saturate(150%) brightness(90%);
+}
+
+// intro & banner
 .fade {
     z-index: 3;
     // max-height: 787px;
@@ -36,52 +44,13 @@
     }
 }
 
-.main-tit {
-    position: relative;
-    padding-top: 220px;
-    @include mobileMore {
-        padding-top: 465px;
-    }
-    z-index: 1;
-}
-
-.tit {
-    font-family: 'GmarketSansMedium';
-    font-weight: 700;
-    font-size: 42px;
-    @include tabletMore {
-        font-size: 120px;
-    }
-    color: #551013;
-    line-height: 0.5;
-    br {
-        content: '';
-        display: block;
-        margin-bottom: -15px;
-    }
-}
-
-.subtit {
-    font-weight: 400;
-    font-size: 22px;
-    @include tabletMore {
-        font-size: 50px;
-    }
-    color: $gray-70;
-    line-height: 1.1;
-}
-
-img {
-    filter: saturate(150%) brightness(90%);
-}
-
 // button
 .main-btn-cont {
     width: 143.5px;
     margin-top: 10px;
     @include tabletMore {
         width: 168px;
-        margin-top: 48px;
+        margin-top: 50px;
     }
     .btn-link {
         border: 1px solid $primary-40;
@@ -151,6 +120,39 @@ img {
 
 // section 공통
 
+// mobile main title padding
+.main-tit {
+    position: relative;
+    padding-top: 220px;
+    z-index: 1;
+}
+
+.tit {
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    font-size: 42px;
+    @include tabletMore {
+        font-size: 120px;
+    }
+    color: #551013;
+    line-height: 0.5;
+    br {
+        content: '';
+        display: block;
+        margin-bottom: -15px;
+    }
+}
+
+.subtit {
+    font-weight: 400;
+    font-size: 22px;
+    @include tabletMore {
+        font-size: 50px;
+    }
+    color: $gray-70;
+    line-height: 1.1;
+}
+
 .tit-wrap {
     position: relative;
 }
@@ -176,7 +178,8 @@ img {
 .img-wrap {
     position: absolute;
     bottom: 14px;
-    right: 0;
+    left: 100%;
+    transform: translateX(-26%);
     width: 210px;
     height: 350px;
     @include mobileMore {
@@ -184,6 +187,7 @@ img {
     }
     @include tabletMore {
         width: 478px;
+        transform: translateX(-100%);
     }
 }
 
@@ -213,6 +217,14 @@ img {
     }
     position: relative;
     .inner {
+        .main-tit {
+            @include mobileMore {
+                padding-top: 500px;
+            }
+            @include tabletMore {
+                padding-top: 600px;
+            }
+        }
         &::before {
             content: '';
             position: absolute;
@@ -250,7 +262,7 @@ img {
 }
 
 .bike-oj-1 {
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translate(-50%, 25%);
     @include tabletMore {
@@ -313,6 +325,14 @@ img {
     }
     position: relative;
     .inner {
+        .main-tit {
+            @include mobileMore {
+                padding-top: 400px;
+            }
+            @include tabletMore {
+                padding-top: 360px;
+            }
+        }
         &::before {
             content: '';
             position: absolute;
@@ -349,6 +369,12 @@ img {
     }
     li {
         margin-top: 30px;
+        &:first-child {
+            margin-top: 0px;
+            @include tabletMore {
+                margin-top: 30px;
+            }
+        }
     }
 }
 
@@ -402,6 +428,14 @@ img {
     }
     position: relative;
     .inner {
+        .main-tit {
+            @include mobileMore {
+                padding-top: 550px;
+            }
+            @include tabletMore {
+                padding-top: 240px;
+            }
+        }
         &::before {
             content: '';
             position: absolute;
@@ -418,6 +452,10 @@ img {
                 left: 60%;
                 scale: (0.8);
             }
+            @include tabletMore {
+                left: calc(100% - 80px);
+                transform: translateX(-58%);
+            }
         }
     }
 }
@@ -428,6 +466,9 @@ img {
 .txt-wrap {
     margin-top: 30px;
     color: $gray-80;
+    @include tabletMore {
+        width: 396px;
+    }
     .date {
         font-size: 14px;
         font-weight: 400;
@@ -435,6 +476,9 @@ img {
     .news-tit {
         font-weight: 700;
         margin: 10px 0 20px;
+        @include tabletMore {
+            font-size: 27px;
+        }
     }
 }
 .single {
@@ -445,6 +489,9 @@ img {
     overflow: hidden;
     padding-bottom: 30px;
     margin: 50px 0px 0px;
+    @include tabletMore {
+        display: none;
+    }
     img {
         display: block;
         width: 100%;
@@ -465,6 +512,17 @@ img {
     }
     .slick-slide {
         margin: 0px 20px;
+    }
+}
+
+.multiple {
+    display: none;
+    @include tabletMore {
+        width: 100%;
+        height: auto;
+        display: block;
+        overflow: hidden;
+        margin: 300px 0px 0px;
     }
 }
 

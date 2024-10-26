@@ -3685,6 +3685,15 @@ input[type=checkbox] {
 .main-content {
   padding: 0 0 160px;
 }
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 0 0 200px;
+  }
+}
+
+img {
+  filter: saturate(150%) brightness(90%);
+}
 
 .fade {
   z-index: 3;
@@ -3706,51 +3715,6 @@ input[type=checkbox] {
   }
 }
 
-.main-tit {
-  position: relative;
-  padding-top: 220px;
-  z-index: 1;
-}
-@media (min-width: 600px) {
-  .main-tit {
-    padding-top: 465px;
-  }
-}
-
-.tit {
-  font-family: "GmarketSansMedium";
-  font-weight: 700;
-  font-size: 42px;
-  color: #551013;
-  line-height: 0.5;
-}
-@media (min-width: 1024px) {
-  .tit {
-    font-size: 120px;
-  }
-}
-.tit br {
-  content: "";
-  display: block;
-  margin-bottom: -15px;
-}
-
-.subtit {
-  font-weight: 400;
-  font-size: 22px;
-  color: #555555;
-  line-height: 1.1;
-}
-@media (min-width: 1024px) {
-  .subtit {
-    font-size: 50px;
-  }
-}
-
-img {
-  filter: saturate(150%) brightness(90%);
-}
-
 .main-btn-cont {
   width: 143.5px;
   margin-top: 10px;
@@ -3758,7 +3722,7 @@ img {
 @media (min-width: 1024px) {
   .main-btn-cont {
     width: 168px;
-    margin-top: 48px;
+    margin-top: 50px;
   }
 }
 .main-btn-cont .btn-link {
@@ -3828,6 +3792,42 @@ img {
   background: url(/resources/img/pattern/ico-pause.svg) no-repeat 0 -32px;
 }
 
+.main-tit {
+  position: relative;
+  padding-top: 220px;
+  z-index: 1;
+}
+
+.tit {
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  font-size: 42px;
+  color: #551013;
+  line-height: 0.5;
+}
+@media (min-width: 1024px) {
+  .tit {
+    font-size: 120px;
+  }
+}
+.tit br {
+  content: "";
+  display: block;
+  margin-bottom: -15px;
+}
+
+.subtit {
+  font-weight: 400;
+  font-size: 22px;
+  color: #555555;
+  line-height: 1.1;
+}
+@media (min-width: 1024px) {
+  .subtit {
+    font-size: 50px;
+  }
+}
+
 .tit-wrap {
   position: relative;
 }
@@ -3857,7 +3857,8 @@ img {
 .img-wrap {
   position: absolute;
   bottom: 14px;
-  right: 0;
+  left: 100%;
+  transform: translateX(-26%);
   width: 210px;
   height: 350px;
 }
@@ -3869,6 +3870,7 @@ img {
 @media (min-width: 1024px) {
   .img-wrap {
     width: 478px;
+    transform: translateX(-100%);
   }
 }
 
@@ -3899,6 +3901,16 @@ img {
 @media (min-width: 1024px) {
   .sec-1 {
     padding: 0 300px;
+  }
+}
+@media (min-width: 600px) {
+  .sec-1 .inner .main-tit {
+    padding-top: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-1 .inner .main-tit {
+    padding-top: 600px;
   }
 }
 .sec-1 .inner::before {
@@ -3943,7 +3955,7 @@ img {
 }
 
 .bike-oj-1 {
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translate(-50%, 25%);
 }
@@ -4019,6 +4031,16 @@ img {
     padding: 0 300px;
   }
 }
+@media (min-width: 600px) {
+  .sec-2 .inner .main-tit {
+    padding-top: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-2 .inner .main-tit {
+    padding-top: 360px;
+  }
+}
 .sec-2 .inner::before {
   content: "";
   position: absolute;
@@ -4060,6 +4082,14 @@ img {
 }
 .main02-list li {
   margin-top: 30px;
+}
+.main02-list li:first-child {
+  margin-top: 0px;
+}
+@media (min-width: 1024px) {
+  .main02-list li:first-child {
+    margin-top: 30px;
+  }
 }
 
 .snd-letter2 {
@@ -4119,6 +4149,16 @@ img {
     padding: 0 300px;
   }
 }
+@media (min-width: 600px) {
+  .sec-3 .inner .main-tit {
+    padding-top: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-3 .inner .main-tit {
+    padding-top: 240px;
+  }
+}
 .sec-3 .inner::before {
   content: "";
   position: absolute;
@@ -4138,6 +4178,12 @@ img {
     scale: 0.8;
   }
 }
+@media (min-width: 1024px) {
+  .sec-3 .inner::before {
+    left: calc(100% - 80px);
+    transform: translateX(-58%);
+  }
+}
 
 .snd-letter3 {
   color: #b76d44;
@@ -4147,6 +4193,11 @@ img {
   margin-top: 30px;
   color: #2d2d2d;
 }
+@media (min-width: 1024px) {
+  .txt-wrap {
+    width: 396px;
+  }
+}
 .txt-wrap .date {
   font-size: 14px;
   font-weight: 400;
@@ -4154,6 +4205,11 @@ img {
 .txt-wrap .news-tit {
   font-weight: 700;
   margin: 10px 0 20px;
+}
+@media (min-width: 1024px) {
+  .txt-wrap .news-tit {
+    font-size: 27px;
+  }
 }
 
 .single {
@@ -4164,6 +4220,11 @@ img {
   overflow: hidden;
   padding-bottom: 30px;
   margin: 50px 0px 0px;
+}
+@media (min-width: 1024px) {
+  .single {
+    display: none;
+  }
 }
 .single img {
   display: block;
@@ -4188,6 +4249,19 @@ img {
 }
 .single .slick-slide {
   margin: 0px 20px;
+}
+
+.multiple {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .multiple {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 300px 0px 0px;
+  }
 }
 
 #footer {

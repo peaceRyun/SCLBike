@@ -14,3 +14,10 @@ $('.single').slick({
     speed: 300,
     slidesToShow: 1,
 });
+
+$('.multiple').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+});
