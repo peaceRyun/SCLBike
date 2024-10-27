@@ -1,6 +1,6 @@
 // 공통
 @font-face {
-    font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium', sans-serif;
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -229,22 +229,20 @@ img {
             content: '';
             position: absolute;
             top: 0;
-            left: 50%;
+            left: 19%;
             display: block;
             height: 100%;
             width: 100%;
-            transform: translateX(-50%);
             transform-origin: top left;
             background: url(../../../resources/img/pattern/d_sec-1_object1.png) no-repeat top/ contain;
-            scale: (0.8);
+            transform: scale(0.8, 0.8);
             @include mobileMore {
-                left: 55%;
-                scale: (0.9);
+                left: 10%;
+                transform: scale(0.9, 0.9);
             }
             @include tabletMore {
-                left: calc(100% - 80px);
-                transform: translateX(-75%);
-                scale: (0.7);
+                left: calc(50% - 100px);
+                transform: scale(0.75, 0.75);
             }
         }
     }
@@ -337,21 +335,20 @@ img {
             content: '';
             position: absolute;
             top: 0;
-            left: 65%;
+            left: 30%;
             display: block;
             height: 100%;
             width: 100%;
-            transform: translateX(-50%);
             transform-origin: top left;
             background: url(/resources/img/pattern/d_sec-2_object1.png) no-repeat top/ contain;
-            scale: (0.7);
+            transform: scale(0.7, 0.7);
             @include mobileMore {
-                left: 60%;
-                scale: (0.8);
+                left: 20%;
+                transform: scale(0.8, 0.8);
             }
             @include tabletMore {
-                left: calc(100% - 80px);
-                transform: translateX(-58%);
+                left: calc(53% - 70px);
+                transform: scale(0.75, 0.75);
             }
         }
     }
@@ -440,21 +437,20 @@ img {
             content: '';
             position: absolute;
             top: 0;
-            left: 65%;
+            left: 30%;
             display: block;
             height: 100%;
             width: 100%;
-            transform: translateX(-50%);
             transform-origin: top left;
             background: url(/resources/img/pattern/d_sec-3_object1.png) no-repeat top/ contain;
-            scale: (0.7);
+            transform: scale(0.7, 0.7);
             @include mobileMore {
-                left: 60%;
-                scale: (0.8);
+                left: 20%;
+                transform: scale(0.8, 0.8);
             }
             @include tabletMore {
-                left: calc(100% - 80px);
-                transform: translateX(-58%);
+                left: calc(53% - 70px);
+                transform: scale(0.75, 0.75);
             }
         }
     }
