@@ -945,13 +945,18 @@ img {
 }
 @media (min-width: 1280px) {
   .tit {
-    font-size: 120px;
+    font-size: 110px;
   }
 }
 .tit br {
   content: "";
   display: block;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
+}
+@media (min-width: 1280px) {
+  .tit br {
+    margin-bottom: -30px;
+  }
 }
 
 .subtit {
@@ -962,7 +967,7 @@ img {
 }
 @media (min-width: 1280px) {
   .subtit {
-    font-size: 50px;
+    font-size: 44px;
   }
 }
 
@@ -978,6 +983,7 @@ img {
 @media (min-width: 1280px) {
   .num {
     font-size: 180px;
+    margin-bottom: -42px;
   }
 }
 
@@ -1049,7 +1055,7 @@ img {
 }
 @media (min-width: 1280px) {
   .sec-1 .inner .main-tit {
-    padding-top: 600px;
+    padding-top: 582px;
   }
 }
 .sec-1 .inner::before {
@@ -1073,7 +1079,7 @@ img {
 @media (min-width: 1280px) {
   .sec-1 .inner::before {
     right: -13%;
-    transform: scale(0.75, 0.75);
+    transform: scale(0.75);
   }
 }
 
@@ -1124,9 +1130,6 @@ img {
   }
 }
 
-.main01-list {
-  margin-top: 130px;
-}
 .main01-list li {
   width: 55%;
 }
@@ -1135,7 +1138,7 @@ img {
 }
 @media (min-width: 1280px) {
   .main01-list li:nth-child(even) {
-    margin-top: 180px;
+    margin-top: 134px;
   }
 }
 .main01-list li:nth-child(odd) {
@@ -1143,7 +1146,7 @@ img {
 }
 @media (min-width: 1280px) {
   .main01-list li:nth-child(odd) {
-    margin-top: 180px;
+    margin-top: 100px;
     margin-left: auto;
   }
 }
@@ -1152,7 +1155,8 @@ img {
 }
 @media (min-width: 1280px) {
   .main01-list li:last-child {
-    padding-bottom: 180px;
+    padding-bottom: 740px;
+    margin-top: -42px;
   }
 }
 
@@ -1176,7 +1180,8 @@ img {
 }
 @media (min-width: 1280px) {
   .sec-2 .inner .main-tit {
-    padding-top: 360px;
+    padding-top: 350px;
+    letter-spacing: -3px;
   }
 }
 .sec-2 .inner::before {
@@ -1200,7 +1205,7 @@ img {
 @media (min-width: 1280px) {
   .sec-2 .inner::before {
     right: -23%;
-    transform: scale(0.75, 0.75);
+    transform: scale(0.65);
   }
 }
 
@@ -1213,7 +1218,7 @@ img {
 }
 @media (min-width: 1280px) {
   .main02-list {
-    margin: 0 0 192px;
+    margin: 60px 0 192px;
     padding-left: 0;
     display: flex;
     justify-content: space-between;
@@ -1267,7 +1272,7 @@ img {
     position: relative;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 240px;
+    margin-top: 368px;
     font-size: 23vw;
     bottom: 0;
   }
@@ -1321,7 +1326,7 @@ img {
 @media (min-width: 1280px) {
   .sec-3 .inner::before {
     right: -23%;
-    transform: scale(0.75, 0.75);
+    transform: scale(0.65);
   }
 }
 
@@ -1400,7 +1405,7 @@ img {
     height: auto;
     display: block;
     overflow: hidden;
-    margin: 300px 0px 0px;
+    margin: 265px 0px 0px;
   }
 }
 

@@ -40,3 +40,14 @@ var swiper = new Swiper('.slide-studio', {
         },
     },
 });
+
+var swiper = new Swiper('.slide-shopping', {
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

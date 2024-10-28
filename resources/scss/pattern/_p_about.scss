@@ -125,14 +125,17 @@ img {
     font-weight: 700;
     font-size: 42px;
     @include tabletMore {
-        font-size: 120px;
+        font-size: 110px;
     }
     color: #551013;
     line-height: 0.5;
     br {
         content: '';
         display: block;
-        margin-bottom: -15px;
+        margin-bottom: -10px;
+        @include tabletMore {
+            margin-bottom: -30px;
+        }
     }
 }
 
@@ -140,7 +143,7 @@ img {
     font-weight: 400;
     font-size: 22px;
     @include tabletMore {
-        font-size: 50px;
+        font-size: 44px;
     }
     color: $gray-70;
     line-height: 1.1;
@@ -154,6 +157,7 @@ img {
     font-size: 70px;
     @include tabletMore {
         font-size: 180px;
+        margin-bottom: -42px;
     }
     color: $primary-80;
     margin-bottom: -17px;
@@ -216,7 +220,7 @@ img {
                 padding-top: 500px;
             }
             @include tabletMore {
-                padding-top: 600px;
+                padding-top: 582px;
             }
         }
         &::before {
@@ -236,7 +240,7 @@ img {
             }
             @include tabletMore {
                 right: -13%;
-                transform: scale(0.75, 0.75);
+                transform: scale(0.75);
             }
         }
     }
@@ -281,26 +285,27 @@ img {
 }
 
 .main01-list {
-    margin-top: 130px;
+    // margin-top: 130px;
     li {
         width: 55%;
         &:nth-child(even) {
             margin-top: 120px;
             @include tabletMore {
-                margin-top: 180px;
+                margin-top: 134px;
             }
         }
         &:nth-child(odd) {
             margin-top: 120px;
             @include tabletMore {
-                margin-top: 180px;
+                margin-top: 100px;
                 margin-left: auto;
             }
         }
         &:last-child {
             padding-bottom: 120px;
             @include tabletMore {
-                padding-bottom: 180px;
+                padding-bottom: 740px;
+                margin-top: -42px;
             }
         }
     }
@@ -323,7 +328,8 @@ img {
                 padding-top: 400px;
             }
             @include tabletMore {
-                padding-top: 360px;
+                padding-top: 350px;
+                letter-spacing: -3px;
             }
         }
         &::before {
@@ -343,7 +349,7 @@ img {
             }
             @include tabletMore {
                 right: -23%;
-                transform: scale(0.75, 0.75);
+                transform: scale(0.65);
             }
         }
     }
@@ -356,7 +362,7 @@ img {
     z-index: 1;
     position: relative;
     @include tabletMore {
-        margin: 0 0 192px;
+        margin: 60px 0 192px;
         padding-left: 0;
         display: flex;
         justify-content: space-between;
@@ -404,7 +410,7 @@ img {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 240px;
+        margin-top: 368px;
         font-size: 23vw;
         bottom: 0;
     }
@@ -449,7 +455,7 @@ img {
             }
             @include tabletMore {
                 right: -23%;
-                transform: scale(0.75, 0.75);
+                transform: scale(0.65);
             }
         }
     }
@@ -517,7 +523,7 @@ img {
         height: auto;
         display: block;
         overflow: hidden;
-        margin: 300px 0px 0px;
+        margin: 265px 0px 0px;
     }
 }
 
