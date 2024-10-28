@@ -51,3 +51,15 @@ var swiper = new Swiper('.slide-shopping', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+var swiper = new Swiper('.sec-1-grid-slide', {
+    slidesPerView: 3,
+    grid: {
+        rows: 2,
+    },
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
