@@ -1,4 +1,5 @@
-.sec-1-grid-slide {
+// content 으로 옮길 예정
+.sec-0-grid-slide {
     margin-left: auto;
     margin-right: auto;
     .swiper-slide {
@@ -13,3 +14,52 @@
         align-items: center;
     }
 }
+
+// shopping - section type 1
+.sec-type1-container {
+    // 이 부분은 뭘로 수정하는게 좋을까
+    margin-top: 80px;
+    > h2 {
+        margin-bottom: 3%;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+    > h3 {
+        margin-top: 8%;
+        font-size: 2.2rem;
+        font-weight: 500;
+        br {
+            content: '';
+            display: block;
+            margin-bottom: -0.7rem;
+        }
+    }
+    > p {
+        margin: 3% 0 9%;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $gray-60;
+    }
+}
+.sec-type1-detail {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    &__mc {
+        > img {
+            border-radius: 10px;
+        }
+        .type1-mc-txt1 {
+            margin-top: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #c4e40d;
+        }
+        .type1-mc-txt2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+}
+
+// shopping - section type 2
