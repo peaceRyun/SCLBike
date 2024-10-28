@@ -85,10 +85,12 @@ img {
     }
     .tit-cont {
         position: absolute;
-        bottom: 100px;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         color: $white;
-        font-size: 22px;
+        font-size: 50px;
         font-weight: 700;
         padding: 0 20px;
     }
