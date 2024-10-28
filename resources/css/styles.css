@@ -3181,7 +3181,7 @@ input[type=checkbox] {
 .inner {
   position: relative;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 20px;
 }
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -3893,8 +3893,8 @@ img {
   position: relative;
 }
 @media (min-width: 1024px) {
-  .sec-1 {
-    padding: 0 300px;
+  .sec-1 .inner {
+    max-width: 1320px;
   }
 }
 @media (min-width: 600px) {
@@ -3911,23 +3911,23 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: 19%;
+  right: 0;
   display: block;
   height: 100%;
   width: 100%;
-  transform-origin: top left;
+  transform-origin: top right;
   background: url(../../../resources/img/pattern/d_sec-1_object1.png) no-repeat top/contain;
   transform: scale(0.8, 0.8);
 }
 @media (min-width: 600px) {
   .sec-1 .inner::before {
-    left: 10%;
+    right: 0;
     transform: scale(0.9, 0.9);
   }
 }
 @media (min-width: 1024px) {
   .sec-1 .inner::before {
-    left: calc(50% - 100px);
+    right: -150px;
     transform: scale(0.75, 0.75);
   }
 }
@@ -4037,23 +4037,23 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: 30%;
+  right: 0;
   display: block;
   height: 100%;
   width: 100%;
-  transform-origin: top left;
+  transform-origin: top right;
   background: url(/resources/img/pattern/d_sec-2_object1.png) no-repeat top/contain;
   transform: scale(0.7, 0.7);
 }
 @media (min-width: 600px) {
   .sec-2 .inner::before {
-    left: 20%;
+    right: 0;
     transform: scale(0.8, 0.8);
   }
 }
 @media (min-width: 1024px) {
   .sec-2 .inner::before {
-    left: calc(53% - 70px);
+    right: -23%;
     transform: scale(0.75, 0.75);
   }
 }
@@ -4154,23 +4154,23 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: 30%;
+  right: 0;
   display: block;
   height: 100%;
   width: 100%;
-  transform-origin: top left;
+  transform-origin: top right;
   background: url(/resources/img/pattern/d_sec-3_object1.png) no-repeat top/contain;
   transform: scale(0.7, 0.7);
 }
 @media (min-width: 600px) {
   .sec-3 .inner::before {
-    left: 20%;
+    right: 0;
     transform: scale(0.8, 0.8);
   }
 }
 @media (min-width: 1024px) {
   .sec-3 .inner::before {
-    left: calc(53% - 70px);
+    right: -23%;
     transform: scale(0.75, 0.75);
   }
 }
