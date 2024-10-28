@@ -206,6 +206,7 @@ img {
 // section 01
 .sec-1 {
     position: relative;
+    overflow: hidden;
     .inner {
         @include tabletMore {
             max-width: 1320px;
@@ -234,7 +235,7 @@ img {
                 transform: scale(0.9, 0.9);
             }
             @include tabletMore {
-                right: -150px;
+                right: -13%;
                 transform: scale(0.75, 0.75);
             }
         }
@@ -311,11 +312,12 @@ img {
 
 // section 02
 .sec-2 {
-    @include tabletMore {
-        padding: 0 300px;
-    }
     position: relative;
+    overflow: hidden;
     .inner {
+        @include tabletMore {
+            max-width: 1320px;
+        }
         .main-tit {
             @include mobileMore {
                 padding-top: 400px;
@@ -351,6 +353,8 @@ img {
     margin: 80px 0 0 20px;
     padding-left: 130px;
     margin-bottom: 134px;
+    z-index: 1;
+    position: relative;
     @include tabletMore {
         margin: 0 0 192px;
         padding-left: 0;
@@ -399,8 +403,9 @@ img {
     @include tabletMore {
         position: relative;
         flex-direction: row;
+        justify-content: space-between;
         margin-top: 240px;
-        font-size: 55.56vw;
+        font-size: 23vw;
         bottom: 0;
     }
     span {
@@ -413,11 +418,12 @@ img {
 
 // section 03
 .sec-3 {
-    @include tabletMore {
-        padding: 0 300px;
-    }
     position: relative;
+    overflow: hidden;
     .inner {
+        @include tabletMore {
+            max-width: 1320px;
+        }
         .main-tit {
             @include mobileMore {
                 padding-top: 550px;

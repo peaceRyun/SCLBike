@@ -1035,6 +1035,7 @@ img {
 
 .sec-1 {
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 1280px) {
   .sec-1 .inner {
@@ -1071,7 +1072,7 @@ img {
 }
 @media (min-width: 1280px) {
   .sec-1 .inner::before {
-    right: -150px;
+    right: -13%;
     transform: scale(0.75, 0.75);
   }
 }
@@ -1161,10 +1162,11 @@ img {
 
 .sec-2 {
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 1280px) {
-  .sec-2 {
-    padding: 0 300px;
+  .sec-2 .inner {
+    max-width: 1320px;
   }
 }
 @media (min-width: 600px) {
@@ -1206,6 +1208,8 @@ img {
   margin: 80px 0 0 20px;
   padding-left: 130px;
   margin-bottom: 134px;
+  z-index: 1;
+  position: relative;
 }
 @media (min-width: 1280px) {
   .main02-list {
@@ -1262,8 +1266,9 @@ img {
   .mask-objects {
     position: relative;
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 240px;
-    font-size: 55.56vw;
+    font-size: 23vw;
     bottom: 0;
   }
 }
@@ -1278,10 +1283,11 @@ img {
 
 .sec-3 {
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 1280px) {
-  .sec-3 {
-    padding: 0 300px;
+  .sec-3 .inner {
+    max-width: 1320px;
   }
 }
 @media (min-width: 600px) {
