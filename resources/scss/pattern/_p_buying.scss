@@ -1,0 +1,54 @@
+// mobile nav 버튼
+.mobile-btns-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 4rem;
+    color: #5d5d5d;
+    opacity: 50%;
+}
+
+.btn-menu {
+    &:before {
+        content: '\f0c9';
+        display: block;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+
+.btn-search {
+    &:before {
+        content: '\f002';
+        display: block;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+
+.btn-home {
+    &:before {
+        content: '\f015';
+        display: block;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+
+.btn-shopping-cart {
+    &:before {
+        content: '\f291';
+        display: block;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+
+.btn-profile {
+    &:before {
+        content: '\f007';
+        display: block;
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
