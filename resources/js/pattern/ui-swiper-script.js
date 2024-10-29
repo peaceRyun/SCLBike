@@ -52,7 +52,7 @@ var swiper = new Swiper('.slide-shopping', {
     },
 });
 
-var swiper = new Swiper('.sec-0-grid-slide', {
+var swiper = new Swiper('.art-0-grid-slide', {
     slidesPerView: 3,
     grid: {
         rows: 2,

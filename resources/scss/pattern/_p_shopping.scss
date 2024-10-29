@@ -1,5 +1,5 @@
 // content 으로 옮길 예정
-.sec-0-grid-slide {
+.art-0-grid-slide {
     margin-left: auto;
     margin-right: auto;
     .swiper-slide {
@@ -16,9 +16,9 @@
 }
 
 // shopping - section type 1
-.sec-type1-container {
+.shopping-art-type1-container {
     // 이 부분은 뭘로 수정하는게 좋을까
-    margin-top: 80px;
+    padding: 80px 0;
     > h2 {
         margin-bottom: 3%;
         font-size: 2.2rem;
@@ -41,7 +41,7 @@
         color: $gray-60;
     }
 }
-.sec-type1-detail {
+.art-type1-detail {
     display: flex;
     align-items: center;
     gap: 4%;
