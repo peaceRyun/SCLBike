@@ -53,9 +53,9 @@ var swiper = new Swiper('.slide-shopping', {
 });
 
 var swiper = new Swiper('.art-0-grid-slide', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     grid: {
-        rows: 2,
+        rows: 3,
     },
     pagination: {
         el: '.swiper-pagination',

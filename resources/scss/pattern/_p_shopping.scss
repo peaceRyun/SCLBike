@@ -1,22 +1,45 @@
 // content 으로 옮길 예정
 .art-0-grid-slide {
-    margin-left: auto;
-    margin-right: auto;
-    height: 500px;
+    margin: 8rem auto 0 auto;
+    height: 520px;
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: yellow;
-        height: calc((100% - 30px) / 2) !important;
+        background: $white;
+        height: calc((100% - 30px) / 3) !important;
 
         /* Center slide text vertically */
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .swiper-pagination {
+        display: none;
+        @include tabletMore {
+            display: block;
+        }
     }
 }
 
-// common 분류할까?
+.shop-sec0-img-wrap {
+    background: $gray-10;
+    border-radius: 10px;
+    height: 139px;
+    width: calc(100% - 10px);
+    margin: 0 auto 0 0;
+    img {
+        object-fit: contain !important;
+        object-position: 50% 10px;
+    }
+}
+.shop-sec0-txt {
+    width: calc(100% - 10px);
+    margin: 0 auto 0 0;
+    font-size: 1.2rem;
+    color: $gray-90;
+}
+
+// shopping - 공통
 .art-h2 {
     margin-bottom: 3%;
     font-size: 2.2rem;
@@ -45,6 +68,16 @@
 br {
     content: '';
     display: block;
+}
+
+.shopping-main-container .inner {
+    max-width: 390px;
+    @include mobileMore {
+        max-width: 768px;
+    }
+    @include tabletMore {
+        max-width: 1280px;
+    }
 }
 
 // shopping - article - type 1
