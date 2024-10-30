@@ -33,6 +33,12 @@
     }
 }
 
+@mixin fr {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media (min-width: $breakpoint-lg) {
         @content;
