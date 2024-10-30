@@ -4,24 +4,41 @@
     background-position: center;
 }
 
-.mySwiper2 {
+.buy-main-slide2 {
+    margin-top: 30%;
     height: 80%;
     width: 100%;
+    // 얘를 활성화 해야지 pagination이 보임 + nav도 망가짐
+    // overflow: visible;
+    .swiper-pagination {
+        position: absolute;
+        bottom: -7%;
+        @include tabletMore {
+            display: none;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background: $primary; /* 활성화된 점 색깔 */
+    }
 }
 
-.mySwiper {
+.buy-main-slide {
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
+    display: none;
+    @include tabletMore {
+        display: block;
+    }
 }
 
-.mySwiper .swiper-slide {
+.buy-main-slide .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.buy-main-slide .swiper-slide-thumb-active {
     opacity: 1;
 }
 
@@ -88,4 +105,10 @@
         font-family: 'Line Awesome Free';
         font-weight: 900;
     }
+}
+
+// buy-aside
+.buy-txt-wrap {
+    display: flex;
+    align-items: start;
 }

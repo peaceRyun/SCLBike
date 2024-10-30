@@ -62,3 +62,20 @@ var swiper = new Swiper('.art-0-grid-slide', {
         clickable: true,
     },
 });
+
+var swiper = new Swiper('.buy-main-slide', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper('.buy-main-slide2', {
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});

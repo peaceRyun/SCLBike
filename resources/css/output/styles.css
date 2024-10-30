@@ -1908,24 +1908,43 @@ br {
   background-position: center;
 }
 
-.mySwiper2 {
+.buy-main-slide2 {
+  margin-top: 30%;
   height: 80%;
   width: 100%;
 }
+.buy-main-slide2 .swiper-pagination {
+  position: absolute;
+  bottom: -7%;
+}
+@media (min-width: 1024px) {
+  .buy-main-slide2 .swiper-pagination {
+    display: none;
+  }
+}
+.buy-main-slide2 .swiper-pagination-bullet-active {
+  background: #d42930; /* 활성화된 점 색깔 */
+}
 
-.mySwiper {
+.buy-main-slide {
   height: 20%;
   box-sizing: border-box;
   padding: 10px 0;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .buy-main-slide {
+    display: block;
+  }
 }
 
-.mySwiper .swiper-slide {
+.buy-main-slide .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.buy-main-slide .swiper-slide-thumb-active {
   opacity: 1;
 }
 
@@ -1984,4 +2003,9 @@ br {
   display: block;
   font-family: "Line Awesome Free";
   font-weight: 900;
+}
+
+.buy-txt-wrap {
+  display: flex;
+  align-items: start;
 }/*# sourceMappingURL=styles.css.map */
