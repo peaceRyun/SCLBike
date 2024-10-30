@@ -248,11 +248,13 @@ br {
 // shopping - banner - type 3
 .shop-banner3-container {
     position: relative;
-    text-align: right;
+    text-align: center;
     .shop-banner3-img {
         border-radius: 60% 45%;
-        height: 40vh;
+        height: 333px;
+        width: 350px;
         object-fit: cover;
+        margin: 0 auto;
     }
 }
 .shop-banner3-txt1 {

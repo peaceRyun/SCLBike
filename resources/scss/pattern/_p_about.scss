@@ -15,10 +15,6 @@ img {
 // intro & banner
 .fade {
     z-index: 3;
-    // max-height: 787px;
-    // @include mobileMore {
-    //     max-height: 1080px;
-    // }
     width: 100%;
     height: auto;
     display: block;
@@ -106,7 +102,7 @@ img {
         display: block;
         width: 35px;
         height: 35px;
-        background: url(/resources/img/pattern/ico-pause.svg) no-repeat 0 -32px;
+        background: url(../../../resources/img/pattern/ico-pause.svg) no-repeat 0 -32px;
     }
 }
 
@@ -206,14 +202,52 @@ img {
     }
 }
 
-// section 01
-.sec-1 {
+// section 공통
+.sec-1,
+.sec-2,
+.sec-3 {
     position: relative;
     overflow: hidden;
     .inner {
-        @include tabletMore {
-            max-width: 1320px;
+        max-width: 390px;
+        @include mobileMore {
+            max-width: 768px;
         }
+        @include tabletMore {
+            max-width: 1280px;
+        }
+    }
+}
+
+.sec-1 .inner::before,
+.sec-2 .inner::before,
+.sec-3 .inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform-origin: top right;
+}
+
+.sec-2 .inner::before,
+.sec-3 .inner::before {
+    transform: scale(0.7, 0.7);
+    @include mobileMore {
+        right: 0;
+        height: 700px;
+    }
+    @include tabletMore {
+        right: -23%;
+        height: 900px;
+    }
+}
+
+// section 01
+.sec-1 {
+    .inner {
         .main-tit {
             @include mobileMore {
                 padding-top: 500px;
@@ -223,14 +257,6 @@ img {
             }
         }
         &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: block;
-            height: 100%;
-            width: 100%;
-            transform-origin: top right;
             background: url(../../../resources/img/pattern/d_sec-1_object1.png) no-repeat top/ contain;
             transform: scale(0.8, 0.8);
             @include mobileMore {
@@ -316,12 +342,7 @@ img {
 
 // section 02
 .sec-2 {
-    position: relative;
-    overflow: hidden;
     .inner {
-        @include tabletMore {
-            max-width: 1320px;
-        }
         .main-tit {
             @include mobileMore {
                 padding-top: 400px;
@@ -332,25 +353,7 @@ img {
             }
         }
         &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: block;
-            height: 100%;
-            width: 100%;
-            transform-origin: top right;
             background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/ contain;
-            transform: scale(0.7, 0.7);
-            @include mobileMore {
-                right: 0;
-                height: 700px;
-            }
-            @include tabletMore {
-                right: -23%;
-                transform: scale(0.65);
-                min-height: 860px;
-            }
         }
     }
 }
@@ -424,12 +427,7 @@ img {
 
 // section 03
 .sec-3 {
-    position: relative;
-    overflow: hidden;
     .inner {
-        @include tabletMore {
-            max-width: 1320px;
-        }
         .main-tit {
             @include mobileMore {
                 padding-top: 550px;
@@ -439,24 +437,7 @@ img {
             }
         }
         &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: block;
-            height: 100%;
-            width: 100%;
-            transform-origin: top right;
             background: url(../../../resources/img/pattern/d_sec-3_object1.png) no-repeat right top/ contain;
-            transform: scale(0.7, 0.7);
-            @include mobileMore {
-                right: 0;
-                transform: scale(0.8, 0.8);
-            }
-            @include tabletMore {
-                right: -23%;
-                transform: scale(0.65);
-            }
         }
     }
 }
@@ -524,154 +505,6 @@ img {
         display: block;
         overflow: hidden;
         margin: 265px 0px 0px;
-    }
-}
-
-// footer
-#footer {
-    width: 100%;
-    height: 100vh;
-    background: #0d0d0d;
-    position: relative;
-    .footer-cont {
-        position: relative;
-        width: 100%;
-        max-width: 1920px;
-        height: 100%;
-        margin: 0 auto;
-    }
-    .footer-inner {
-        position: absolute;
-        bottom: 10%;
-        width: 100%;
-        @include tabletMore {
-            bottom: 15%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    .footer-content {
-        padding: 0 20px;
-        color: #ebebeb;
-        @include tabletMore {
-            padding: 0 60px;
-            margin: 0 auto;
-            max-width: 1304px;
-        }
-    }
-    .footer-logo {
-        position: absolute;
-        top: 150px;
-        left: calc(50% + 30px);
-        width: 150px;
-        @include mobileMore {
-            width: 206px;
-        }
-        overflow: hidden;
-        @include mobileMore {
-            top: 110px;
-        }
-        @include tabletMore {
-            top: 0;
-            left: calc(50% + 264px);
-        }
-        img {
-            display: block;
-            object-fit: cover;
-            margin: 0px 0px 0px;
-            @include mobileMore {
-                margin: 0px 0px 0px;
-            }
-        }
-    }
-
-    .ul-list-top {
-        font-size: 26px;
-        font-weight: 400;
-        text-decoration: underline;
-        li {
-            &:last-child {
-                margin-top: 16px;
-            }
-        }
-    }
-    .ul-list-btm {
-        position: relative;
-        font-size: 16px;
-        margin-top: 38px;
-        li {
-            &:first-child {
-                margin: 0px;
-            }
-            margin: 20px 0px 0px;
-        }
-    }
-
-    .info-list {
-        display: none;
-        @include tabletMore {
-            display: flex;
-            gap: 144px;
-            margin-top: 100px;
-            .info {
-                span {
-                    color: #454545;
-                    font-size: 14px;
-                }
-                p {
-                    font-size: 18px;
-                    margin-top: 15px;
-                    margin-bottom: 26px;
-                }
-                em {
-                    display: block;
-                    margin-top: 30px;
-                    font-weight: 400;
-                    color: #898989;
-                }
-            }
-            .about-ft {
-                min-width: 100px;
-            }
-        }
-    }
-
-    .sns-list {
-        display: flex;
-        gap: 20px;
-        margin-top: 50px;
-        @include fr {
-            display: none;
-        }
-        @include tabletMore {
-            position: absolute;
-            top: 0;
-            left: 60px;
-            flex-direction: column;
-            margin-top: 0px;
-        }
-        li {
-            &::before {
-                font-family: 'Line Awesome Brands';
-                color: #ebebeb;
-                font-size: 24px;
-            }
-            &:first-child::before {
-                content: '\f167';
-            }
-            &:nth-child(2)::before {
-                content: '\f16d';
-            }
-            &:last-child::before {
-                content: '\f39e';
-            }
-        }
-    }
-
-    .copy {
-        font-size: 12px;
-        color: #aaaaaa;
-        margin-top: 100px;
     }
 }
 
