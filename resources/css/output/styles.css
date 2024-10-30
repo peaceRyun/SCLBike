@@ -1192,13 +1192,13 @@ img {
   height: 100%;
   width: 100%;
   transform-origin: top right;
-  background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat top/contain;
+  background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/contain;
   transform: scale(0.7, 0.7);
 }
 @media (min-width: 600px) {
   .sec-2 .inner::before {
     right: 0;
-    transform: scale(0.8, 0.8);
+    height: 700px;
   }
 }
 @media (min-width: 1280px) {
@@ -1314,7 +1314,7 @@ img {
   height: 100%;
   width: 100%;
   transform-origin: top right;
-  background: url(../../../resources/img/pattern/d_sec-3_object1.png) no-repeat top/contain;
+  background: url(../../../resources/img/pattern/d_sec-3_object1.png) no-repeat right top/contain;
   transform: scale(0.7, 0.7);
 }
 @media (min-width: 600px) {
@@ -1595,11 +1595,12 @@ img {
 .art-0-grid-slide {
   margin-left: auto;
   margin-right: auto;
+  height: 500px;
 }
 .art-0-grid-slide .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: yellow;
   height: calc((100% - 30px) / 2) !important;
   /* Center slide text vertically */
   display: flex;
@@ -1643,11 +1644,15 @@ br {
 
 .art1-detail {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 4%;
+}
+.art1-detail__mc {
+  width: 48%;
 }
 .art1-detail__mc > img {
   border-radius: 10px;
+  width: 100%;
 }
 
 .art1-mc-txt1 {
@@ -1681,10 +1686,13 @@ br {
   display: flex;
   justify-content: space-between;
   margin: 5% 0 0;
-  gap: 2%;
+}
+.art2-detail-wrap__mc {
+  width: 30%;
 }
 .art2-detail-wrap__mc > img {
   border-radius: 1rem;
+  width: 100%;
 }
 
 .art2-mc-txt1 {

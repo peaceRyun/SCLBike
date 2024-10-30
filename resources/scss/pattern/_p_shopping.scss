@@ -2,10 +2,11 @@
 .art-0-grid-slide {
     margin-left: auto;
     margin-right: auto;
+    height: 500px;
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        background: yellow;
         height: calc((100% - 30px) / 2) !important;
 
         /* Center slide text vertically */
@@ -53,11 +54,13 @@ br {
 }
 .art1-detail {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 4%;
     &__mc {
+        width: 48%;
         > img {
             border-radius: 10px;
+            width: 100%;
         }
     }
 }
@@ -91,10 +94,11 @@ br {
     display: flex;
     justify-content: space-between;
     margin: 5% 0 0;
-    gap: 2%;
     &__mc {
+        width: 30%;
         > img {
             border-radius: 1rem;
+            width: 100%;
         }
     }
 }

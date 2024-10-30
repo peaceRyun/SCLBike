@@ -57,7 +57,6 @@ var swiper = new Swiper('.art-0-grid-slide', {
     grid: {
         rows: 2,
     },
-    spaceBetween: 30,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
