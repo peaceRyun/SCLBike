@@ -108,7 +108,52 @@
 }
 
 // buy-aside
+.buy-txt-h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 100%;
+}
 .buy-txt-wrap {
     display: flex;
     align-items: start;
+}
+.buy-txt-price {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.buy-txt-price-origin {
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: $gray-40;
+}
+.buy-review-value {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $gray-50;
+    // &::after {
+    //     content: '\f005';
+    //     font-family: 'Line Awesome Free';
+    //     font-weight: 900;
+    //     color: $black;
+    // }
+}
+.buy-txt-p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $black;
+}
+.buy-detailto::after {
+    content: '\f063';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    color: $black;
+}
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+}
+.red {
+    background: red;
 }
