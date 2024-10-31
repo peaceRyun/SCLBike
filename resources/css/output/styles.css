@@ -1360,6 +1360,9 @@ img {
   color: #b45151;
 }
 
+.sec-2::before {
+  background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/contain;
+}
 @media (min-width: 600px) {
   .sec-2 .inner .main-tit {
     padding-top: 400px;
@@ -1370,9 +1373,6 @@ img {
     padding-top: 350px;
     letter-spacing: -3px;
   }
-}
-.sec-2 .inner::before {
-  background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/contain;
 }
 
 .main02-list {

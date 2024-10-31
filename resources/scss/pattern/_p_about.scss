@@ -342,6 +342,9 @@ img {
 
 // section 02
 .sec-2 {
+    &::before {
+        background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/ contain;
+    }
     .inner {
         .main-tit {
             @include mobileMore {
@@ -351,9 +354,6 @@ img {
                 padding-top: 350px;
                 letter-spacing: -3px;
             }
-        }
-        &::before {
-            background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/ contain;
         }
     }
 }
