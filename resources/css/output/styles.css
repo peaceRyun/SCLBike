@@ -1232,6 +1232,12 @@ img {
   }
 }
 
+.sec-1 .inner,
+.sec-2 .inner,
+.sec-3 .inner {
+  overflow: hidden;
+}
+
 .sec-1,
 .sec-2,
 .sec-3 {
@@ -1256,6 +1262,33 @@ img {
   .sec-2 .inner,
   .sec-3 .inner {
     max-width: 1280px;
+  }
+}
+
+.sec-1::before {
+  content: "3";
+  position: absolute;
+  top: -530px;
+  right: -9%;
+  width: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 67rem;
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  .sec-1::before {
+    top: -71.5rem;
+    right: -25%;
+    font-size: 117rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-1::before {
+    top: -150rem;
+    right: -46%;
+    font-size: 206rem;
   }
 }
 
@@ -1289,18 +1322,23 @@ img {
   }
 }
 
-.sec-1 .inner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform-origin: top right;
-  transition: transform 0.5s ease;
+.sec-1::before {
+  background-image: url(../../../resources/img/pattern/about/sec1-bg-object1.jpg);
+  background-position: 2rem -73px;
+  background-size: 66rem;
 }
-
+@media (min-width: 600px) {
+  .sec-1::before {
+    background-position: 2rem -18rem;
+    background-size: 109rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-1::before {
+    background-position: 9rem -18rem;
+    background-size: 180rem;
+  }
+}
 @media (min-width: 600px) {
   .sec-1 .inner .main-tit {
     padding-top: 500px;
@@ -1309,22 +1347,6 @@ img {
 @media (min-width: 1024px) {
   .sec-1 .inner .main-tit {
     padding-top: 582px;
-  }
-}
-.sec-1 .inner::before {
-  background: url(../../../resources/img/pattern/d_sec-1_object1.png) no-repeat top/contain;
-  transform: scale(0.8, 0.8);
-}
-@media (min-width: 600px) {
-  .sec-1 .inner::before {
-    right: 0;
-    transform: scale(0.9, 0.9);
-  }
-}
-@media (min-width: 1024px) {
-  .sec-1 .inner::before {
-    right: -13%;
-    transform: scale(0.75);
   }
 }
 
@@ -1471,7 +1493,7 @@ img {
 }
 @media (min-width: 1024px) {
   .main02-list {
-    margin: 60px 0 192px;
+    margin: 500px 0 200px;
     padding-left: 0;
     display: flex;
     justify-content: space-between;
@@ -1480,12 +1502,17 @@ img {
 .main02-list li {
   margin-top: 30px;
 }
+@media (min-width: 600px) {
+  .main02-list li {
+    margin-top: 58px;
+  }
+}
 .main02-list li:first-child {
   margin-top: 0px;
 }
 @media (min-width: 1024px) {
   .main02-list li:first-child {
-    margin-top: 30px;
+    margin-top: 58px;
   }
 }
 
@@ -1506,10 +1533,25 @@ img {
   }
 }
 
-.mask-objects {
+.FCM-cont {
   position: absolute;
-  bottom: -30px;
+  top: 43%;
   left: 0;
+}
+@media (min-width: 600px) {
+  .FCM-cont {
+    top: 55%;
+  }
+}
+@media (min-width: 1024px) {
+  .FCM-cont {
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.mask-objects {
   display: flex;
   flex-direction: column;
   background: url("../../../resources/img/pattern/about/mask1.jpg") no-repeat center center;
@@ -1526,18 +1568,12 @@ img {
     position: relative;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 368px;
     font-size: 50rem;
     bottom: 0;
   }
 }
 .mask-objects span {
-  line-height: 1;
-}
-@media (min-width: 600px) {
-  .mask-objects span {
-    line-height: 0.9;
-  }
+  line-height: 0.95;
 }
 
 .sec-3::before {

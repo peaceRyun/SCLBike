@@ -145,7 +145,7 @@ img {
     }
 }
 
-// section 공통
+// section 공통 텍스트 관련
 
 // mobile main title padding
 .main-tit {
@@ -242,7 +242,13 @@ img {
     }
 }
 
-// section 공통
+// section 공통 레이아웃 관련
+.sec-1 .inner,
+.sec-2 .inner,
+.sec-3 .inner {
+    overflow: hidden;
+}
+
 .sec-1,
 .sec-2,
 .sec-3 {
@@ -257,6 +263,29 @@ img {
         @include tabletMore {
             max-width: 1280px;
         }
+    }
+}
+
+.sec-1::before {
+    content: '3';
+    position: absolute;
+    top: -530px;
+    right: -9%;
+    width: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 67rem;
+    font-weight: bold;
+    @include mobileMore {
+        top: -71.5rem;
+        right: -25%;
+        font-size: 117rem;
+    }
+    @include tabletMore {
+        top: -150rem;
+        right: -46%;
+        font-size: 206rem;
     }
 }
 
@@ -284,20 +313,21 @@ img {
     }
 }
 
-.sec-1 .inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
-    transform-origin: top right;
-    transition: transform 0.5s ease;
-}
-
 // section 01
 .sec-1 {
+    &::before {
+        background-image: url(../../../resources/img/pattern/about/sec1-bg-object1.jpg);
+        background-position: 2rem -73px;
+        background-size: 66rem;
+        @include mobileMore {
+            background-position: 2rem -18rem;
+            background-size: 109rem;
+        }
+        @include tabletMore {
+            background-position: 9rem -18rem;
+            background-size: 180rem;
+        }
+    }
     .inner {
         .main-tit {
             @include mobileMore {
@@ -305,18 +335,6 @@ img {
             }
             @include tabletMore {
                 padding-top: 582px;
-            }
-        }
-        &::before {
-            background: url(../../../resources/img/pattern/d_sec-1_object1.png) no-repeat top/ contain;
-            transform: scale(0.8, 0.8);
-            @include mobileMore {
-                right: 0;
-                transform: scale(0.9, 0.9);
-            }
-            @include tabletMore {
-                right: -13%;
-                transform: scale(0.75);
             }
         }
     }
@@ -450,17 +468,20 @@ img {
     z-index: 1;
     position: relative;
     @include tabletMore {
-        margin: 60px 0 192px;
+        margin: 500px 0 200px;
         padding-left: 0;
         display: flex;
         justify-content: space-between;
     }
     li {
         margin-top: 30px;
+        @include mobileMore {
+            margin-top: 58px;
+        }
         &:first-child {
             margin-top: 0px;
             @include tabletMore {
-                margin-top: 30px;
+                margin-top: 58px;
             }
         }
     }
@@ -481,10 +502,21 @@ img {
     }
 }
 
-.mask-objects {
+.FCM-cont {
     position: absolute;
-    bottom: -30px;
+    top: 43%;
     left: 0;
+    @include mobileMore {
+        top: 55%;
+    }
+    @include tabletMore {
+        top: 48%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.mask-objects {
     display: flex;
     flex-direction: column;
     background: url('../../../resources/img/pattern/about/mask1.jpg') no-repeat center center;
@@ -499,15 +531,11 @@ img {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 368px;
         font-size: 50rem;
         bottom: 0;
     }
     span {
-        line-height: 1;
-        @include mobileMore {
-            line-height: 0.9;
-        }
+        line-height: 0.95;
     }
 }
 
