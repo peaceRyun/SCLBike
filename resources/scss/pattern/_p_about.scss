@@ -210,16 +210,16 @@ img {
 .img-wrap {
     position: absolute;
     bottom: 14px;
-    left: 100%;
-    transform: translateX(-26%);
+    left: 40%;
     width: 210px;
     height: 350px;
     @include mobileMore {
         width: 436.8px;
+        left: 38%;
     }
     @include tabletMore {
         width: 478px;
-        transform: translateX(-100%);
+        left: 32%;
     }
 }
 
@@ -342,55 +342,59 @@ img {
 
 .bike-oj-common {
     position: absolute;
-    width: 171.5px;
-    height: 199px;
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 50%;
     @include tabletMore {
         width: 470px;
         height: 500px;
     }
-    object-fit: contain;
 }
 
 .bike-oj-1 {
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 7%);
+    @include mobileMore {
+        transform: translate(-50%, 2%);
+    }
     @include tabletMore {
-        bottom: 70px;
+        transform: translate(-50%, 11%);
     }
 }
 
 .bike-oj-2 {
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 22%);
     @include tabletMore {
-        bottom: 6px;
+        transform: translate(-50%, 24%);
     }
 }
 
 .bike-oj-3 {
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 19%);
+    @include mobileMore {
+        transform: translate(-50%, 10%);
+    }
     @include tabletMore {
-        bottom: 17px;
+        transform: translate(-50%, 22%);
     }
 }
 
 .main01-list {
     // margin-top: 130px;
     li {
-        width: 55%;
+        width: 100%;
         &:nth-child(even) {
             margin-top: 120px;
             @include tabletMore {
+                width: 55%;
                 margin-top: 134px;
             }
         }
         &:nth-child(odd) {
             margin-top: 120px;
             @include tabletMore {
+                width: 55%;
                 margin-top: 100px;
                 margin-left: auto;
             }
@@ -398,6 +402,7 @@ img {
         &:last-child {
             padding-bottom: 120px;
             @include tabletMore {
+                width: 55%;
                 padding-bottom: 740px;
                 margin-top: -42px;
             }
