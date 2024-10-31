@@ -33,9 +33,15 @@ $('.lang__list li').click(function () {
     $('.lang__list').hide();
 });
 
-// loading 관련 js
+// loading 관련 js by gpt
 // 페이지가 모두 로드된 후 로딩 화면을 제거
-window.addEventListener('load', function () {
-    document.getElementById('loading').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-});
+// window.addEventListener('load', function () {
+//     document.getElementById('loading').style.display = 'none';
+//     document.querySelector('.content').style.display = 'block';
+// });
+
+// about페이지 section1 관련
+gsap.from('.sec-1__letter1', { opacity: 0, y: 100, duration: 2 });
+gsap.from('.sec-1__letter3', { opacity: 0, y: 100, duration: 2, delay: 1 });
+gsap.from('.sec-1__letter2', { x: -200, duration: 2, delay: 2 });
+// gsap.fromTo('.sec-1__letter2', { x: -200, duration: 2, delay: 2 }, { x: 0, duration: 2, delay: 2 });

@@ -1129,6 +1129,7 @@ img {
 }
 
 .tit {
+  position: relative;
   font-family: "GmarketSansMedium";
   font-weight: 700;
   font-size: 4.2rem;
@@ -1296,6 +1297,7 @@ img {
   height: 100%;
   width: 100%;
   transform-origin: top right;
+  transition: transform 0.5s ease;
 }
 
 @media (min-width: 600px) {
@@ -1404,6 +1406,7 @@ img {
 
 .snd-letter1 {
   color: #b45151;
+  display: inline-block;
 }
 
 .sec-2::before {

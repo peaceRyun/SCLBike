@@ -31,7 +31,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script defer src="../resources/js/pattern/ui-slick-script.js"></script>
+        <script defer src="../resources/js/pattern/ui-swiper-script.js"></script>
         <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
         <script defer src="../resources/js/include.js"></script>
     </head>
@@ -42,9 +45,9 @@
         </div>
         <div id="wrap">
             <!-- 로딩 화면 -->
-            <div id="loading">
+            <!-- <div id="loading">
                 <div class="loader"></div>
-            </div>
+            </div> -->
 
             <!-- active 추가시 depth2 활성화 -->
             <header id="header">
@@ -199,7 +202,10 @@
                         <div class="inner">
                             <div class="main-tit">
                                 <h2 class="tit">
-                                    <span>S</span><span class="snd-letter1">AFTEY</span> <br /><span>F</span
+                                    <span class="sec-1__letter1">S</span
+                                    ><span class="snd-letter1 sec-1__letter2">AFTEY</span> <br /><span
+                                        class="sec-1__letter3"
+                                        >F</span
                                     ><span class="snd-letter1">IRST</span>
                                 </h2>
                                 <p class="subtit">
