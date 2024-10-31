@@ -1,3 +1,5 @@
+// header 관련 js
+
 // .all-menu 를 클릭했을 때
 $('.all-menu').click(function () {
     $('#nav-all').addClass('active');
@@ -29,4 +31,11 @@ $('.lang__btn').click(function () {
 
 $('.lang__list li').click(function () {
     $('.lang__list').hide();
+});
+
+// loading 관련 js
+// 페이지가 모두 로드된 후 로딩 화면을 제거
+window.addEventListener('load', function () {
+    document.getElementById('loading').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
 });
