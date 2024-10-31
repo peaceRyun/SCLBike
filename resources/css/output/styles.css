@@ -1237,6 +1237,7 @@ img {
 .sec-3 {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .sec-1 .inner,
 .sec-2 .inner,
@@ -1404,9 +1405,33 @@ img {
   }
 }
 
-.snd-letter1 {
-  color: #b45151;
+.sec-1__letter1,
+.sec-1__letter2,
+.sec-1__letter3,
+.sec-1__letter4 {
   display: inline-block;
+  position: relative;
+}
+
+.sec-1__letter2,
+.sec-1__letter4 {
+  color: #b45151;
+}
+
+.sec-1__letter1 {
+  z-index: 40;
+}
+
+.sec-1__letter2 {
+  z-index: 30;
+}
+
+.sec-1__letter3 {
+  z-index: 40;
+}
+
+.sec-1__letter4 {
+  z-index: 30;
 }
 
 .sec-2::before {

@@ -41,7 +41,7 @@ $('.lang__list li').click(function () {
 // });
 
 // about페이지 section1 관련
-gsap.from('.sec-1__letter1', { opacity: 0, y: 100, duration: 2 });
-gsap.from('.sec-1__letter3', { opacity: 0, y: 100, duration: 2, delay: 1 });
-gsap.from('.sec-1__letter2', { x: -200, duration: 2, delay: 2 });
-// gsap.fromTo('.sec-1__letter2', { x: -200, duration: 2, delay: 2 }, { x: 0, duration: 2, delay: 2 });
+gsap.from('.sec-1__letter1', { opacity: 0, duration: 2 });
+gsap.from('.sec-1__letter3', { opacity: 0, duration: 2, delay: 1 });
+gsap.from('.sec-1__letter2', { opacity: 0, x: -200, duration: 1, delay: 2 });
+gsap.from('.sec-1__letter4', { opacity: 0, x: -200, duration: 1, delay: 3 });
