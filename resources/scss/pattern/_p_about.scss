@@ -208,6 +208,7 @@ img {
 .sec-3 {
     position: relative;
     overflow: hidden;
+    color: transparent;
     .inner {
         max-width: 390px;
         @include mobileMore {
@@ -219,9 +220,31 @@ img {
     }
 }
 
-.sec-1 .inner::before,
-.sec-2 .inner::before,
-.sec-3 .inner::before {
+.sec-2::before,
+.sec-3::before {
+    content: '0';
+    position: absolute;
+    top: -473px;
+    right: -23%;
+    width: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 67rem;
+    font-weight: bold;
+    @include mobileMore {
+        top: -71.5rem;
+        right: -25%;
+        font-size: 117rem;
+    }
+    @include tabletMore {
+        top: -150rem;
+        right: -46%;
+        font-size: 206rem;
+    }
+}
+
+.sec-1 .inner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -230,19 +253,6 @@ img {
     height: 100%;
     width: 100%;
     transform-origin: top right;
-}
-
-.sec-2 .inner::before,
-.sec-3 .inner::before {
-    transform: scale(0.7, 0.7);
-    @include mobileMore {
-        right: 0;
-        height: 700px;
-    }
-    @include tabletMore {
-        right: -23%;
-        height: 900px;
-    }
 }
 
 // section 01
@@ -343,12 +353,21 @@ img {
 // section 02
 .sec-2 {
     &::before {
-        background: url(../../../resources/img/pattern/d_sec-2_object1.png) no-repeat right top/ contain;
+        background-image: url('../../../resources/img/pattern/about/sec2-bg-object1.svg');
+        background-position: -6rem -193px;
+        background-size: 47rem;
+        @include mobileMore {
+            background-position: -6rem -17.9rem;
+            background-size: 79rem;
+        }
+        @include tabletMore {
+            background-size: 126rem;
+        }
     }
     .inner {
         .main-tit {
             @include mobileMore {
-                padding-top: 400px;
+                padding-top: 500px;
             }
             @include tabletMore {
                 padding-top: 350px;
@@ -388,6 +407,7 @@ img {
 .txt2 {
     margin-top: 11px;
     font-size: 1.6rem;
+    color: $black;
     @include tabletMore {
         font-size: 2.2rem;
         width: 250px;
@@ -401,7 +421,7 @@ img {
     left: 0;
     display: flex;
     flex-direction: column;
-    background: url('../../../resources/img/pattern/mask1.jpg') no-repeat center center;
+    background: url('../../../resources/img/pattern/about/mask1.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -427,17 +447,27 @@ img {
 
 // section 03
 .sec-3 {
+    &::before {
+        background-image: url('../../../resources/img/pattern/about/sec3-bg-object1.jpg');
+        background-position: -84rem 0;
+        background-size: 68rem;
+        @include mobileMore {
+            background-position: -40rem -17.9rem;
+            background-size: 137rem;
+        }
+        @include tabletMore {
+            background-position: -33rem -50.9rem;
+            background-size: 177rem;
+        }
+    }
     .inner {
         .main-tit {
             @include mobileMore {
-                padding-top: 550px;
+                padding-top: 500px;
             }
             @include tabletMore {
-                padding-top: 240px;
+                padding-top: 350px;
             }
-        }
-        &::before {
-            background: url(../../../resources/img/pattern/d_sec-3_object1.png) no-repeat right top/ contain;
         }
     }
 }
