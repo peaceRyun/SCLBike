@@ -12,6 +12,9 @@
     @include tablet {
         padding: 0 $p-tablet;
     }
+    @include tabletMore {
+        padding: 0;
+    }
 }
 
 #skip-nav {

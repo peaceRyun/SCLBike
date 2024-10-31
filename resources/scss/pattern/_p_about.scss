@@ -564,6 +564,15 @@ img {
             }
         }
     }
+    .main-btn-cont {
+        margin-left: $p-mobile;
+        @include mobileMore {
+            margin-left: $p-tablet;
+        }
+        @include tabletMore {
+            margin-left: 320px;
+        }
+    }
 }
 
 .snd-letter3 {
