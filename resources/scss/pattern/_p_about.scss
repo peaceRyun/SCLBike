@@ -445,7 +445,8 @@ img {
             background-size: 79rem;
         }
         @include tabletMore {
-            background-size: 126rem;
+            background-position: -7rem -18rem;
+            background-size: 140rem;
         }
     }
     .inner {

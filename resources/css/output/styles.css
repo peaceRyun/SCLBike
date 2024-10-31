@@ -1474,7 +1474,8 @@ img {
 }
 @media (min-width: 1024px) {
   .sec-2::before {
-    background-size: 126rem;
+    background-position: -7rem -18rem;
+    background-size: 140rem;
   }
 }
 @media (min-width: 600px) {
