@@ -45,12 +45,12 @@ img {
         padding: 7.5px 17px;
         @include tabletMore {
             padding: 12px 24px;
-            font-size: 16px;
+            font-size: 1.6rem;
         }
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 14px;
+        font-size: 1.4rem;
         &::after {
             content: '\f067';
             font-family: 'Line Awesome Free';
@@ -83,7 +83,7 @@ img {
         transform: translate(-50%, -50%);
         text-align: center;
         color: $white;
-        font-size: 50px;
+        font-size: 5rem;
         font-weight: 700;
         padding: 0 20px;
     }
@@ -118,9 +118,9 @@ img {
 .tit {
     font-family: 'GmarketSansMedium';
     font-weight: 700;
-    font-size: 42px;
+    font-size: 4.2rem;
     @include tabletMore {
-        font-size: 110px;
+        font-size: 11rem;
     }
     color: #551013;
     line-height: 0.5;
@@ -136,9 +136,9 @@ img {
 
 .subtit {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 2.2rem;
     @include tabletMore {
-        font-size: 44px;
+        font-size: 4.4rem;
     }
     color: $gray-70;
     line-height: 1.1;
@@ -149,9 +149,9 @@ img {
 }
 
 .num {
-    font-size: 70px;
+    font-size: 7rem;
     @include tabletMore {
-        font-size: 180px;
+        font-size: 18rem;
         margin-bottom: -42px;
     }
     color: $primary-80;
@@ -160,9 +160,9 @@ img {
 
 .title {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 2.2rem;
     @include tabletMore {
-        font-size: 30px;
+        font-size: 3rem;
     }
     color: #b45151;
 }
@@ -196,9 +196,9 @@ img {
 
 .txt1 {
     margin-top: 11px;
-    font-size: 18px;
+    font-size: 1.8rem;
     @include tabletMore {
-        font-size: 22px;
+        font-size: 2.2rem;
     }
 }
 
@@ -387,9 +387,9 @@ img {
 
 .txt2 {
     margin-top: 11px;
-    font-size: 16px;
+    font-size: 1.6rem;
     @include tabletMore {
-        font-size: 22px;
+        font-size: 2.2rem;
         width: 250px;
         height: 99px;
     }
@@ -405,7 +405,7 @@ img {
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 180px;
+    font-size: 18rem;
     font-weight: 700;
     text-align: center;
     color: transparent;
@@ -452,14 +452,14 @@ img {
         width: 396px;
     }
     .date {
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 400;
     }
     .news-tit {
         font-weight: 700;
         margin: 10px 0 20px;
         @include tabletMore {
-            font-size: 27px;
+            font-size: 2.7rem;
         }
     }
 }
@@ -518,9 +518,9 @@ img {
     z-index: 10;
     &:before {
         content: '\f062';
-        font-size: 19px;
+        font-size: 1.9rem;
         @include tabletMore {
-            font-size: 30px;
+            font-size: 3rem;
             border-radius: 30px;
         }
         font-family: 'Line Awesome Free';
