@@ -79,6 +79,13 @@ br {
     display: block;
 }
 
+.shopping-main-container {
+    @include tabletMore {
+        width: 1280px;
+        padding: 0 320px;
+    }
+}
+
 .shopping-main-container .inner {
     max-width: 390px;
     @include mobileMore {
@@ -86,6 +93,17 @@ br {
     }
     @include tabletMore {
         max-width: 1280px;
+    }
+}
+
+// aside
+#aside {
+    @include tabletMore {
+        position: fixed;
+        height: 100%;
+        width: 640px;
+        top: 0;
+        right: 0;
     }
 }
 
