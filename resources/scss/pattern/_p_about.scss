@@ -1,5 +1,4 @@
-// 공통
-
+// about 페이지 공통
 .main-content {
     background: #f4f3ef;
     padding: 0 0 160px;
@@ -10,6 +9,34 @@
 
 img {
     filter: saturate(150%) brightness(90%);
+}
+
+.main-btn-cont {
+    width: 143.5px;
+    margin-top: 10px;
+    @include tabletMore {
+        width: 168px;
+        margin-top: 50px;
+    }
+    .btn-link {
+        border: 1px solid $primary-40;
+        border-radius: 30px;
+        color: $primary-40;
+        padding: 7.5px 17px;
+        @include tabletMore {
+            padding: 12px 24px;
+            font-size: 1.6rem;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        &::after {
+            content: '\f067';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+        }
+    }
 }
 
 // 로딩 페이지 (by gpt)
@@ -46,11 +73,12 @@ img {
     }
 }
 
-/* 본문 콘텐츠 숨김 */
+/* 로딩 애니메이션 - 본문 콘텐츠 숨김 */
 .content {
     display: none;
 }
 
+// div별 코드
 // intro & banner
 .fade {
     z-index: 3;
@@ -69,34 +97,6 @@ img {
     }
 }
 
-// button
-.main-btn-cont {
-    width: 143.5px;
-    margin-top: 10px;
-    @include tabletMore {
-        width: 168px;
-        margin-top: 50px;
-    }
-    .btn-link {
-        border: 1px solid $primary-40;
-        border-radius: 30px;
-        color: $primary-40;
-        padding: 7.5px 17px;
-        @include tabletMore {
-            padding: 12px 24px;
-            font-size: 1.6rem;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.4rem;
-        &::after {
-            content: '\f067';
-            font-family: 'Line Awesome Free';
-            font-weight: 900;
-        }
-    }
-}
 // header
 #header {
     background-color: transparent;
@@ -146,8 +146,6 @@ img {
 }
 
 // section 공통 텍스트 관련
-
-// mobile main title padding
 .main-tit {
     position: relative;
     padding-top: 220px;
@@ -207,33 +205,6 @@ img {
     color: #b45151;
 }
 
-.img-wrap {
-    position: absolute;
-    bottom: 14px;
-    left: 40%;
-    width: 210px;
-    height: 350px;
-    @include mobileMore {
-        width: 436.8px;
-        left: 38%;
-    }
-    @include tabletMore {
-        width: 478px;
-        left: 32%;
-    }
-}
-
-.img-wrap:after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    display: block;
-    background: #002b49;
-}
-
 .txt1 {
     margin-top: 11px;
     font-size: 1.8rem;
@@ -242,6 +213,19 @@ img {
     }
 }
 
+.letter-common {
+    display: inline-block;
+    position: relative;
+    background: #f4f3ef;
+}
+
+.letter-common-even {
+    z-index: 30;
+}
+
+.letter-common-odd {
+    z-index: 40;
+}
 // section 공통 레이아웃 관련
 .sec-1 .inner,
 .sec-2 .inner,
@@ -410,33 +394,36 @@ img {
     }
 }
 
-.sec-1__letter1,
-.sec-1__letter2,
-.sec-1__letter3,
-.sec-1__letter4 {
-    display: inline-block;
-    position: relative;
+.img-wrap {
+    position: absolute;
+    bottom: 14px;
+    left: 40%;
+    width: 210px;
+    height: 350px;
+    @include mobileMore {
+        width: 436.8px;
+        left: 38%;
+    }
+    @include tabletMore {
+        width: 478px;
+        left: 32%;
+    }
+}
+
+.img-wrap::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #002b49;
 }
 
 .sec-1__letter2,
 .sec-1__letter4 {
     color: #b45151;
-}
-
-.sec-1__letter1 {
-    z-index: 40;
-}
-
-.sec-1__letter2 {
-    z-index: 30;
-}
-
-.sec-1__letter3 {
-    z-index: 40;
-}
-
-.sec-1__letter4 {
-    z-index: 30;
 }
 
 // section 02
@@ -493,10 +480,6 @@ img {
     }
 }
 
-.snd-letter2 {
-    color: #aa8947;
-}
-
 .txt2 {
     margin-top: 11px;
     font-size: 1.6rem;
@@ -506,6 +489,11 @@ img {
         width: 250px;
         height: 99px;
     }
+}
+
+.sec-2__letter2,
+.sec-2__letter4 {
+    color: #aa8947;
 }
 
 .FCM-cont {
@@ -581,9 +569,6 @@ img {
     }
 }
 
-.snd-letter3 {
-    color: #b76d44;
-}
 .txt-wrap {
     margin-top: 30px;
     color: $gray-80;
@@ -602,6 +587,12 @@ img {
         }
     }
 }
+
+.sec-3__letter2,
+.sec-3__letter4 {
+    color: #b76d44;
+}
+
 .single {
     z-index: 3;
     width: 100%;
