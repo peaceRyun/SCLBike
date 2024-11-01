@@ -40,6 +40,15 @@
 }
 
 // shopping - 공통
+.shopping-main-container img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.shop-space1 {
+    margin-bottom: 8rem;
+}
+
 .art-h2 {
     margin-bottom: 3%;
     font-size: 2.2rem;
@@ -305,8 +314,4 @@ br {
     br {
         margin-bottom: -0.6rem;
     }
-}
-
-.shop-space {
-    margin-bottom: 8rem;
 }

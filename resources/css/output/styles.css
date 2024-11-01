@@ -319,6 +319,23 @@ caption {
   font-weight: normal;
   font-style: normal;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 1%;
+  }
+}
+
 .bg-gray {
   background-color: #f8f8f8;
 }
@@ -1774,6 +1791,15 @@ img {
   color: #1d1d1d;
 }
 
+.shopping-main-container img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.shop-space1 {
+  margin-bottom: 8rem;
+}
+
 .art-h2 {
   margin-bottom: 3%;
   font-size: 2.2rem;
@@ -2055,10 +2081,6 @@ br {
 }
 .shop-banner3-txt2 br {
   margin-bottom: -0.6rem;
-}
-
-.shop-space {
-  margin-bottom: 8rem;
 }
 
 .swiper-slide {
