@@ -995,6 +995,13 @@ caption {
   bottom: -100px;
 }
 
+.ani.on img {
+  transform: translateY(0);
+}
+.ani.on .img-wrap::after {
+  width: 100%;
+}
+
 .main-content {
   background: #f4f3ef;
   padding: 0 0 160px;
@@ -1460,13 +1467,6 @@ img {
     width: 478px;
     left: 32%;
   }
-}
-
-.ani.on img {
-  transform: translateY(0);
-}
-.ani.on .img-wrap::after {
-  width: 100%;
 }
 
 .img-wrap::after {

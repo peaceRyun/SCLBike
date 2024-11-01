@@ -1,4 +1,15 @@
 // about 페이지 공통
+.ani {
+    &.on {
+        img {
+            transform: translateY(0);
+        }
+        .img-wrap::after {
+            width: 100%;
+        }
+    }
+}
+
 .main-content {
     background: #f4f3ef;
     padding: 0 0 160px;
@@ -407,17 +418,6 @@ img {
     @include tabletMore {
         width: 478px;
         left: 32%;
-    }
-}
-
-.ani {
-    &.on {
-        img {
-            transform: translateY(0);
-        }
-        .img-wrap::after {
-            width: 100%;
-        }
     }
 }
 
