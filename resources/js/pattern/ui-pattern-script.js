@@ -1,18 +1,70 @@
 // header 관련 js
-// 윈도우가 스크롤 됐을 떄
-// window.addEventListener(이벤트, 함수);
+const headerEl = document.querySelector('#header');
+const toTopEl = document.querySelector('.home-key');
+
+let lastScrollY = window.scrollY;
+
 window.addEventListener(
     'scroll',
     _.throttle(function () {
-        const scrolled = window.scrollY;
-        console.log(`스크롤 값 : ${scrolled}`);
-        if (scrolled > 73) {
-            gsap.to('#header', { yPercent: -100, duration: 0.3 });
+        // 현재 스크롤 위치
+        const currentScrollY = window.scrollY;
+
+        // 스크롤 다운
+        if (currentScrollY > lastScrollY) {
+            // Badge 요소 숨기기!
+            // gsap.to(요소, 시간, 옵션);
+            gsap.to(headerEl, {
+                opacity: 0,
+                display: 'none',
+                duration: 0.8,
+            });
+            // 상단으로 스크롤 버튼 보이기!
+            gsap.to(toTopEl, {
+                right: '30px',
+                // x: 0,
+                duration: 0.2,
+            });
+
+            // 스크롤 업
         } else {
-            gsap.to('#header', { yPercent: 0, duration: 0.3 });
+            // Badge 요소 보이기!
+            gsap.to(headerEl, {
+                opacity: 1,
+                display: 'block',
+                duration: 0.8,
+            });
+            // 상단으로 스크롤 버튼 숨기기!
+            gsap.to(toTopEl, {
+                right: '-50px',
+                // x: 100,
+                duration: 0.2,
+            });
         }
-    })
+
+        // 이전 스크롤 위치 업데이트
+        lastScrollY = currentScrollY;
+    }, 300)
 );
+// 상단으로 스크롤 버튼을 클릭하면,
+toTopEl.addEventListener('click', function () {
+    // 페이지 위치를 최상단으로 부드럽게(1초 동안) 이동.
+    gsap.to(window, {
+        scrollTo: 0,
+    });
+});
+
+gsap.to('#header', {
+    backgroundColor: '#ffffff', // 원하는 배경색으로 변경
+    duration: 1, // 애니메이션 지속 시간
+    scrollTrigger: {
+        trigger: '.fade', // 애니메이션을 시작할 요소
+        start: 'top 100%', // 화면의 80% 지점에 도달했을 때 시작
+        end: 'bottom 20%',
+        toggleActions: 'reverse play reverse play', // 스크롤 방향에 따라 동작 설정
+        markers: true, // 스크롤 지점을 시각적으로 표시 (개발용)
+    },
+});
 
 // .all-menu 를 클릭했을 때
 $('.all-menu').click(function () {
@@ -56,6 +108,7 @@ $('.lang__list li').click(function () {
 
 // 플로그인 설치
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 // 스크롤 트리거 변수 설정
 var tlS1Mt = gsap.timeline({
