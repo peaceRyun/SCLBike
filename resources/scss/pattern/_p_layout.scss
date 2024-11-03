@@ -338,6 +338,38 @@
     }
 }
 
+// snb
+.quick-menu {
+    display: none;
+    @include tabletMore {
+        width: 210px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .qm-list {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $primary-80;
+        li {
+            border-left: 2px solid $primary-40;
+            margin-top: 14px;
+            padding-left: 8px;
+            span {
+                margin-left: 5px;
+            }
+            :first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
 // footer
 #footer {
     width: 100%;

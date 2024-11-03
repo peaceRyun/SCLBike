@@ -336,6 +336,12 @@ caption {
   }
 }
 
+.about {
+  background: #f4f3ef;
+  z-index: 500;
+  position: relative;
+}
+
 .bg-gray {
   background-color: #f8f8f8;
 }
@@ -691,6 +697,39 @@ caption {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.quick-menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .quick-menu {
+    width: 210px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+}
+.quick-menu .qm-list {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #551013;
+}
+.quick-menu .qm-list li {
+  border-left: 2px solid #dd5459;
+  margin-top: 14px;
+  padding-left: 8px;
+}
+.quick-menu .qm-list li span {
+  margin-left: 5px;
+}
+.quick-menu .qm-list li :first-child {
+  margin-top: 0px;
 }
 
 #footer {
