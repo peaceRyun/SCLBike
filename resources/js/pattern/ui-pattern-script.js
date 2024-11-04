@@ -40,12 +40,54 @@ function handleMobile() {
 
 function handleTablet() {
     // 태블릿에서 실행할 코드
-    console.log('Tablet version');
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY; // 현재 스크롤 위치
+        const threshold1 = 1300;
+        const threshold2 = 1600;
+        const threshold3 = 2100;
+
+        const div1 = document.querySelector('.main01-list li:first-child');
+        const div2 = document.querySelector('.main01-list li:nth-child(2)');
+        const div3 = document.querySelector('.main01-list li:nth-child(3)');
+
+        if (scrollTop > threshold1) {
+            div1.classList.add('on');
+        }
+
+        if (scrollTop > threshold2) {
+            div2.classList.add('on');
+        }
+
+        if (scrollTop > threshold3) {
+            div3.classList.add('on');
+        }
+    });
 }
 
 function handleDesktop() {
     // 데스크탑에서 실행할 코드
-    console.log('Desktop version');
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY; // 현재 스크롤 위치
+        const threshold1 = 1950;
+        const threshold2 = 2550;
+        const threshold3 = 2730;
+
+        const div1 = document.querySelector('.main01-list li:first-child');
+        const div2 = document.querySelector('.main01-list li:nth-child(2)');
+        const div3 = document.querySelector('.main01-list li:nth-child(3)');
+
+        if (scrollTop > threshold1) {
+            div1.classList.add('on');
+        }
+
+        if (scrollTop > threshold2) {
+            div2.classList.add('on');
+        }
+
+        if (scrollTop > threshold3) {
+            div3.classList.add('on');
+        }
+    });
 }
 
 // 미디어 쿼리 리스너 함수
@@ -206,8 +248,8 @@ var tlS1Mt = gsap.timeline({
 tlS1Mt
     .from('.sec-1__letter1', { opacity: 0, duration: 1 })
     .from('.sec-1__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-1__letter2', { x: -200, duration: 1 })
-    .from('.sec-1__letter4', { x: -200, duration: 1 })
+    .from('.sec-1__letter2', { x: -500, duration: 1 })
+    .from('.sec-1__letter4', { x: -500, duration: 1 })
     .from('.sec-1 .subtit', { y: 200, duration: 1 });
 // section 2
 // var tlS2Ml = gsap.timeline({
@@ -238,8 +280,8 @@ var tlS2Mt = gsap.timeline({
 tlS2Mt
     .from('.sec-2__letter1', { opacity: 0, duration: 1 })
     .from('.sec-2__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-2__letter2', { x: -200, duration: 1 })
-    .from('.sec-2__letter4', { x: -300, duration: 1 })
+    .from('.sec-2__letter2', { x: -500, duration: 1 })
+    .from('.sec-2__letter4', { x: -700, duration: 1 })
     .from('.sec-2 .subtit', { y: 200, duration: 1 })
     .from('.mask-objects span', { opacity: 0, duration: 2 })
     .from('.main02-list li:first-child', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' })
@@ -263,8 +305,9 @@ var tlS3Mt = gsap.timeline({
 tlS3Mt
     .from('.sec-3__letter1', { opacity: 0, duration: 1 })
     .from('.sec-3__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-3__letter2', { x: -200, duration: 1 })
-    .from('.sec-3__letter4', { x: -200, duration: 1 })
+    .from('.sec-3__letter2', { x: -500, duration: 1 })
+    .from('.sec-3__letter4', { x: -500, duration: 1 })
     .from('.sec-3 .subtit', { y: 200, duration: 1 })
     .from('.sec-3 .single', { opacity: 0, y: 200, duration: 1 })
+    .from('.sec-3 .multiple', { opacity: 0, y: 200, duration: 1 })
     .from('.sec-3 .main-btn-cont', { opacity: 0, y: 200, duration: 1 });

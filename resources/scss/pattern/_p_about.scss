@@ -3,12 +3,27 @@
     &.on {
         .bike-oj-1 {
             transform: translate(-50%, 8%);
+            @include mobileMore {
+                transform: translate(-50%, 2%);
+            }
+            @include tabletMore {
+                transform: translate(-50%, 13%);
+            }
         }
         .bike-oj-2 {
             transform: translate(-50%, 22%);
+            @include tabletMore {
+                transform: translate(-50%, 24%);
+            }
         }
         .bike-oj-3 {
             transform: translate(-50%, 19%);
+            @include mobileMore {
+                transform: translate(-50%, 10%);
+            }
+            @include tabletMore {
+                transform: translate(-50%, 22%);
+            }
         }
         .num,
         .title1,
@@ -374,27 +389,27 @@ img {
 .bike-oj-1 {
     transform: translate(-50%, 100%);
     @include mobileMore {
-        transform: translate(-50%, 2%);
+        transform: translate(-50%, 100%);
     }
     @include tabletMore {
-        transform: translate(-50%, 11%);
+        transform: translate(-50%, 90%);
     }
 }
 
 .bike-oj-2 {
     transform: translate(-50%, 86%);
     @include tabletMore {
-        transform: translate(-50%, 24%);
+        transform: translate(-50%, 84%);
     }
 }
 
 .bike-oj-3 {
     transform: translate(-50%, 76%);
     @include mobileMore {
-        transform: translate(-50%, 10%);
+        transform: translate(-50%, 83%);
     }
     @include tabletMore {
-        transform: translate(-50%, 22%);
+        transform: translate(-50%, 74%);
     }
 }
 
@@ -441,6 +456,7 @@ img {
     }
     @include tabletMore {
         width: 478px;
+        height: 400px;
         left: 32%;
     }
 }
