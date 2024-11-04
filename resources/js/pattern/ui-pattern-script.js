@@ -1,3 +1,78 @@
+// about - 개발자를 위한 스크롤 값 표시
+window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY; // 현재 스크롤 위치
+    console.log('Current scroll position:', scrollTop);
+});
+
+// 반응형 관련 js
+// 미디어 쿼리 설정
+const mobileQuery = window.matchMedia('(max-width: 767px)');
+const tabletQuery = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+const desktopQuery = window.matchMedia('(min-width: 1025px)');
+
+// 각 화면 크기에 맞는 함수를 정의
+function handleMobile() {
+    // 모바일에서 실행할 코드
+    // 전체 scroll 별 addclass 'on'
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.scrollY; // 현재 스크롤 위치
+        const threshold1 = 1000;
+        const threshold2 = 1500;
+        const threshold3 = 1900;
+
+        const div1 = document.querySelector('.main01-list li:first-child');
+        const div2 = document.querySelector('.main01-list li:nth-child(2)');
+        const div3 = document.querySelector('.main01-list li:nth-child(3)');
+
+        if (scrollTop > threshold1) {
+            div1.classList.add('on');
+        }
+
+        if (scrollTop > threshold2) {
+            div2.classList.add('on');
+        }
+
+        if (scrollTop > threshold3) {
+            div3.classList.add('on');
+        }
+    });
+}
+
+function handleTablet() {
+    // 태블릿에서 실행할 코드
+    console.log('Tablet version');
+}
+
+function handleDesktop() {
+    // 데스크탑에서 실행할 코드
+    console.log('Desktop version');
+}
+
+// 미디어 쿼리 리스너 함수
+function handleMediaChange(e) {
+    if (e.matches) {
+        // 조건이 맞는 경우 해당 함수를 호출
+        if (e.media === mobileQuery.media) {
+            handleMobile();
+        } else if (e.media === tabletQuery.media) {
+            handleTablet();
+        } else if (e.media === desktopQuery.media) {
+            handleDesktop();
+        }
+    }
+}
+
+// 각 미디어 쿼리에 리스너 추가
+mobileQuery.addListener(handleMediaChange);
+tabletQuery.addListener(handleMediaChange);
+desktopQuery.addListener(handleMediaChange);
+
+// 페이지 로드 시 초기 체크
+handleMediaChange(mobileQuery);
+handleMediaChange(tabletQuery);
+handleMediaChange(desktopQuery);
+
+// -----------------------------------------------------------------------------------------------------------
 // header 관련 js
 const headerEl = document.querySelector('#header');
 const toTopEl = document.querySelector('.home-key');
@@ -100,6 +175,7 @@ $('.lang__list li').click(function () {
     $('.lang__list').hide();
 });
 
+// -----------------------------------------------------------------------------------------------------------
 // loading 관련 js by gpt
 // 페이지가 모두 로드된 후 로딩 화면을 제거
 // window.addEventListener('load', function () {
@@ -107,62 +183,25 @@ $('.lang__list li').click(function () {
 //     document.querySelector('.content').style.display = 'block';
 // });
 
+// -----------------------------------------------------------------------------------------------------------
 // 플로그인 설치
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-// section 공통 및 section 별 스크롤 트리거 변수 설정
+// about
+// section 1
 var tlS1Mt = gsap.timeline({
     scrollTrigger: {
         trigger: '.sec-1 .main-tit',
-        pin: true, // pin the trigger element while active
+        pin: false, // pin the trigger element while active
         start: 'top 0', // when the top of the trigger hits the top of the viewport
         end: '+=10', // end after scrolling 500px beyond the start
         once: true, // 애니메이션을 한 번만 실행
         toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 6, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        markers: true,
+        scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        markers: false,
     },
 });
-var tlSt = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.subtit',
-        pin: true, // pin the trigger element while active
-        start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
-        once: true, // 애니메이션을 한 번만 실행
-        toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 6, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        markers: true,
-    },
-});
-var tlS2Mt = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.sec-2 .main-tit',
-        pin: true, // pin the trigger element while active
-        start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
-        once: true, // 애니메이션을 한 번만 실행
-        toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 6, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        markers: true,
-    },
-});
-var tlS3Mt = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.sec-3 .main-tit',
-        pin: true, // pin the trigger element while active
-        start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
-        once: true, // 애니메이션을 한 번만 실행
-        toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 6, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        markers: true,
-    },
-});
-
-// about페이지 section1 관련
-// title
 
 tlS1Mt
     .from('.sec-1__letter1', { opacity: 0, duration: 1 })
@@ -170,46 +209,62 @@ tlS1Mt
     .from('.sec-1__letter2', { x: -200, duration: 1 })
     .from('.sec-1__letter4', { x: -200, duration: 1 })
     .from('.sec-1 .subtit', { y: 200, duration: 1 });
+// section 2
+// var tlS2Ml = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.main02-list',
+//         pin: false, // pin the trigger element while active
+//         start: 'top 0', // when the top of the trigger hits the top of the viewport
+//         end: '+=10', // end after scrolling 500px beyond the start
+//         once: true, // 애니메이션을 한 번만 실행
+//         toggleActions: 'play none none none', // 도착 지점에서 유지
+//         scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//         markers: true,
+//     },
+// });
+var tlS2Mt = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.sec-2 .main-tit',
+        pin: false, // pin the trigger element while active
+        start: 'top 0', // when the top of the trigger hits the top of the viewport
+        end: '+=10', // end after scrolling 500px beyond the start
+        once: true, // 애니메이션을 한 번만 실행
+        toggleActions: 'play none none none', // 도착 지점에서 유지
+        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        markers: false,
+    },
+});
 
 tlS2Mt
     .from('.sec-2__letter1', { opacity: 0, duration: 1 })
     .from('.sec-2__letter3', { opacity: 0, duration: 1 })
     .from('.sec-2__letter2', { x: -200, duration: 1 })
     .from('.sec-2__letter4', { x: -300, duration: 1 })
-    .from('.sec-2 .subtit', { y: 200, duration: 1 });
+    .from('.sec-2 .subtit', { y: 200, duration: 1 })
+    .from('.mask-objects span', { opacity: 0, duration: 2 })
+    .from('.main02-list li:first-child', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' })
+    .from('.main02-list li:nth-child(2)', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' })
+    .from('.main02-list li:nth-child(3)', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' });
+
+// section 3
+var tlS3Mt = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.sec-3 .main-tit',
+        pin: false, // pin the trigger element while active
+        start: 'top 0', // when the top of the trigger hits the top of the viewport
+        end: '+=10', // end after scrolling 500px beyond the start
+        once: true, // 애니메이션을 한 번만 실행
+        toggleActions: 'play none none none', // 도착 지점에서 유지
+        scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        markers: false,
+    },
+});
 
 tlS3Mt
     .from('.sec-3__letter1', { opacity: 0, duration: 1 })
     .from('.sec-3__letter3', { opacity: 0, duration: 1 })
     .from('.sec-3__letter2', { x: -200, duration: 1 })
     .from('.sec-3__letter4', { x: -200, duration: 1 })
-    .from('.sec-3 .subtit', { y: 200, duration: 1 });
-
-// main01-list
-window.addEventListener('scroll', function () {
-    const scrollTop = window.scrollY; // 현재 스크롤 위치
-    console.log('Current scroll position:', scrollTop);
-});
-
-window.addEventListener('scroll', function () {
-    const scrollTop = window.scrollY; // 현재 스크롤 위치
-    const threshold1 = 1000;
-    const threshold2 = 1500;
-    const threshold3 = 1900;
-
-    const div1 = document.querySelector('.main01-list li:first-child');
-    const div2 = document.querySelector('.main01-list li:nth-child(2)');
-    const div3 = document.querySelector('.main01-list li:nth-child(3)');
-
-    if (scrollTop > threshold1) {
-        div1.classList.add('on');
-    }
-
-    if (scrollTop > threshold2) {
-        div2.classList.add('on');
-    }
-
-    if (scrollTop > threshold3) {
-        div3.classList.add('on');
-    }
-});
+    .from('.sec-3 .subtit', { y: 200, duration: 1 })
+    .from('.sec-3 .single', { opacity: 0, y: 200, duration: 1 })
+    .from('.sec-3 .main-btn-cont', { opacity: 0, y: 200, duration: 1 });

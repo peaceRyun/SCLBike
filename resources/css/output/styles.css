@@ -1038,7 +1038,7 @@ caption {
   transform: translate(-50%, 19%);
 }
 .ani.on .num,
-.ani.on .title,
+.ani.on .title1,
 .ani.on .txt1 {
   opacity: 1;
 }
@@ -1261,14 +1261,17 @@ img {
 .title {
   font-weight: 700;
   font-size: 2.2rem;
-  opacity: 0;
-  transition: all 0.3s;
   color: #b45151;
 }
 @media (min-width: 1024px) {
   .title {
     font-size: 3rem;
   }
+}
+
+.title1 {
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .txt1 {
