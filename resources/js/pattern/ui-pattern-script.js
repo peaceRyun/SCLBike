@@ -54,6 +54,7 @@ toTopEl.addEventListener('click', function () {
     });
 });
 
+// intro 페이지를 지난 상태에서 스크롤을 올리면 배경색이 하얀색으로 바뀌게 설정
 gsap.to('#header', {
     backgroundColor: '#ffffff', // 원하는 배경색으로 변경
     duration: 1, // 애니메이션 지속 시간
@@ -62,7 +63,7 @@ gsap.to('#header', {
         start: 'top 100%', // 화면의 80% 지점에 도달했을 때 시작
         end: 'bottom 20%',
         toggleActions: 'reverse play reverse play', // 스크롤 방향에 따라 동작 설정
-        markers: true, // 스크롤 지점을 시각적으로 표시 (개발용)
+        markers: false, // 스크롤 지점을 시각적으로 표시 (개발용)
     },
 });
 
@@ -110,7 +111,7 @@ $('.lang__list li').click(function () {
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-// 스크롤 트리거 변수 설정
+// section 공통 및 section 별 스크롤 트리거 변수 설정
 var tlS1Mt = gsap.timeline({
     scrollTrigger: {
         trigger: '.sec-1 .main-tit',
@@ -162,27 +163,53 @@ var tlS3Mt = gsap.timeline({
 
 // about페이지 section1 관련
 // title
+
 tlS1Mt
     .from('.sec-1__letter1', { opacity: 0, duration: 1 })
     .from('.sec-1__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-1__letter2', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-1__letter4', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-1 .subtit', { opacity: -4, y: -100, duration: 1 });
-
-// main01-list
-// tlSt.from('.num1, .title1', { opacity: -2, duration: 1 })
-//     .from('.bike-oj-1', { opacity: 0, y: 200, duration: 1 });
+    .from('.sec-1__letter2', { x: -200, duration: 1 })
+    .from('.sec-1__letter4', { x: -200, duration: 1 })
+    .from('.sec-1 .subtit', { y: 200, duration: 1 });
 
 tlS2Mt
     .from('.sec-2__letter1', { opacity: 0, duration: 1 })
     .from('.sec-2__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-2__letter2', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-2__letter4', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-2 .subtit', { opacity: -4, y: -100, duration: 1 });
+    .from('.sec-2__letter2', { x: -200, duration: 1 })
+    .from('.sec-2__letter4', { x: -300, duration: 1 })
+    .from('.sec-2 .subtit', { y: 200, duration: 1 });
 
 tlS3Mt
     .from('.sec-3__letter1', { opacity: 0, duration: 1 })
     .from('.sec-3__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-3__letter2', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-3__letter4', { opacity: -4, x: -200, duration: 1 })
-    .from('.sec-3 .subtit', { opacity: -4, y: -100, duration: 1 });
+    .from('.sec-3__letter2', { x: -200, duration: 1 })
+    .from('.sec-3__letter4', { x: -200, duration: 1 })
+    .from('.sec-3 .subtit', { y: 200, duration: 1 });
+
+// main01-list
+window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY; // 현재 스크롤 위치
+    console.log('Current scroll position:', scrollTop);
+});
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY; // 현재 스크롤 위치
+    const threshold1 = 1000;
+    const threshold2 = 1500;
+    const threshold3 = 1900;
+
+    const div1 = document.querySelector('.main01-list li:first-child');
+    const div2 = document.querySelector('.main01-list li:nth-child(2)');
+    const div3 = document.querySelector('.main01-list li:nth-child(3)');
+
+    if (scrollTop > threshold1) {
+        div1.classList.add('on');
+    }
+
+    if (scrollTop > threshold2) {
+        div2.classList.add('on');
+    }
+
+    if (scrollTop > threshold3) {
+        div3.classList.add('on');
+    }
+});

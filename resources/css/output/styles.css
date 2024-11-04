@@ -336,12 +336,6 @@ caption {
   }
 }
 
-.about {
-  background: #f4f3ef;
-  z-index: 500;
-  position: relative;
-}
-
 .bg-gray {
   background-color: #f8f8f8;
 }
@@ -1034,8 +1028,19 @@ caption {
   bottom: -100px;
 }
 
-.ani.on img {
-  transform: translateY(0);
+.ani.on .bike-oj-1 {
+  transform: translate(-50%, 8%);
+}
+.ani.on .bike-oj-2 {
+  transform: translate(-50%, 22%);
+}
+.ani.on .bike-oj-3 {
+  transform: translate(-50%, 19%);
+}
+.ani.on .num,
+.ani.on .title,
+.ani.on .txt1 {
+  opacity: 1;
 }
 .ani.on .img-wrap::after {
   width: 100%;
@@ -1195,6 +1200,7 @@ img {
   position: relative;
   padding-top: 220px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .tit {
@@ -1202,6 +1208,7 @@ img {
   font-family: "GmarketSansMedium";
   font-weight: 700;
   font-size: 4.2rem;
+  overflow: hidden;
   color: #551013;
   line-height: 0.5;
 }
@@ -1239,6 +1246,8 @@ img {
 
 .num {
   font-size: 7rem;
+  opacity: 0;
+  transition: all 0.3s;
   color: #551013;
   margin-bottom: -17px;
 }
@@ -1252,6 +1261,8 @@ img {
 .title {
   font-weight: 700;
   font-size: 2.2rem;
+  opacity: 0;
+  transition: all 0.3s;
   color: #b45151;
 }
 @media (min-width: 1024px) {
@@ -1263,6 +1274,8 @@ img {
 .txt1 {
   margin-top: 11px;
   font-size: 1.8rem;
+  opacity: 0;
+  transition: all 0.5s ease 2.5s;
 }
 @media (min-width: 1024px) {
   .txt1 {
@@ -1273,7 +1286,6 @@ img {
 .letter-common {
   display: inline-block;
   position: relative;
-  background: #f4f3ef;
 }
 
 .letter-common-even {
@@ -1282,6 +1294,7 @@ img {
 
 .letter-common-odd {
   z-index: 40;
+  background: #f4f3ef;
 }
 
 .sec-1 .inner,
@@ -1407,7 +1420,8 @@ img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  height: 200px;
+  height: 210px;
+  transition: all 1.5s ease 1s;
   bottom: 0;
   left: 50%;
 }
@@ -1419,7 +1433,7 @@ img {
 }
 
 .bike-oj-1 {
-  transform: translate(-50%, 7%);
+  transform: translate(-50%, 100%);
 }
 @media (min-width: 600px) {
   .bike-oj-1 {
@@ -1433,7 +1447,7 @@ img {
 }
 
 .bike-oj-2 {
-  transform: translate(-50%, 22%);
+  transform: translate(-50%, 86%);
 }
 @media (min-width: 1024px) {
   .bike-oj-2 {
@@ -1442,7 +1456,7 @@ img {
 }
 
 .bike-oj-3 {
-  transform: translate(-50%, 19%);
+  transform: translate(-50%, 76%);
 }
 @media (min-width: 600px) {
   .bike-oj-3 {
@@ -1494,6 +1508,7 @@ img {
   left: 40%;
   width: 210px;
   height: 350px;
+  overflow: hidden;
 }
 @media (min-width: 600px) {
   .img-wrap {
@@ -1515,9 +1530,10 @@ img {
   left: 0;
   width: 0;
   height: 2px;
+  transform: translate(0px, -2px);
   display: block;
   background: #002b49;
-  transition: all 3s;
+  transition: all 1.5s;
 }
 
 .sec-1__letter2,
