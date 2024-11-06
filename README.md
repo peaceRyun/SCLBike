@@ -137,36 +137,6 @@ export { deviceSizes, media };
 - meta tags를 통해 Facebook, twitter, linkedin, discord, kakao talk 등 링크를 전달 했을 때 링크에 대한 정보를 볼 수 있도록 구현
 - https://www.opengraph.xyz
 
-### **6. 기타 기능**
-
-- favicon.ico 생성
-- Fade-in transform
-- 프로젝트 페이지
-- React-responsive-carousel 커스텀
-
-## **🚀 배포**
-
-- 첫 배포
-
-```
-$ npm install -g firebase-tools
-$ firebase init
-$ firebase login
-  > HOSTING
-  > Directroy? build
-$ yarn build
-$ firebase deploy
-```
-
-- 수정 후 배포
-
-```
-$ yarn build
-$ firebase deploy
-```
-
-- 커스텀 도메인: Godaddy에서 커스텀 도매인 구매(https://keemtj.com)
-
 <br />
 
 ## ⏰ 커밋 히스토리
