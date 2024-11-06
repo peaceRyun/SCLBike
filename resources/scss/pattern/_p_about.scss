@@ -255,7 +255,7 @@ img {
     margin-top: 11px;
     font-size: 1.8rem;
     opacity: 0;
-    transition: all 0.5s ease 2.5s;
+    transition: all 0.3s ease 1s;
     @include tabletMore {
         font-size: 2.2rem;
     }
@@ -377,7 +377,7 @@ img {
     object-fit: contain;
     width: 100%;
     height: 210px;
-    transition: all 1.5s ease 1s;
+    transition: all 0.8s ease 0.5s;
     bottom: 0;
     left: 50%;
     @include tabletMore {
@@ -436,8 +436,7 @@ img {
             padding-bottom: 120px;
             @include tabletMore {
                 width: 55%;
-                padding-bottom: 740px;
-                margin-top: -42px;
+                padding-bottom: 300px;
             }
         }
     }
@@ -471,7 +470,7 @@ img {
     transform: translate(0px, -2px);
     display: block;
     background: #002b49;
-    transition: all 1.5s;
+    transition: all 0.3s;
 }
 
 .sec-1__letter2,

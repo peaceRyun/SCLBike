@@ -237,11 +237,12 @@ var tlS1Mt = gsap.timeline({
         trigger: '.sec-1 .main-tit',
         pin: false, // pin the trigger element while active
         start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
+        end: '+=10',
         once: true, // 애니메이션을 한 번만 실행
         toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         markers: false,
+        ease: 'none',
     },
 });
 
@@ -251,42 +252,31 @@ tlS1Mt
     .from('.sec-1__letter2', { x: -500, duration: 1 })
     .from('.sec-1__letter4', { x: -500, duration: 1 })
     .from('.sec-1 .subtit', { y: 200, duration: 1 });
+
 // section 2
-// var tlS2Ml = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.main02-list',
-//         pin: false, // pin the trigger element while active
-//         start: 'top 0', // when the top of the trigger hits the top of the viewport
-//         end: '+=10', // end after scrolling 500px beyond the start
-//         once: true, // 애니메이션을 한 번만 실행
-//         toggleActions: 'play none none none', // 도착 지점에서 유지
-//         scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-//         markers: true,
-//     },
-// });
 var tlS2Mt = gsap.timeline({
     scrollTrigger: {
         trigger: '.sec-2 .main-tit',
         pin: false, // pin the trigger element while active
         start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
+        end: '+=10',
         once: true, // 애니메이션을 한 번만 실행
         toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        markers: false,
+        scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        markers: true,
     },
 });
-
 tlS2Mt
-    .from('.sec-2__letter1', { opacity: 0, duration: 1 })
-    .from('.sec-2__letter3', { opacity: 0, duration: 1 })
-    .from('.sec-2__letter2', { x: -500, duration: 1 })
-    .from('.sec-2__letter4', { x: -700, duration: 1 })
-    .from('.sec-2 .subtit', { y: 200, duration: 1 })
-    .from('.mask-objects span', { opacity: 0, duration: 2 })
-    .from('.main02-list li:first-child', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' })
-    .from('.main02-list li:nth-child(2)', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' })
-    .from('.main02-list li:nth-child(3)', { y: 100, opacity: 0, duration: 2, ease: 'power2.out' });
+    .from('.sec-2__letter1', { opacity: 0, duration: 3 })
+    .from('.sec-2__letter3', { opacity: 0, duration: 3 })
+    .from('.sec-2__letter2', { x: -500, duration: 3 })
+    .from('.sec-2__letter4', { x: -700, duration: 3 })
+    .from('.sec-2 .subtit', { y: 200, duration: 3 });
+tlS2Mt
+    .from('.mask-objects span', { opacity: 0, duration: 5 }, '<')
+    .from('.main02-list li:first-child', { y: 100, opacity: 0, duration: 5 }, '>1')
+    .from('.main02-list li:nth-child(2)', { y: 100, opacity: 0, duration: 5 }, '>1.5')
+    .from('.main02-list li:nth-child(3)', { y: 100, opacity: 0, duration: 5 }, '<1');
 
 // section 3
 var tlS3Mt = gsap.timeline({
@@ -294,11 +284,12 @@ var tlS3Mt = gsap.timeline({
         trigger: '.sec-3 .main-tit',
         pin: false, // pin the trigger element while active
         start: 'top 0', // when the top of the trigger hits the top of the viewport
-        end: '+=10', // end after scrolling 500px beyond the start
+        end: '+=10',
         once: true, // 애니메이션을 한 번만 실행
         toggleActions: 'play none none none', // 도착 지점에서 유지
-        scrub: 5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        scrub: 10, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         markers: false,
+        ease: 'none',
     },
 });
 
