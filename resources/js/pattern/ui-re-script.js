@@ -111,7 +111,7 @@ $('.lang__list li').click(function () {
 });
 
 // ---------------------------------------------------------------------
-// ani가 활성화 됐을 때
+// ani 관련
 document.querySelectorAll('.ani').forEach(function (item) {
     ScrollTrigger.create({
         trigger: item,
@@ -126,6 +126,7 @@ document.querySelectorAll('.ani').forEach(function (item) {
     });
 });
 
+// snb 관련
 document.querySelectorAll('.ani-snb').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
@@ -140,14 +141,13 @@ document.querySelectorAll('.ani-snb').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.ani-snb1').forEach(function (item) {
     const targ = document.querySelector('.qm-list__1');
 
     ScrollTrigger.create({
         trigger: item,
         start: 'top bottom',
-        end: 'bottom top',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'on',
@@ -155,14 +155,13 @@ document.querySelectorAll('.ani-snb1').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.ani-snb2').forEach(function (item) {
     const targ = document.querySelector('.qm-list__2');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top top',
-        end: 'bottom top',
+        start: 'top 50%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'on',
@@ -170,14 +169,13 @@ document.querySelectorAll('.ani-snb2').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.ani-snb3').forEach(function (item) {
     const targ = document.querySelector('.qm-list__3');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top top',
-        end: 'bottom top',
+        start: 'top 50%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'on',
@@ -185,14 +183,13 @@ document.querySelectorAll('.ani-snb3').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.ani-snb4').forEach(function (item) {
     const targ = document.querySelector('.qm-list__4');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top top',
-        end: 'bottom top',
+        start: 'top 50%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'on',
@@ -200,14 +197,13 @@ document.querySelectorAll('.ani-snb4').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.intro-slide-cont.ani-snb1').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 30%',
-        end: 'bottom 30%',
+        start: 'top 20%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'white',
@@ -215,14 +211,13 @@ document.querySelectorAll('.intro-slide-cont.ani-snb1').forEach(function (item) 
         markers: false,
     });
 });
-
 document.querySelectorAll('.banner1.ani-snb2').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 30%',
-        end: 'bottom 30%',
+        start: 'top 50%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'white',
@@ -230,14 +225,13 @@ document.querySelectorAll('.banner1.ani-snb2').forEach(function (item) {
         markers: false,
     });
 });
-
 document.querySelectorAll('.banner2.ani-snb3').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 30%',
-        end: 'bottom 30%',
+        start: 'top 50%',
+        end: 'bottom 50%',
         toggleClass: {
             targets: targ,
             className: 'white',

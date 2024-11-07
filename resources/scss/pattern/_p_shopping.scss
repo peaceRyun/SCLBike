@@ -112,30 +112,52 @@ br {
     @include tabletMore {
         width: 1280px;
         padding: 0 320px;
-        flex-grow: 1; //임시
     }
 }
 
+// @media only screen and (min-width: 1620px) {
+//     #main {
+//         .shopping-main-container {
+//             padding: 0 320px;
+//         }
+//     }
+// }
+
 .shopping-main-container .inner {
     max-width: 390px;
+    padding: 0 0 80px;
     @include mobileMore {
         max-width: 768px;
     }
     @include tabletMore {
         max-width: 1280px;
     }
+    .row {
+        @include mobileMore {
+            .column:first-child {
+                padding-right: 1%;
+            }
+            .column:last-child {
+                padding-left: 1%;
+            }
+        }
+    }
 }
 
 // aside
 #aside {
+    height: 80vh;
+    @include mobileMore {
+        height: 90vh;
+    }
     @include tabletMore {
         position: sticky;
-        height: 100%;
+        height: 100vh;
         width: 640px;
         top: 0;
         margin-left: auto;
         z-index: 6000;
-        opacity: 50%; //임시
+        flex: 1;
     }
 }
 
@@ -144,9 +166,6 @@ br {
         display: flex;
         flex-direction: row-reverse;
     }
-    // #main {
-    //     display: flex; //임시
-    // }
 }
 
 // .aside-avatar {
