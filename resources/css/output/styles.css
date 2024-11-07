@@ -730,6 +730,9 @@ caption {
 .quick-menu .qm-list li :first-child {
   margin-top: 0px;
 }
+.quick-menu .qm-list.on {
+  display: none;
+}
 .quick-menu .qm-list__1 {
   display: none;
 }

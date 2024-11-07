@@ -122,7 +122,22 @@ document.querySelectorAll('.ani').forEach(function (item) {
             targets: item,
             className: 'on',
         },
-        markers: true,
+        markers: false,
+    });
+});
+
+document.querySelectorAll('.ani-snb').forEach(function (item) {
+    const targ = document.querySelector('.qm-list');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'bottom 35%',
+        end: '+=9999',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: false,
     });
 });
 
@@ -131,13 +146,13 @@ document.querySelectorAll('.ani-snb1').forEach(function (item) {
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 65%',
+        start: 'top bottom',
         end: 'bottom top',
         toggleClass: {
             targets: targ,
             className: 'on',
         },
-        markers: true,
+        markers: false,
     });
 });
 
@@ -146,13 +161,13 @@ document.querySelectorAll('.ani-snb2').forEach(function (item) {
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 65%',
+        start: 'top top',
         end: 'bottom top',
         toggleClass: {
             targets: targ,
             className: 'on',
         },
-        markers: true,
+        markers: false,
     });
 });
 
@@ -161,28 +176,13 @@ document.querySelectorAll('.ani-snb3').forEach(function (item) {
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 65%',
+        start: 'top top',
         end: 'bottom top',
         toggleClass: {
             targets: targ,
             className: 'on',
         },
-        markers: true,
-    });
-});
-
-document.querySelectorAll('.ani-snb3').forEach(function (item) {
-    const targ = document.querySelector('.qm-list__3');
-
-    ScrollTrigger.create({
-        trigger: item,
-        start: 'top 65%',
-        end: 'bottom top',
-        toggleClass: {
-            targets: targ,
-            className: 'on',
-        },
-        markers: true,
+        markers: false,
     });
 });
 
@@ -191,12 +191,12 @@ document.querySelectorAll('.ani-snb4').forEach(function (item) {
 
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 65%',
+        start: 'top top',
         end: 'bottom top',
         toggleClass: {
             targets: targ,
             className: 'on',
         },
-        markers: true,
+        markers: false,
     });
 });

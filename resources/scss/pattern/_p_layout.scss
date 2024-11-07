@@ -374,6 +374,9 @@
                 margin-top: 0px;
             }
         }
+        &.on {
+            display: none;
+        }
         &__1 {
             display: none;
             &.on {
