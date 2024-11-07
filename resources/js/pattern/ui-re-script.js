@@ -125,3 +125,78 @@ document.querySelectorAll('.ani').forEach(function (item) {
         markers: true,
     });
 });
+
+document.querySelectorAll('.ani-snb1').forEach(function (item) {
+    const targ = document.querySelector('.qm-list__1');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom top',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: true,
+    });
+});
+
+document.querySelectorAll('.ani-snb2').forEach(function (item) {
+    const targ = document.querySelector('.qm-list__2');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom top',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: true,
+    });
+});
+
+document.querySelectorAll('.ani-snb3').forEach(function (item) {
+    const targ = document.querySelector('.qm-list__3');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom top',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: true,
+    });
+});
+
+document.querySelectorAll('.ani-snb3').forEach(function (item) {
+    const targ = document.querySelector('.qm-list__3');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom top',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: true,
+    });
+});
+
+document.querySelectorAll('.ani-snb4').forEach(function (item) {
+    const targ = document.querySelector('.qm-list__4');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom top',
+        toggleClass: {
+            targets: targ,
+            className: 'on',
+        },
+        markers: true,
+    });
+});

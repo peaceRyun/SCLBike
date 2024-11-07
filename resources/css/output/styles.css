@@ -701,9 +701,6 @@ caption {
   font-weight: 700;
 }
 
-.quick-menu {
-  display: none;
-}
 @media (min-width: 1024px) {
   .quick-menu {
     width: 210px;
@@ -714,7 +711,7 @@ caption {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 6500;
   }
 }
 .quick-menu .qm-list {
@@ -732,6 +729,30 @@ caption {
 }
 .quick-menu .qm-list li :first-child {
   margin-top: 0px;
+}
+.quick-menu .qm-list__1 {
+  display: none;
+}
+.quick-menu .qm-list__1.on {
+  display: inline;
+}
+.quick-menu .qm-list__2 {
+  display: none;
+}
+.quick-menu .qm-list__2.on {
+  display: inline;
+}
+.quick-menu .qm-list__3 {
+  display: none;
+}
+.quick-menu .qm-list__3.on {
+  display: inline;
+}
+.quick-menu .qm-list__4 {
+  display: none;
+}
+.quick-menu .qm-list__4.on {
+  display: inline;
 }
 
 #main {
