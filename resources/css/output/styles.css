@@ -2054,6 +2054,7 @@ br {
   .shopping-main-container {
     width: 1280px;
     padding: 0 320px;
+    flex-grow: 1;
   }
 }
 
@@ -2073,12 +2074,20 @@ br {
 
 @media (min-width: 1024px) {
   #aside {
-    position: fixed;
+    position: sticky;
     height: 100%;
     width: 640px;
     top: 0;
-    right: 0;
+    margin-left: auto;
     z-index: 6000;
+    opacity: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopping {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 

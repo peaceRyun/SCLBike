@@ -1,4 +1,4 @@
-// content 으로 옮길 예정
+//shopping - aside swiper
 .art-0-grid-slide {
     margin: 8rem auto 0 auto;
     height: 520px;
@@ -83,6 +83,7 @@ br {
     @include tabletMore {
         width: 1280px;
         padding: 0 320px;
+        flex-grow: 1; //임시
     }
 }
 
@@ -99,14 +100,30 @@ br {
 // aside
 #aside {
     @include tabletMore {
-        position: fixed;
+        position: sticky;
         height: 100%;
         width: 640px;
         top: 0;
-        right: 0;
+        margin-left: auto;
         z-index: 6000;
+        opacity: 50%; //임시
     }
 }
+
+.shopping {
+    @include tabletMore {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    // #main {
+    //     display: flex; //임시
+    // }
+}
+
+// .aside-avatar {
+//     background: red;
+//     flex-grow: 1;
+// }
 
 // shopping - article - type 1
 .shop-art1-container {
