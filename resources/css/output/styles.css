@@ -733,6 +733,9 @@ caption {
 .quick-menu .qm-list.on {
   display: none;
 }
+.quick-menu .qm-list.white {
+  color: white;
+}
 .quick-menu .qm-list__1 {
   display: none;
 }

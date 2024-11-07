@@ -200,3 +200,48 @@ document.querySelectorAll('.ani-snb4').forEach(function (item) {
         markers: false,
     });
 });
+
+document.querySelectorAll('.intro-slide-cont.ani-snb1').forEach(function (item) {
+    const targ = document.querySelector('.qm-list');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 30%',
+        end: 'bottom 30%',
+        toggleClass: {
+            targets: targ,
+            className: 'white',
+        },
+        markers: false,
+    });
+});
+
+document.querySelectorAll('.banner1.ani-snb2').forEach(function (item) {
+    const targ = document.querySelector('.qm-list');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 30%',
+        end: 'bottom 30%',
+        toggleClass: {
+            targets: targ,
+            className: 'white',
+        },
+        markers: false,
+    });
+});
+
+document.querySelectorAll('.banner2.ani-snb3').forEach(function (item) {
+    const targ = document.querySelector('.qm-list');
+
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 30%',
+        end: 'bottom 30%',
+        toggleClass: {
+            targets: targ,
+            className: 'white',
+        },
+        markers: false,
+    });
+});
