@@ -32,6 +32,35 @@
         object-position: 50% 10px;
     }
 }
+
+.ss0iw1 {
+    background: #f2f2f2;
+}
+.ss0iw2 {
+    background: #9fc0c3;
+}
+.ss0iw3 {
+    background: #cebb94;
+}
+.ss0iw4 {
+    background: #c8a9a8;
+}
+.ss0iw5 {
+    background: #959f87;
+}
+.ss0iw6 {
+    background: #8686a9;
+}
+.ss0iw7 {
+    background: #e5e5e5;
+}
+.ss0iw8 {
+    background: #ffa326;
+}
+.ss0iw9 {
+    background: #f2c894;
+}
+
 .shop-sec0-txt {
     width: calc(100% - 10px);
     margin: 0 auto 0 0;
@@ -327,6 +356,15 @@ br {
 .shop-banner3-container {
     position: relative;
     text-align: center;
+    &__content-wrap {
+        @include mobileMore {
+            display: flex;
+            .bnr3-txt-wrap {
+                margin: auto;
+                text-align: left;
+            }
+        }
+    }
     .shop-banner3-img {
         border-radius: 60% 45%;
         height: 333px;
