@@ -536,7 +536,7 @@ img {
     z-index: 1;
     position: relative;
     @include tabletMore {
-        margin: 500px 0 200px;
+        margin: 600px 0 200px;
         padding-left: 0;
         display: flex;
         justify-content: space-between;
@@ -611,7 +611,7 @@ img {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 50rem;
+        font-size: 57rem;
         bottom: 0;
     }
     span {
