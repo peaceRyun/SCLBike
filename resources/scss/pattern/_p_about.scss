@@ -27,6 +27,10 @@ img {
         opacity: 0;
         transform: translateY(-30px);
         transition: all 0.3s;
+        &:hover {
+            color: $gray-10;
+            background: $primary-40;
+        }
         @include tabletMore {
             padding: 12px 24px;
             font-size: 1.6rem;
@@ -639,14 +643,23 @@ img {
                 padding-top: 350px;
             }
         }
+        .slide-wrap {
+            .about-btn-cont2 {
+                display: none;
+                @include tabletMore {
+                    display: block;
+                    margin-left: 0px;
+                }
+            }
+        }
     }
-    .main-btn-cont {
+    .about-btn-cont1 {
         margin-left: $p-mobile;
         @include mobileMore {
             margin-left: $p-tablet;
         }
         @include tabletMore {
-            margin-left: 320px;
+            display: none;
         }
     }
 }
