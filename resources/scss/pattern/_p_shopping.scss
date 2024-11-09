@@ -21,6 +21,61 @@
     }
 }
 
+.shop-aside-swiper {
+    .shop-aside-txts {
+        color: $white;
+        position: absolute;
+        bottom: 7%;
+        left: 0;
+        text-align: left;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    .shop-aside-fixed-icons {
+        position: absolute;
+        bottom: 3%;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+        color: $gray-80;
+        height: 140px;
+        .shop-hist {
+            padding: 5px 10px;
+            background: $white;
+            font-size: 1.8rem;
+            border-radius: 100%;
+        }
+        .shop-kc {
+            padding: 5px 10px;
+            background: $white;
+            font-size: 1.8rem;
+            border-radius: 100%;
+        }
+        .shop-totop {
+            padding: 5px 10px;
+            background: $white;
+            font-size: 1.8rem;
+            border-radius: 100%;
+        }
+    }
+}
+
 .shop-sec0-img-wrap {
     background: $gray-10;
     border-radius: 10px;
@@ -133,13 +188,18 @@ br {
         max-width: 1280px;
     }
     .row {
+        padding: 0 20px;
         @include mobileMore {
+            padding: 0 30px;
             .column:first-child {
-                padding-right: 1%;
+                padding-right: 2%;
             }
             .column:last-child {
-                padding-left: 1%;
+                padding-left: 2%;
             }
+        }
+        @include tabletMore {
+            padding: 0;
         }
     }
 }
