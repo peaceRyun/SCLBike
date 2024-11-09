@@ -1064,7 +1064,7 @@ caption {
 
 .main-content {
   background: #f4f3ef;
-  padding: 0 0 160px;
+  padding: 100vh 0 160px;
 }
 @media (min-width: 1024px) {
   .main-content {
@@ -1181,6 +1181,12 @@ img {
   width: 100%;
 }
 
+.fade.intro-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6444;
+}
 .fade.intro-slide img {
   height: 787px;
 }
@@ -1194,11 +1200,39 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 0 20px;
   text-align: center;
   color: #fff;
-  font-size: 5rem;
   font-weight: 700;
-  padding: 0 20px;
+}
+.fade.intro-slide .tit-cont h2 {
+  font-size: 3.2rem;
+}
+@media (min-width: 1024px) {
+  .fade.intro-slide .tit-cont h2 {
+    font-size: 5rem;
+  }
+}
+.fade.intro-slide .tit-cont p {
+  font-size: 1.6rem;
+}
+@media (min-width: 1024px) {
+  .fade.intro-slide .tit-cont p {
+    font-size: 2.5rem;
+  }
+}
+.fade.intro-slide .tit-cont .main-btn-cont {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fade.intro-slide .tit-cont .main-btn-cont .btn-link {
+  border: none;
+  background: #fff;
+}
+.fade.intro-slide .tit-cont .main-btn-cont .btn-link:hover {
+  background: #dd5459;
 }
 
 .intro-slide-cont {

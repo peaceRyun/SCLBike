@@ -2,7 +2,7 @@
 
 .main-content {
     background: #f4f3ef;
-    padding: 0 0 160px;
+    padding: 100vh 0 160px;
     @include tabletMore {
         padding: 0 0 200px;
     }
@@ -117,6 +117,10 @@ img {
 
 // intro
 .fade.intro-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6444;
     img {
         height: 787px;
         @include mobileMore {
@@ -128,11 +132,35 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        padding: 0 20px;
         text-align: center;
         color: $white;
-        font-size: 5rem;
         font-weight: 700;
-        padding: 0 20px;
+        h2 {
+            font-size: 3.2rem;
+            @include tabletMore {
+                font-size: 5rem;
+            }
+        }
+        p {
+            font-size: 1.6rem;
+            @include tabletMore {
+                font-size: 2.5rem;
+            }
+        }
+        .main-btn-cont {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            .btn-link {
+                border: none;
+                background: $white;
+                &:hover {
+                    background: #dd5459;
+                }
+            }
+        }
     }
 }
 
