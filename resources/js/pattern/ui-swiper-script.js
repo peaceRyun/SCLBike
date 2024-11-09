@@ -41,7 +41,8 @@ var swiper = new Swiper('.slide-studio', {
     },
 });
 
-var swiper = new Swiper('.slide-shopping', {
+var swiper = new Swiper('.shop-aside-swiper', {
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
