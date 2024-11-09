@@ -1064,7 +1064,7 @@ caption {
 
 .main-content {
   background: #f4f3ef;
-  padding: 100vh 0 160px;
+  padding: 0 0 160px;
 }
 @media (min-width: 1024px) {
   .main-content {
@@ -1181,12 +1181,6 @@ img {
   width: 100%;
 }
 
-.fade.intro-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 6444;
-}
 .fade.intro-slide img {
   height: 787px;
 }
@@ -1241,16 +1235,39 @@ img {
 
 .control-cont {
   position: absolute;
-  bottom: 50px;
-  left: 0;
-  z-index: 4;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   padding: 0 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.control-cont .pause {
+.control-cont #play-pause-btn {
   display: block;
   width: 35px;
   height: 35px;
-  background: url(../../../resources/img/pattern/ico-pause.svg) no-repeat 0 -32px;
+}
+.control-cont #play-pause-btn.play {
+  background: url(../../../resources/img/pattern//common/ico-play.svg) no-repeat 0 -32px;
+}
+.control-cont #play-pause-btn.pause {
+  background: url(../../../resources/img/pattern//common/ico-pause.svg) no-repeat 0 -32px;
+}
+.control-cont .progress {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 4px;
+  position: relative;
+  margin-top: 10px;
+}
+.control-cont .progress-bar {
+  background-color: #dd5459;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease;
 }
 
 .main-tit {
