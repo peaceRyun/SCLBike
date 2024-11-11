@@ -170,13 +170,14 @@ br {
     }
 }
 
-// @media only screen and (min-width: 1620px) {
-//     #main {
-//         .shopping-main-container {
-//             padding: 0 320px;
-//         }
-//     }
-// }
+@media only screen and (min-width: 1024px) and (max-width: 1620px) {
+    #main {
+        .shopping-main-container {
+            width: 640px;
+            padding: 0 30px;
+        }
+    }
+}
 
 .shopping-main-container .inner {
     max-width: 390px;
@@ -214,6 +215,7 @@ br {
         position: sticky;
         height: 100vh;
         width: 640px;
+        min-width: 0;
         top: 0;
         margin-left: auto;
         z-index: 6000;

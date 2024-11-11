@@ -162,6 +162,8 @@ img {
 
 .intro-slide-cont {
     position: relative;
+    z-index: 5050;
+    background: $white;
 }
 .control-cont {
     position: absolute;
