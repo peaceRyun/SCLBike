@@ -88,3 +88,13 @@ var swiper = new Swiper('.buy-main-slide3', {
         clickable: true,
     },
 });
+
+var swiper = new Swiper('.buy-review-slide', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
