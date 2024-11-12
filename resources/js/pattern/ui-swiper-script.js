@@ -80,3 +80,11 @@ var swiper2 = new Swiper('.buy-main-slide2', {
         swiper: swiper,
     },
 });
+
+var swiper = new Swiper('.buy-main-slide3', {
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});

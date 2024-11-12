@@ -109,6 +109,7 @@
 
 // buy-aside
 .buy-txt-h2 {
+    margin-top: 32px;
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 100%;
@@ -186,4 +187,33 @@
     background-color: #d9534f; /* 빨간색 배경 */
     color: white;
     border: none;
+}
+
+//main
+.buy-txt-wrap2 {
+    padding: 24px 10px 0px;
+    > h4 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    > h3 {
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+    > p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 22px;
+    }
+}
+
+.buy-main-slide3 {
+    padding: 0 0 40px;
+    .swiper-pagination {
+        position: relative;
+        margin-top: 20px;
+    }
+    .swiper-wrapper {
+        height: 220px;
+    }
 }

@@ -2634,6 +2634,7 @@ br {
 }
 
 .buy-txt-h2 {
+  margin-top: 32px;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 100%;
@@ -2724,4 +2725,32 @@ br {
   background-color: #d9534f; /* 빨간색 배경 */
   color: white;
   border: none;
+}
+
+.buy-txt-wrap2 {
+  padding: 24px 10px 0px;
+}
+.buy-txt-wrap2 > h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.buy-txt-wrap2 > h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.buy-txt-wrap2 > p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.buy-main-slide3 {
+  padding: 0 0 40px;
+}
+.buy-main-slide3 .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+.buy-main-slide3 .swiper-wrapper {
+  height: 220px;
 }/*# sourceMappingURL=styles.css.map */
