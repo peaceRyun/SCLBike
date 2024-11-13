@@ -71,7 +71,7 @@ var swiper = new Swiper('.buy-main-slide', {
     watchSlidesProgress: true,
 });
 var swiper2 = new Swiper('.buy-main-slide2', {
-    spaceBetween: 10,
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

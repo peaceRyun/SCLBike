@@ -5,7 +5,6 @@
 }
 
 .buy-main-slide2 {
-    margin-top: 30%;
     height: 80%;
     width: 100%;
     // 얘를 활성화 해야지 pagination이 보임 + nav도 망가짐
@@ -108,6 +107,38 @@
 }
 
 // buy-aside
+.buy-aside {
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+    background: white;
+    .inner {
+        @include tabletMore {
+            max-width: 500px;
+        }
+        .buy-aside-flex-wrap-big {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 24px;
+        }
+    }
+}
+.buy-want-date {
+    padding: 0 0 10px;
+    border-bottom: 1px solid $gray-40;
+    &::before {
+        content: '\f0d1';
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+    }
+}
+.buy-for-save::before {
+    content: '\f004';
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+}
+
 .buy-txt-h2 {
     margin-top: 32px;
     font-size: 2.4rem;
@@ -167,14 +198,12 @@
     flex-direction: column;
 }
 .buy-btns-flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    flex: 100%;
-    max-width: 100%;
 }
 .buy-btn-size {
-    width: 157px;
+    width: 100%;
     padding: 8px;
     border: 1px solid $gray-40;
     border-radius: 4px;
@@ -188,19 +217,39 @@
     color: white;
     border: none;
 }
+.buy-btns-wrap-stor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .buy-btn-mc1 {
+        background: $gray-90;
+        color: $white;
+    }
+    .buy-btn-mc2 {
+        border: 1px solid $gray-90;
+        color: $gray-90;
+    }
+}
+.buy-btn-mc {
+    padding: 10px 100px;
+    border-radius: 6px;
+    span {
+        white-space: nowrap;
+    }
+}
 
 //main
 .buy-txt-wrap2 {
     padding: 24px 10px 0px;
-    > h4 {
+    h4 {
         font-size: 1.2rem;
         font-weight: 400;
     }
-    > h3 {
+    h3 {
         font-size: 2.4rem;
         font-weight: 500;
     }
-    > p {
+    p {
         font-size: 1.6rem;
         font-weight: 400;
         margin-bottom: 22px;
@@ -261,26 +310,28 @@
             gap: 16px;
         }
         button {
-            padding: 10px 100px;
             background: $gray-90;
-            border-radius: 6px;
             span {
-                white-space: nowrap;
                 color: $white;
             }
         }
     }
+    .swiper-wrapper {
+        margin-bottom: 24px;
+    }
     .swiper.buy-review-slide {
         width: 350px;
-        margin-bottom: 100px;
+        .swiper-slide {
+            border-radius: 10px;
+        }
     }
     .buy-review-card {
         background: $white;
-        border-radius: 8px;
         height: 100%;
         width: 350px;
         padding: 24px;
         text-align: left;
+        border-radius: 10px;
         &__namedate {
             display: flex;
             justify-content: space-between;
@@ -290,9 +341,12 @@
             font-weight: 500;
         }
         &__p {
-            height: 100px;
-            overflow: hidden;
             text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4; /* 호환성을 위해 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             p {
                 font-size: 1.4rem;
                 font-weight: 400;
