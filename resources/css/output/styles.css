@@ -916,6 +916,15 @@ caption {
   margin-top: 100px;
 }
 
+.buying #header {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .buying #header {
+    display: block;
+  }
+}
+
 :root {
   --swiper-theme-color: red;
 }
@@ -2584,12 +2593,17 @@ br {
 }
 
 .mobile-btns-wrap {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 4rem;
   color: #5d5d5d;
-  opacity: 50%;
+  background: #fff;
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .mobile-btns-wrap {
@@ -2654,13 +2668,16 @@ br {
   padding: 0 0 10px;
   border-bottom: 1px solid #c6c6c6;
 }
+.buy-want-date a {
+  text-decoration: underline;
+}
 .buy-want-date::before {
   content: "\f0d1";
   font-family: "Line Awesome Free";
   font-weight: 900;
 }
 
-.buy-for-save::before {
+.buy-for-save:before {
   content: "\f004";
   font-family: "Line Awesome Free";
   font-weight: 900;
@@ -2673,9 +2690,26 @@ br {
   line-height: 100%;
 }
 
+.wrap-two3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buy-txt-p1 {
+  color: #8e8e8e;
+  font-size: 1.4rem;
+}
+
 .buy-txt-wrap1 {
   display: flex;
   align-items: start;
+  gap: 8px;
+}
+
+.buy-star-wrap {
+  display: flex;
+  gap: 1px;
 }
 
 .buy-txt-price {
@@ -2744,11 +2778,11 @@ br {
 
 .buy-btn-size {
   width: 100%;
-  padding: 8px;
+  padding: 5px 2px;
   border: 1px solid #c6c6c6;
   border-radius: 4px;
   background-color: white;
-  font-size: 16px;
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -2758,26 +2792,97 @@ br {
   border: none;
 }
 
+.buy-measure-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+  position: relative;
+}
+.buy-measure-wrap .buy-ruler-css {
+  width: 20px;
+  height: 15px;
+  background: #fff;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.buy-measure-wrap h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+.buy-measure-wrap .pd {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 14px;
+}
+.buy-measure-wrap .pd .buy-btn-mc {
+  width: 90%;
+}
+.buy-measure-wrap p {
+  font-size: 1.2rem;
+  padding: 0 20px;
+}
+.buy-measure-wrap a {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  font-weight: 700;
+  padding: 0 20px 20px;
+}
+
 .buy-btns-wrap-stor {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.buy-btns-wrap-stor .buy-btn-mc1 {
-  background: #1d1d1d;
-  color: #fff;
-}
-.buy-btns-wrap-stor .buy-btn-mc2 {
-  border: 1px solid #1d1d1d;
-  color: #1d1d1d;
-}
 
 .buy-btn-mc {
   padding: 10px 100px;
   border-radius: 6px;
+  width: 100%;
 }
 .buy-btn-mc span {
   white-space: nowrap;
+  font-size: 1.6rem;
+}
+
+.buy-sort-wrap {
+  position: relative;
+  z-index: 1;
+}
+.buy-sort-wrap .buy-label1 {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 1.6rem;
+  line-height: 16px;
+  background: #fff;
+}
+
+#sort {
+  font-size: 16px;
+  line-height: 16px;
+  height: 48px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 0px 30px;
+  border: 1px solid rgb(37, 37, 37);
+  background: url(../../../resources/img/pattern/buying/expand-more-icon.svg) calc(100% - 10px) center/20px no-repeat rgb(255, 255, 255);
+}
+
+.buy-btn-mc1 {
+  background: #1d1d1d;
+  color: #fff;
+}
+
+.buy-btn-mc2 {
+  border: 1px solid #1d1d1d;
+  color: #1d1d1d;
 }
 
 .buy-txt-wrap2 {
@@ -2853,6 +2958,17 @@ br {
   flex-direction: column;
   gap: 16px;
 }
+@media (min-width: 600px) {
+  .buy-review-wrap .buy-review-header form {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .buy-review-wrap .buy-review-header form button {
+    width: auto;
+    padding: 0 16px;
+  }
+}
 .buy-review-wrap .buy-review-header button {
   background: #1d1d1d;
 }
@@ -2864,6 +2980,11 @@ br {
 }
 .buy-review-wrap .swiper.buy-review-slide {
   width: 350px;
+}
+@media (min-width: 600px) {
+  .buy-review-wrap .swiper.buy-review-slide {
+    width: 350px;
+  }
 }
 .buy-review-wrap .swiper.buy-review-slide .swiper-slide {
   border-radius: 10px;

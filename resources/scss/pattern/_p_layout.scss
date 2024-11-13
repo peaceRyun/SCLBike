@@ -556,3 +556,12 @@
 
 .shopping {
 }
+
+.buying {
+    #header {
+        display: none;
+        @include tabletMore {
+            display: block;
+        }
+    }
+}
