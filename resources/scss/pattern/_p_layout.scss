@@ -92,6 +92,7 @@
     position: relative;
     z-index: 1000;
     &.active {
+        background: $white;
         &::before {
             height: 206px;
         }
@@ -104,7 +105,7 @@
         content: '';
         height: 0px;
         // 206px
-        background: $gray-5;
+        background: $white;
         position: absolute;
         top: 102px;
         left: 0;
@@ -165,19 +166,19 @@
                     }
                 }
             }
-            &:first-child {
-                .gnb__depth2 {
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 1px;
-                        background: $gray-40;
-                    }
-                }
-            }
+            // &:first-child {
+            //     .gnb__depth2 {
+            //         &::before {
+            //             content: '';
+            //             position: absolute;
+            //             top: 0;
+            //             left: 0;
+            //             height: 100%;
+            //             width: 1px;
+            //             background: $gray-40;
+            //         }
+            //     }
+            // }
             > a {
                 display: flex;
                 justify-content: center;
@@ -214,17 +215,17 @@
         right: 0;
         padding: 0;
         height: 0;
-        background: $gray-10;
+        background: $white;
         transition: all 0.3s;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 1px;
-            background: $gray-40;
-        }
+        // &:after {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     height: 100%;
+        //     width: 1px;
+        //     background: $gray-40;
+        // }
         a {
             display: block;
             font-size: 1.5rem;
