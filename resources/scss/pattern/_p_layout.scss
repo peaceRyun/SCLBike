@@ -567,7 +567,9 @@
         }
     }
     #main {
-        width: 1280px;
-        padding: 0 30px;
+        @include tabletMore {
+            width: 1280px;
+            padding: 0 30px;
+        }
     }
 }

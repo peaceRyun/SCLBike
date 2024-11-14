@@ -16,6 +16,9 @@
         @include mobileMore {
             height: 432px;
         }
+        @include tabletMore {
+            height: 735.25px;
+        }
     }
     .swiper-pagination {
         position: absolute;
@@ -36,6 +39,15 @@
     display: none;
     @include tabletMore {
         display: block;
+        height: 42px;
+        .swiper-wrapper {
+            justify-content: center;
+            gap: 8px;
+        }
+        .swiper-slide {
+            width: 78px !important;
+            height: 100%;
+        }
     }
 }
 

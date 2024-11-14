@@ -907,6 +907,13 @@ caption {
 @media (min-width: 1024px) {
   .buying #header {
     display: block;
+    background-color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  .buying #main {
+    width: 1280px;
+    padding: 0 30px;
   }
 }
 
@@ -2544,6 +2551,11 @@ br {
     height: 432px;
   }
 }
+@media (min-width: 1024px) {
+  .buy-main-slide2 .swiper-slide {
+    height: 735.25px;
+  }
+}
 .buy-main-slide2 .swiper-pagination {
   position: absolute;
   bottom: -7%;
@@ -2566,6 +2578,15 @@ br {
 @media (min-width: 1024px) {
   .buy-main-slide {
     display: block;
+    height: 42px;
+  }
+  .buy-main-slide .swiper-wrapper {
+    justify-content: center;
+    gap: 8px;
+  }
+  .buy-main-slide .swiper-slide {
+    width: 78px !important;
+    height: 100%;
   }
 }
 
