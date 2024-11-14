@@ -572,4 +572,33 @@
             padding: 0 30px;
         }
     }
+    // .huge-flex1 {
+    //     display: flex;
+    //     flex-direction: column;
+    //     @include tabletMore {
+    //         flex-direction: row;
+    //     }
+    //     .big-flex1 {
+    //         display: flex;
+    //         flex-direction: column;
+    //         .ts {
+    //             order: 1;
+    //             @include tabletMore {
+    //                 order: 0;
+    //             }
+    //         }
+    //         #main {
+    //             order: 3;
+    //             @include tabletMore {
+    //                 order: 0;
+    //             }
+    //         }
+    //     }
+    //     .buy-aside {
+    //         order: 2;
+    //         @include tabletMore {
+    //             order: 1;
+    //         }
+    //     }
+    // }
 }
