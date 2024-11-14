@@ -441,7 +441,7 @@ caption {
   z-index: 1000;
 }
 #header.active {
-  background: #fff;
+  background: #fff !important;
 }
 #header.active::before {
   height: 206px;
@@ -522,7 +522,7 @@ caption {
 #gnb .gnb__depth1 > li:hover > a > span {
   color: #d42930;
 }
-#gnb .gnb__depth1 > li:hover > a > span::after {
+#gnb .gnb__depth1 > li:hover > a > span::before {
   width: 100%;
 }
 #gnb .gnb__depth1 > li > a {
@@ -544,12 +544,25 @@ caption {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 0;
-  height: 5px;
+  height: 3px;
+  background-color: #eea9ac;
+  transition: all 0.3s 0.5s;
+}
+#gnb .gnb__depth1 > li > a > span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
   background-color: #d42930;
   transition: all 0.3s;
+  z-index: 10001;
+}
+#gnb .gnb__depth1 > li > a > span.active::after {
+  width: 100%;
 }
 #gnb .gnb__depth2 {
   overflow: hidden;
@@ -648,41 +661,6 @@ caption {
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3.5rem;
-}
-
-#nav-all {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 20px;
-  transition: all 0.3s;
-}
-#nav-all.active {
-  display: block;
-  left: 0;
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  #nav-all {
-    padding: 30px;
-  }
-}
-#nav-all .close::after {
-  content: "\f00d";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 70px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-#nav-all > ul > li > a {
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 .quick-menu {

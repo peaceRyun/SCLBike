@@ -79,6 +79,7 @@ gsap.to('#header', {
 
 $('.all-menu').click(function () {
     $('#header').toggleClass('active');
+    $('.gnb__depth1 > li > a > span').toggleClass('active');
 });
 
 // .lang__btn 을 클릭했을 때
