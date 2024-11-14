@@ -146,7 +146,7 @@ img {
         }
         .main-btn-cont {
             position: absolute;
-            bottom: -60px;
+            bottom: -90px;
             left: 50%;
             transform: translateX(-50%);
             .btn-link {
@@ -167,8 +167,8 @@ img {
 }
 .control-cont {
     position: absolute;
-    bottom: 5%;
-    left: 50%;
+    bottom: 6%;
+    left: 93%;
     transform: translateX(-50%);
     z-index: 10;
     width: 120px;
@@ -176,6 +176,9 @@ img {
     flex-direction: column;
     align-items: center;
     #play-pause-btn {
+        position: relative;
+        top: 30px;
+        left: -100px;
         display: block;
         width: 35px;
         height: 35px;

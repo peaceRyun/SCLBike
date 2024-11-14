@@ -82,6 +82,10 @@ $('.all-menu').click(function () {
     $('.gnb__depth1 > li > a > span').toggleClass('active');
 });
 
+function myFunction(x) {
+    x.classList.toggle('change');
+}
+
 // .lang__btn 을 클릭했을 때
 // .lang에 .active 추가한다
 $('.lang__btn').click(function () {

@@ -299,10 +299,32 @@
         }
     }
     .all-menu {
-        &::before {
-            content: '\f0c9';
-            @include lineAwesome;
-            font-size: 3.5rem;
+        position: relative;
+        top: 4px;
+        right: 4px;
+        .all-menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 30px;
+                height: 3px;
+                background-color: $gray-90;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            &.change {
+                .bar1 {
+                    transform: translate(0, 9px) rotate(-45deg);
+                }
+                .bar2 {
+                    opacity: 0;
+                }
+                .bar3 {
+                    transform: translate(0, -9px) rotate(45deg);
+                }
+            }
         }
     }
 }
@@ -513,9 +535,6 @@
         color: #aaaaaa;
         margin-top: 100px;
     }
-}
-
-.shopping {
 }
 
 .buying {
