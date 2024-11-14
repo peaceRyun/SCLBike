@@ -563,6 +563,11 @@
         display: none;
         @include tabletMore {
             display: block;
+            background-color: $white;
         }
+    }
+    #main {
+        width: 1280px;
+        padding: 0 30px;
     }
 }
