@@ -2533,6 +2533,16 @@ br {
 .buy-main-slide2 {
   height: 80%;
   width: 100%;
+  padding-top: 200px;
+  background: white;
+}
+.buy-main-slide2 .swiper-slide {
+  height: 220px;
+}
+@media (min-width: 600px) {
+  .buy-main-slide2 .swiper-slide {
+    height: 432px;
+  }
 }
 .buy-main-slide2 .swiper-pagination {
   position: absolute;
@@ -2636,6 +2646,18 @@ br {
   z-index: 1;
   padding-top: 1px;
   background: white;
+}
+@media (min-width: 1024px) {
+  .buy-aside {
+    position: sticky;
+    height: 100vh;
+    width: 640px;
+    min-width: 0;
+    top: 0;
+    margin-left: auto;
+    z-index: 6000;
+    flex: 1;
+  }
 }
 @media (min-width: 1024px) {
   .buy-aside .inner {
@@ -2897,6 +2919,11 @@ br {
 .buy-main-slide3 .swiper-wrapper {
   height: 220px;
 }
+@media (min-width: 600px) {
+  .buy-main-slide3 .swiper-wrapper {
+    height: 432px;
+  }
+}
 
 .player {
   padding-top: 56.25%;
@@ -2963,13 +2990,11 @@ br {
 .buy-review-wrap .swiper-wrapper {
   margin-bottom: 24px;
 }
-.buy-review-wrap .swiper.buy-review-slide {
-  width: 350px;
+.buy-review-wrap .swiper-wrapper:first-child {
+  margin-left: 20px;
 }
-@media (min-width: 600px) {
-  .buy-review-wrap .swiper.buy-review-slide {
-    width: 350px;
-  }
+.buy-review-wrap .swiper.buy-review-slide {
+  width: 100%;
 }
 .buy-review-wrap .swiper.buy-review-slide .swiper-slide {
   border-radius: 10px;

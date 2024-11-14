@@ -90,11 +90,21 @@ var swiper = new Swiper('.buy-main-slide3', {
 });
 
 var swiper = new Swiper('.buy-review-slide', {
-    slidesPerView: 1,
+    slidesPerView: 1.3,
     spaceBetween: 30,
     loop: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        600: {
+            slidesPerView: 2.3,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 2.3,
+            spaceBetween: 50,
+        },
     },
 });

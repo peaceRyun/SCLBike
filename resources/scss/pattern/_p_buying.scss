@@ -7,8 +7,16 @@
 .buy-main-slide2 {
     height: 80%;
     width: 100%;
+    padding-top: 200px;
+    background: white;
     // 얘를 활성화 해야지 pagination이 보임 + nav도 망가짐
     // overflow: visible;
+    .swiper-slide {
+        height: 220px;
+        @include mobileMore {
+            height: 432px;
+        }
+    }
     .swiper-pagination {
         position: absolute;
         bottom: -7%;
@@ -117,6 +125,16 @@
     z-index: 1;
     padding-top: 1px;
     background: white;
+    @include tabletMore {
+        position: sticky;
+        height: 100vh;
+        width: 640px;
+        min-width: 0;
+        top: 0;
+        margin-left: auto;
+        z-index: 6000;
+        flex: 1;
+    }
     .inner {
         @include tabletMore {
             max-width: 500px;
@@ -354,6 +372,9 @@
     }
     .swiper-wrapper {
         height: 220px;
+        @include mobileMore {
+            height: 432px;
+        }
     }
 }
 
@@ -417,12 +438,12 @@
     }
     .swiper-wrapper {
         margin-bottom: 24px;
+        &:first-child {
+            margin-left: 20px;
+        }
     }
     .swiper.buy-review-slide {
-        width: 350px;
-        @include mobileMore {
-            width: 350px;
-        }
+        width: 100%;
         .swiper-slide {
             border-radius: 10px;
         }
