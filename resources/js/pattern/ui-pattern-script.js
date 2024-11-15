@@ -3,10 +3,10 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 // 개발자를 위한 스크롤 값 표시
-window.addEventListener('scroll', function () {
-    const scrollTop = window.scrollY; // 현재 스크롤 위치
-    console.log('Current scroll position:', scrollTop);
-});
+// window.addEventListener('scroll', function () {
+//     const scrollTop = window.scrollY; // 현재 스크롤 위치
+//     console.log('Current scroll position:', scrollTop);
+// });
 
 // header 관련 js
 const headerEl = document.querySelector('#header');
@@ -33,6 +33,11 @@ window.addEventListener(
             gsap.to(toTopEl, {
                 right: '30px',
                 // x: 0,
+                duration: 0.2,
+            });
+
+            gsap.to(toTopE2, {
+                right: '30px',
                 duration: 0.2,
             });
 
@@ -95,6 +100,9 @@ $('.lang__btn').click(function () {
 $('.lang__list li').click(function () {
     $('.lang__list').hide();
 });
+
+// shop-aside-fixed-icons
+const toTopE2 = document.querySelector('.shop-totop');
 
 // ---------------------------------------------------------------------
 // ani 관련

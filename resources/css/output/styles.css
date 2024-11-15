@@ -912,7 +912,7 @@ caption {
 @media (min-width: 1024px) {
   .buying #main {
     width: 1280px;
-    padding: 0 30px;
+    padding: 0 30px 80px;
   }
 }
 
@@ -2085,30 +2085,31 @@ img {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.shop-aside-swiper .shop-aside-fixed-icons {
-  position: absolute;
+
+.shop-aside-fixed-icons {
+  position: fixed;
+  z-index: 6001;
   bottom: 3%;
   right: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
   color: #2d2d2d;
   height: 140px;
 }
-.shop-aside-swiper .shop-aside-fixed-icons .shop-hist {
+.shop-aside-fixed-icons .shop-hist {
   padding: 5px 10px;
   background: #fff;
   font-size: 1.8rem;
   border-radius: 100%;
 }
-.shop-aside-swiper .shop-aside-fixed-icons .shop-kc {
+.shop-aside-fixed-icons .shop-kc {
   padding: 5px 10px;
   background: #fff;
   font-size: 1.8rem;
   border-radius: 100%;
 }
-.shop-aside-swiper .shop-aside-fixed-icons .shop-totop {
+.shop-aside-fixed-icons .shop-totop {
   padding: 5px 10px;
   background: #fff;
   font-size: 1.8rem;
@@ -2259,17 +2260,11 @@ br {
 }
 
 #aside {
-  height: 80vh;
-}
-@media (min-width: 600px) {
-  #aside {
-    height: 90vh;
-  }
+  height: 100vh;
 }
 @media (min-width: 1024px) {
   #aside {
     position: sticky;
-    height: 100vh;
     width: 640px;
     min-width: 0;
     top: 0;
@@ -2534,6 +2529,11 @@ br {
   margin-bottom: -0.6rem;
 }
 
+.big-grid {
+  display: grid;
+  grid-template-columns: calc(100% - 640px) 1fr;
+}
+
 .swiper-slide {
   background-size: cover;
   background-position: center;
@@ -2544,6 +2544,12 @@ br {
   width: 100%;
   padding-top: 200px;
   background: white;
+}
+@media (min-width: 1024px) {
+  .buy-main-slide2 {
+    height: 100%;
+    padding: 0 0 0 24px;
+  }
 }
 .buy-main-slide2 .swiper-slide {
   height: 220px;
@@ -2580,7 +2586,12 @@ br {
 @media (min-width: 1024px) {
   .buy-main-slide {
     display: block;
-    height: 42px;
+    height: 7%;
+    background: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9999;
   }
   .buy-main-slide .swiper-wrapper {
     justify-content: center;
@@ -2589,6 +2600,9 @@ br {
   .buy-main-slide .swiper-slide {
     width: 78px !important;
     height: 100%;
+  }
+  .buy-main-slide .swiper-slide img {
+    border-radius: 5px;
   }
 }
 

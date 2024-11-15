@@ -45,34 +45,35 @@
             font-weight: 500;
         }
     }
-    .shop-aside-fixed-icons {
-        position: absolute;
-        bottom: 3%;
-        right: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        z-index: 1;
-        color: $gray-80;
-        height: 140px;
-        .shop-hist {
-            padding: 5px 10px;
-            background: $white;
-            font-size: 1.8rem;
-            border-radius: 100%;
-        }
-        .shop-kc {
-            padding: 5px 10px;
-            background: $white;
-            font-size: 1.8rem;
-            border-radius: 100%;
-        }
-        .shop-totop {
-            padding: 5px 10px;
-            background: $white;
-            font-size: 1.8rem;
-            border-radius: 100%;
-        }
+}
+
+.shop-aside-fixed-icons {
+    position: fixed;
+    z-index: 6001;
+    bottom: 3%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $gray-80;
+    height: 140px;
+    .shop-hist {
+        padding: 5px 10px;
+        background: $white;
+        font-size: 1.8rem;
+        border-radius: 100%;
+    }
+    .shop-kc {
+        padding: 5px 10px;
+        background: $white;
+        font-size: 1.8rem;
+        border-radius: 100%;
+    }
+    .shop-totop {
+        padding: 5px 10px;
+        background: $white;
+        font-size: 1.8rem;
+        border-radius: 100%;
     }
 }
 
@@ -207,13 +208,9 @@ br {
 
 // aside
 #aside {
-    height: 80vh;
-    @include mobileMore {
-        height: 90vh;
-    }
+    height: 100vh;
     @include tabletMore {
         position: sticky;
-        height: 100vh;
         width: 640px;
         min-width: 0;
         top: 0;
