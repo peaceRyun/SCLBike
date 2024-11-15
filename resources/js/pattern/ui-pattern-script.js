@@ -11,6 +11,8 @@ gsap.registerPlugin(ScrollToPlugin);
 // header 관련 js
 const headerEl = document.querySelector('#header');
 const toTopEl = document.querySelector('.home-key');
+// shop-aside-fixed-icons
+const toTopE2 = document.querySelector('.shop-totop');
 
 let lastScrollY = window.scrollY;
 
@@ -55,6 +57,10 @@ window.addEventListener(
                 // x: 100,
                 duration: 0.2,
             });
+            gsap.to(toTopE2, {
+                right: '-50px',
+                duration: 0.2,
+            });
         }
 
         // 이전 스크롤 위치 업데이트
@@ -63,6 +69,14 @@ window.addEventListener(
 );
 // 상단으로 스크롤 버튼을 클릭하면,
 toTopEl.addEventListener('click', function () {
+    // 페이지 위치를 최상단으로 부드럽게(1초 동안) 이동.
+    gsap.to(window, {
+        scrollTo: 0,
+    });
+});
+
+// 상단으로 스크롤 버튼을 클릭하면,
+toTopE2.addEventListener('click', function () {
     // 페이지 위치를 최상단으로 부드럽게(1초 동안) 이동.
     gsap.to(window, {
         scrollTo: 0,
@@ -100,9 +114,6 @@ $('.lang__btn').click(function () {
 $('.lang__list li').click(function () {
     $('.lang__list').hide();
 });
-
-// shop-aside-fixed-icons
-const toTopE2 = document.querySelector('.shop-totop');
 
 // ---------------------------------------------------------------------
 // ani 관련
