@@ -1,5 +1,5 @@
 // ani
-.ani-buy {
+.ani-shop {
     &.on {
         .shop-banner3-img {
             border-radius: 45% 60%;
@@ -79,6 +79,7 @@
         border-radius: 100%;
     }
     .shop-totop {
+        position: relative;
         padding: 5px 10px;
         background: $white;
         font-size: 1.8rem;

@@ -2039,7 +2039,7 @@ img {
   width: 100%;
 }
 
-.ani-buy.on .shop-banner3-img {
+.ani-shop.on .shop-banner3-img {
   border-radius: 45% 60%;
 }
 
@@ -2114,6 +2114,7 @@ img {
   border-radius: 100%;
 }
 .shop-aside-fixed-icons .shop-totop {
+  position: relative;
   padding: 5px 10px;
   background: #fff;
   font-size: 1.8rem;

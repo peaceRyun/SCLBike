@@ -13,6 +13,7 @@ const headerEl = document.querySelector('#header');
 const toTopE1 = document.querySelector('.home-key');
 // shop-aside-fixed-icons
 const toTopE2 = document.querySelector('.shop-totop');
+const fixedIcons = document.querySelector('.shop-aside-fixed-icons');
 
 let lastScrollY = window.scrollY;
 
@@ -38,11 +39,6 @@ window.addEventListener(
                 duration: 0.2,
             });
 
-            gsap.to(toTopE2, {
-                right: '30px',
-                duration: 0.2,
-            });
-
             // 스크롤 업
         } else {
             // Badge 요소 보이기!
@@ -57,9 +53,31 @@ window.addEventListener(
                 // x: 100,
                 duration: 0.2,
             });
+        }
+
+        if (window.scrollY === 0) {
             gsap.to(toTopE2, {
-                right: '-50px',
-                duration: 0.2,
+                opacity: 0,
+                duration: 0.3,
+                onComplete: () => {
+                    toTopE2.style.display = 'none';
+                },
+            });
+            gsap.to(fixedIcons, {
+                height: '90px',
+                duration: 0.3,
+                ease: 'power2.inOut',
+            });
+        } else {
+            toTopE2.style.display = 'block';
+            gsap.to(toTopE2, {
+                opacity: 1,
+                duration: 0.3,
+            });
+            gsap.to(fixedIcons, {
+                height: '140px',
+                duration: 0.3,
+                ease: 'power2.inOut',
             });
         }
 
@@ -106,6 +124,7 @@ $('.all-menu').click(function () {
     $('.gnb__depth1 > li > a > span').toggleClass('active');
 });
 
+// hamburger 메뉴 애니메이션
 function myFunction(x) {
     x.classList.toggle('change');
 }
@@ -121,7 +140,7 @@ $('.lang__list li').click(function () {
 });
 
 // ---------------------------------------------------------------------
-// ani 관련
+// ani
 document.querySelectorAll('.ani').forEach(function (item) {
     ScrollTrigger.create({
         trigger: item,
@@ -136,8 +155,8 @@ document.querySelectorAll('.ani').forEach(function (item) {
     });
 });
 
-// ani 관련
-document.querySelectorAll('.ani-buy').forEach(function (item) {
+// ani-buy
+document.querySelectorAll('.ani-shop').forEach(function (item) {
     ScrollTrigger.create({
         trigger: item,
         start: 'top 65%',
@@ -151,7 +170,7 @@ document.querySelectorAll('.ani-buy').forEach(function (item) {
     });
 });
 
-// snb 관련
+// snb
 document.querySelectorAll('.ani-snb').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
