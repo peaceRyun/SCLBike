@@ -136,6 +136,21 @@ document.querySelectorAll('.ani').forEach(function (item) {
     });
 });
 
+// ani 관련
+document.querySelectorAll('.ani-buy').forEach(function (item) {
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 65%',
+        end: 'bottom 50%',
+        once: false,
+        toggleClass: {
+            targets: item,
+            className: 'on',
+        },
+        markers: false,
+    });
+});
+
 // snb 관련
 document.querySelectorAll('.ani-snb').forEach(function (item) {
     const targ = document.querySelector('.qm-list');

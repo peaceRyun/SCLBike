@@ -2039,6 +2039,10 @@ img {
   width: 100%;
 }
 
+.ani-buy.on .shop-banner3-img {
+  border-radius: 45% 60%;
+}
+
 .art-0-grid-slide {
   margin: 8rem auto 0 auto;
   height: 520px;
@@ -2504,6 +2508,7 @@ br {
 }
 .shop-banner3-container .shop-banner3-img {
   border-radius: 60% 45%;
+  transition: all 0.7s;
   height: 333px;
   width: 350px;
   -o-object-fit: cover;

@@ -1,5 +1,10 @@
 // ani
-.ani {
+.ani-buy {
+    &.on {
+        .shop-banner3-img {
+            border-radius: 45% 60%;
+        }
+    }
 }
 
 //shopping - aside swiper
@@ -449,6 +454,7 @@ br {
     }
     .shop-banner3-img {
         border-radius: 60% 45%;
+        transition: all 0.7s;
         height: 333px;
         width: 350px;
         object-fit: cover;
