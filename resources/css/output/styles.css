@@ -2339,6 +2339,9 @@ br {
 .art1-detail__mc > img {
   border-radius: 10px;
   width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .art1-mc-txt1 {
@@ -2367,6 +2370,12 @@ br {
   font-weight: 700;
   color: #8e8e8e;
 }
+.art2-btns-wrap .art2-btn.clicked {
+  background-color: #551013;
+  border-radius: 20px;
+  padding: 4px 12px;
+  color: #e4e4e4;
+}
 
 .art2-detail-wrap {
   display: flex;
@@ -2379,6 +2388,9 @@ br {
 .art2-detail-wrap__mc > img {
   border-radius: 1rem;
   width: 100%;
+  height: 155px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .art2-mc-txt1 {
