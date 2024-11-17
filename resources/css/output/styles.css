@@ -2129,46 +2129,84 @@ img {
   margin: 0 auto 0 0;
 }
 .shop-sec0-img-wrap img {
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
   -o-object-position: 50% 10px;
      object-position: 50% 10px;
 }
 
-.ss0iw1 {
+.art-0-grid-slide .ss0iw1,
+.art-0-grid-slide .ss0iw2,
+.art-0-grid-slide .ss0iw3,
+.art-0-grid-slide .ss0iw4,
+.art-0-grid-slide .ss0iw5,
+.art-0-grid-slide .ss0iw6,
+.art-0-grid-slide .ss0iw7,
+.art-0-grid-slide .ss0iw8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.art-0-grid-slide .ss0iw1 img,
+.art-0-grid-slide .ss0iw2 img,
+.art-0-grid-slide .ss0iw3 img,
+.art-0-grid-slide .ss0iw4 img,
+.art-0-grid-slide .ss0iw5 img,
+.art-0-grid-slide .ss0iw6 img,
+.art-0-grid-slide .ss0iw7 img,
+.art-0-grid-slide .ss0iw8 img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.art-0-grid-slide .ss0iw3 img,
+.art-0-grid-slide .ss0iw4 img,
+.art-0-grid-slide .ss0iw6 img {
+  -o-object-position: 50% 69%;
+     object-position: 50% 69%;
+}
+.art-0-grid-slide .ss0iw1 {
   background: #f2f2f2;
 }
-
-.ss0iw2 {
+.art-0-grid-slide .ss0iw2 {
   background: #9fc0c3;
 }
-
-.ss0iw3 {
+.art-0-grid-slide .ss0iw3 {
   background: #cebb94;
 }
-
-.ss0iw4 {
+.art-0-grid-slide .ss0iw4 {
   background: #c8a9a8;
 }
-
-.ss0iw5 {
+.art-0-grid-slide .ss0iw5 {
   background: #959f87;
 }
-
-.ss0iw6 {
+.art-0-grid-slide .ss0iw5 img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  width: 100px;
+}
+.art-0-grid-slide .ss0iw6 {
   background: #8686a9;
 }
-
-.ss0iw7 {
+.art-0-grid-slide .ss0iw6 img {
+  width: 150px;
+}
+.art-0-grid-slide .ss0iw7 {
   background: #e5e5e5;
 }
-
-.ss0iw8 {
+.art-0-grid-slide .ss0iw8 {
   background: #ffa326;
 }
-
-.ss0iw9 {
+.art-0-grid-slide .ss0iw8 img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  width: 100px;
+}
+.art-0-grid-slide .ss0iw9 {
   background: #f2c894;
+}
+.art-0-grid-slide .ss0iw9 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 110%;
+     object-position: 110%;
 }
 
 .shop-sec0-txt {
