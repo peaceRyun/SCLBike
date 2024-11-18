@@ -31,6 +31,36 @@
 }
 
 .shop-aside-swiper {
+    .shop-swiper-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 95%;
+        left: 6%;
+        width: 70%;
+        .shop-swiper-btn-wrap1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 21%;
+            .swiper-button-prev {
+                position: relative;
+                transform: translate(-10px, 12px);
+            }
+            .swiper-button-next {
+                position: relative;
+                transform: translate(10px, 12px);
+            }
+        }
+        .swiper-pagination {
+            width: 300px;
+            position: relative;
+            .swiper-pagination-progressbar-fill {
+                background-color: $gray-20;
+            }
+        }
+    }
     .shop-aside-txts {
         color: $white;
         position: absolute;
@@ -66,6 +96,9 @@
     justify-content: space-between;
     color: $gray-80;
     height: 140px;
+    @include tabletMore {
+        right: 2%;
+    }
     .shop-hist {
         padding: 5px 10px;
         background: $white;
@@ -260,7 +293,7 @@ br {
     height: 100vh;
     @include tabletMore {
         position: sticky;
-        width: 640px;
+        // width: 640px;
         min-width: 0;
         top: 0;
         margin-left: auto;

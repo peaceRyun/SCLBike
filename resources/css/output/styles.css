@@ -2076,6 +2076,36 @@ img {
   }
 }
 
+.shop-aside-swiper .shop-swiper-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 95%;
+  left: 6%;
+  width: 70%;
+}
+.shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 21%;
+}
+.shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .swiper-button-prev {
+  position: relative;
+  transform: translate(-10px, 12px);
+}
+.shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .swiper-button-next {
+  position: relative;
+  transform: translate(10px, 12px);
+}
+.shop-aside-swiper .shop-swiper-flex .swiper-pagination {
+  width: 300px;
+  position: relative;
+}
+.shop-aside-swiper .shop-swiper-flex .swiper-pagination .swiper-pagination-progressbar-fill {
+  background-color: #e4e4e4;
+}
 .shop-aside-swiper .shop-aside-txts {
   color: #fff;
   position: absolute;
@@ -2110,6 +2140,11 @@ img {
   justify-content: space-between;
   color: #2d2d2d;
   height: 140px;
+}
+@media (min-width: 1024px) {
+  .shop-aside-fixed-icons {
+    right: 2%;
+  }
 }
 .shop-aside-fixed-icons .shop-hist {
   padding: 5px 10px;
@@ -2318,7 +2353,6 @@ br {
 @media (min-width: 1024px) {
   #aside {
     position: sticky;
-    width: 640px;
     min-width: 0;
     top: 0;
     margin-left: auto;
