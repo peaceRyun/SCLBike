@@ -32,39 +32,56 @@
 
 .shop-aside-swiper {
     .shop-swiper-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 95%;
-        left: 6%;
-        width: 70%;
-        .shop-swiper-btn-wrap1 {
+        display: none;
+        @include tabletMore {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 25%;
-            .swiper-button-prev {
-                position: relative;
-                transform: translate(-10px, 12px);
+            position: absolute;
+            top: 95%;
+            left: 6%;
+            width: 70%;
+            .shop-swiper-btn-wrap1 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 25%;
+                .swiper-button-prev {
+                    position: relative;
+                    transform: translate(-10px, 12px);
+                    &::before {
+                        content: '\f104';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                        font-size: 2rem;
+                        color: $gray-40;
+                    }
+                }
+                .swiper-fraction {
+                    position: relative;
+                    z-index: 1;
+                    color: $gray-20;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+                .swiper-button-next {
+                    position: relative;
+                    transform: translate(10px, 12px);
+                    &::before {
+                        content: '\f105';
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                        font-size: 2rem;
+                        color: $gray-40;
+                    }
+                }
             }
-            .swiper-fraction {
+            .swiper-pagination {
+                width: 300px;
                 position: relative;
-                z-index: 1;
-                color: $gray-20;
-                font-size: 1.4rem;
-                font-weight: 400;
-            }
-            .swiper-button-next {
-                position: relative;
-                transform: translate(10px, 12px);
-            }
-        }
-        .swiper-pagination {
-            width: 300px;
-            position: relative;
-            .swiper-pagination-progressbar-fill {
-                background-color: $gray-20;
+                .swiper-pagination-progressbar-fill {
+                    background-color: $gray-20;
+                }
             }
         }
     }

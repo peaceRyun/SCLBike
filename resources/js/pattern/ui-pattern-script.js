@@ -284,7 +284,7 @@ document.querySelectorAll('.banner2.ani-snb3').forEach(function (item) {
     });
 });
 
-// clicked
+// shop-clicked
 const buttons = document.querySelectorAll('.art2-btn'); // 모든 버튼 선택
 const content = document.querySelector('.art2-detail-wrap');
 
@@ -353,5 +353,17 @@ buttons.forEach((button) => {
         } else {
             content.innerHTML = '<p>Choose a button to see the content!</p>';
         }
+    });
+});
+
+//buying - clicked
+const btns = document.querySelectorAll('.buy-btn-size'); // 모든 버튼 선택
+
+btns.forEach((button) => {
+    button.addEventListener('click', () => {
+        // 모든 버튼의 활성화 클래스 제거
+        btns.forEach((btn) => btn.classList.remove('selected'));
+        // 클릭된 버튼에만 활성화 클래스 추가
+        button.classList.add('selected');
     });
 });

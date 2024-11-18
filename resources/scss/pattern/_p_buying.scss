@@ -1,6 +1,10 @@
-.big-grid {
-    display: grid;
-    grid-template-columns: calc(100% - 640px) 1fr;
+.big-wrap {
+    display: flex;
+    flex-direction: column;
+    @include tabletMore {
+        display: grid;
+        grid-template-columns: calc(100% - 640px) 1fr;
+    }
 }
 
 // swiper 관련
@@ -24,7 +28,7 @@
     .swiper-slide {
         height: 220px;
         @include mobileMore {
-            height: 432px;
+            height: 100%;
         }
         @include tabletMore {
             height: 735.25px;
@@ -179,6 +183,8 @@
     }
 }
 .buy-want-date {
+    display: flex;
+    gap: 10px;
     padding: 0 0 10px;
     border-bottom: 1px solid $gray-40;
     a {
@@ -191,6 +197,8 @@
     }
 }
 .buy-for-save {
+    display: flex;
+    gap: 10px;
     &:before {
         content: '\f004';
         font-family: 'Line Awesome Free';
@@ -281,14 +289,16 @@
     border: 1px solid $gray-40;
     border-radius: 4px;
     background-color: white;
-    // cursor: pointer;
     font-size: 1.4rem;
     text-align: center;
-}
-.buy-btn-size.selected {
-    background-color: #d9534f; /* 빨간색 배경 */
-    color: white;
-    border: none;
+    &:hover {
+        box-shadow: inset 0 0 0 2px $gray-60;
+    }
+    &.selected {
+        background-color: #d9534f;
+        color: white;
+        border: none;
+    }
 }
 .buy-measure-wrap {
     display: flex;
@@ -371,10 +381,16 @@
 .buy-btn-mc1 {
     background: $gray-90;
     color: $white;
+    &:hover {
+        background: $gray-40;
+    }
 }
 .buy-btn-mc2 {
-    border: 1px solid $gray-90;
+    border: 1px solid $gray-40;
     color: $gray-90;
+    &:hover {
+        box-shadow: inset 0 0 0 2px $gray-60;
+    }
 }
 
 //main
