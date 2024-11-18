@@ -43,10 +43,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 21%;
+            width: 25%;
             .swiper-button-prev {
                 position: relative;
                 transform: translate(-10px, 12px);
+            }
+            .swiper-fraction {
+                position: relative;
+                z-index: 1;
+                color: $gray-20;
+                font-size: 1.4rem;
+                font-weight: 400;
             }
             .swiper-button-next {
                 position: relative;

@@ -51,7 +51,22 @@ var swiper = new Swiper('.shop-aside-swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    on: {
+        init: function () {
+            updateFraction(this);
+        },
+        slideChange: function () {
+            updateFraction(this);
+        },
+    },
 });
+
+function updateFraction(swiper) {
+    const fractionEl = swiper.el.querySelector('.swiper-fraction');
+    if (fractionEl) {
+        fractionEl.textContent = `${swiper.realIndex + 1} / ${swiper.slides.length}`;
+    }
+}
 
 var swiper = new Swiper('.art-0-grid-slide', {
     slidesPerView: 2,
