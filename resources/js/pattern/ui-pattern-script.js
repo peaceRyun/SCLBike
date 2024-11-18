@@ -54,33 +54,33 @@ window.addEventListener(
                 duration: 0.2,
             });
         }
-
-        if (window.scrollY === 0) {
-            gsap.to(toTopE2, {
-                opacity: 0,
-                duration: 0.3,
-                onComplete: () => {
-                    toTopE2.style.display = 'none';
-                },
-            });
-            gsap.to(fixedIcons, {
-                height: '90px',
-                duration: 0.3,
-                ease: 'power2.inOut',
-            });
-        } else {
-            toTopE2.style.display = 'block';
-            gsap.to(toTopE2, {
-                opacity: 1,
-                duration: 0.3,
-            });
-            gsap.to(fixedIcons, {
-                height: '140px',
-                duration: 0.3,
-                ease: 'power2.inOut',
-            });
+        if (toTopE2 && fixedIcons) {
+            if (window.scrollY === 0) {
+                gsap.to(toTopE2, {
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: () => {
+                        toTopE2.style.display = 'none';
+                    },
+                });
+                gsap.to(fixedIcons, {
+                    height: '90px',
+                    duration: 0.3,
+                    ease: 'power2.inOut',
+                });
+            } else {
+                toTopE2.style.display = 'block';
+                gsap.to(toTopE2, {
+                    opacity: 1,
+                    duration: 0.3,
+                });
+                gsap.to(fixedIcons, {
+                    height: '140px',
+                    duration: 0.3,
+                    ease: 'power2.inOut',
+                });
+            }
         }
-
         // 이전 스크롤 위치 업데이트
         lastScrollY = currentScrollY;
     }, 300)

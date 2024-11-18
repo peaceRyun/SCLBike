@@ -103,7 +103,7 @@ var swiper = new Swiper('.buy-review-slide', {
             spaceBetween: 40,
         },
         1024: {
-            slidesPerView: 2.3,
+            slidesPerView: 3.3,
             spaceBetween: 50,
         },
     },
