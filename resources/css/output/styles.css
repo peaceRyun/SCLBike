@@ -2433,44 +2433,31 @@ br {
   border-radius: 1rem;
 }
 
-.tab-list {
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: none !important;
-  font-size: 1.5rem;
 }
 
-#tabby-toggle_tab1,
-#tabby-toggle_tab2,
-#tabby-toggle_tab3 {
-  border: none;
+sl-tab::part(base) {
+  background-color: #fff;
+  color: #2d2d2d;
 }
-#tabby-toggle_tab1[aria-selected=true],
-#tabby-toggle_tab2[aria-selected=true],
-#tabby-toggle_tab3[aria-selected=true] {
+
+sl-tab[active]::part(base) {
   background-color: #551013;
   border-radius: 20px;
   padding: 4px 12px;
   color: #e4e4e4;
 }
-#tabby-toggle_tab1[aria-selected=false],
-#tabby-toggle_tab2[aria-selected=false],
-#tabby-toggle_tab3[aria-selected=false] {
-  background-color: #fff;
-  color: #2d2d2d;
-}
 
-.art2-tab11 {
+sl-tab-panel::part(base) {
   display: flex;
   justify-content: space-between;
   padding: 20px 0 0;
   font-size: 1.4rem;
   font-weight: 700;
   color: #8e8e8e;
-}
-.art2-tab11[hidden=hidden] {
-  display: none;
 }
 
 .art2-detail-wrap {
