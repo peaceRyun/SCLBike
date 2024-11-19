@@ -375,22 +375,41 @@ br {
     }
 }
 
-.art2-btns-wrap {
+.tab-list {
     display: flex;
     justify-content: space-between;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: $gray-50;
-    .art2-btn {
-        &.clicked {
-            background-color: $primary-80;
-            border-radius: 20px;
-            padding: 4px 12px;
-            color: $gray-20;
-        }
+    align-items: center;
+    border: none !important;
+    font-size: 1.5rem;
+}
+
+#tabby-toggle_tab1,
+#tabby-toggle_tab2,
+#tabby-toggle_tab3 {
+    border: none;
+    &[aria-selected='true'] {
+        background-color: $primary-80;
+        border-radius: 20px;
+        padding: 4px 12px;
+        color: $gray-20;
+    }
+    &[aria-selected='false'] {
+        background-color: $white;
+        color: $gray-80;
     }
 }
 
+.art2-tab11 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $gray-50;
+    &[hidden='hidden'] {
+        display: none;
+    }
+}
 .art2-detail-wrap {
     display: flex;
     justify-content: space-between;

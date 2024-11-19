@@ -26,6 +26,12 @@
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../resources/css/pattern_css.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -304,42 +310,111 @@
                                     /></a>
                                     <h3 class="art-h3">선택이 필요한 순간, <br />완벽한 큐레이션 O’SELECTED</h3>
                                     <p class="art-p">탁월한 선택으로 <br />셀렉티드 자전거 브랜드</p>
-                                    <div class="art2-tab">
-                                        <div class="art2-btns-wrap">
-                                            <button class="art2-btn art2-btn1">PHANTOM</button>
-                                            <button class="art2-btn art2-btn2">APPALANCHIA</button>
-                                            <button class="art2-btn art2-btn3">LESPO</button>
+                                    <div class="art2-tab1">
+                                        <ul data-tabs class="tab-list">
+                                            <li>
+                                                <a data-tabby-default href="#tab1">PHANTOM</a>
+                                            </li>
+                                            <li><a href="#tab2">APPALANCHIA</a></li>
+                                            <li><a href="#tab3">LESPO</a></li>
+                                        </ul>
+
+                                        <div id="tab1" class="art2-tab11">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
                                         </div>
-                                        <div class="art2-detail-wrap">
+
+                                        <div id="tab2" class="art2-tab11">
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
                                             </div>
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
                                             </div>
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
+                                            </div>
+                                        </div>
+
+                                        <div id="tab3" class="art2-tab11">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -424,43 +499,111 @@
                                     /></a>
                                     <h3 class="art-h3">선택이 필요한 순간, <br />완벽한 큐레이션 O’SELECTED</h3>
                                     <p class="art-p">탁월한 선택으로 <br />셀렉티드 자전거 브랜드</p>
+                                    <div class="art2-tab1">
+                                        <ul data-tabs class="tab-list">
+                                            <li>
+                                                <a data-tabby-default href="#tab1">PHANTOM</a>
+                                            </li>
+                                            <li><a href="#tab2">APPALANCHIA</a></li>
+                                            <li><a href="#tab3">LESPO</a></li>
+                                        </ul>
 
-                                    <div class="tab-wrap">
-                                        <div class="art2-btns-wrap">
-                                            <button class="art2-btn art2-btn1">PHANTOM</button>
-                                            <button class="art2-btn art2-btn2">APPALANCHIA</button>
-                                            <button class="art2-btn art2-btn3">LESPO</button>
+                                        <div id="tab1">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
                                         </div>
-                                        <div class="art2-detail-wrap">
+
+                                        <div id="tab2">
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
                                             </div>
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
                                             </div>
                                             <div class="art2-detail-wrap__mc">
                                                 <img
-                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
                                                     alt="예시"
                                                 />
                                                 <a href="./buying.html"
-                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
                                                 >
-                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
+                                            </div>
+                                        </div>
+
+                                        <div id="tab3">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -693,32 +836,112 @@
                                     /></a>
                                     <h3 class="art-h3">선택이 필요한 순간, <br />완벽한 큐레이션 O’SELECTED</h3>
                                     <p class="art-p">탁월한 선택으로 <br />셀렉티드 자전거 브랜드</p>
-                                    <div class="art2-btns-wrap">
-                                        <button class="art2-btn art2-btn1">PHANTOM</button>
-                                        <button class="art2-btn art2-btn2">APPALANCHIA</button>
-                                        <button class="art2-btn art2-btn3">LESPO</button>
-                                    </div>
-                                    <div class="art2-detail-wrap">
-                                        <div class="art2-detail-wrap__mc">
-                                            <img src="../resources/img/pattern/shopping/shop-img3-1.jpg" alt="예시" />
-                                            <a href="./buying.html"
-                                                ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
-                                            >
-                                            <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                    <div class="art2-tab1">
+                                        <ul data-tabs class="tab-list">
+                                            <li>
+                                                <a data-tabby-default href="#tab1">PHANTOM</a>
+                                            </li>
+                                            <li><a href="#tab2">APPALANCHIA</a></li>
+                                            <li><a href="#tab3">LESPO</a></li>
+                                        </ul>
+
+                                        <div id="tab1">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img3-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+                                            </div>
                                         </div>
-                                        <div class="art2-detail-wrap__mc">
-                                            <img src="../resources/img/pattern/shopping/shop-img3-1.jpg" alt="예시" />
-                                            <a href="./buying.html"
-                                                ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
-                                            >
-                                            <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+
+                                        <div id="tab2">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img4-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Appalanchia M55<br />Shorts, Black</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">630,000원</p></a>
+                                            </div>
                                         </div>
-                                        <div class="art2-detail-wrap__mc">
-                                            <img src="../resources/img/pattern/shopping/shop-img3-1.jpg" alt="예시" />
-                                            <a href="./buying.html"
-                                                ><p class="art2-mc-txt1">Phantom FS<br />Shorts, Yellow</p></a
-                                            >
-                                            <a href="./buying.html"><p class="art2-price">1,950,000원</p></a>
+
+                                        <div id="tab3">
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
+                                            <div class="art2-detail-wrap__mc">
+                                                <img
+                                                    src="../resources/img/pattern/shopping/shop-img5-1.jpg"
+                                                    alt="예시"
+                                                />
+                                                <a href="./buying.html"
+                                                    ><p class="art2-mc-txt1">Stinger 100<br />Shorts, White</p></a
+                                                >
+                                                <a href="./buying.html"><p class="art2-price">395,000원</p></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </section>

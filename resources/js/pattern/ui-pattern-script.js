@@ -284,7 +284,8 @@ document.querySelectorAll('.banner2.ani-snb3').forEach(function (item) {
     });
 });
 
-// shop-clicked
+// shop-tab
+var tabs = new Tabby('[data-tabs]');
 
 //buying - clicked
 const btns = document.querySelectorAll('.buy-btn-size'); // 모든 버튼 선택

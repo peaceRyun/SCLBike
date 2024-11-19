@@ -2433,18 +2433,44 @@ br {
   border-radius: 1rem;
 }
 
-.art2-btns-wrap {
+.tab-list {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #8e8e8e;
+  align-items: center;
+  border: none !important;
+  font-size: 1.5rem;
 }
-.art2-btns-wrap .art2-btn.clicked {
+
+#tabby-toggle_tab1,
+#tabby-toggle_tab2,
+#tabby-toggle_tab3 {
+  border: none;
+}
+#tabby-toggle_tab1[aria-selected=true],
+#tabby-toggle_tab2[aria-selected=true],
+#tabby-toggle_tab3[aria-selected=true] {
   background-color: #551013;
   border-radius: 20px;
   padding: 4px 12px;
   color: #e4e4e4;
+}
+#tabby-toggle_tab1[aria-selected=false],
+#tabby-toggle_tab2[aria-selected=false],
+#tabby-toggle_tab3[aria-selected=false] {
+  background-color: #fff;
+  color: #2d2d2d;
+}
+
+.art2-tab11 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8e8e8e;
+}
+.art2-tab11[hidden=hidden] {
+  display: none;
 }
 
 .art2-detail-wrap {
