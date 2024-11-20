@@ -496,6 +496,60 @@
     display: block; /* 보이는 상태 */
 }
 
+.buy-more-cont1 {
+    ul {
+        list-style: disc;
+        padding: 24px 16px;
+    }
+}
+
+.buy-more-cont2 {
+    &__flex {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $gray-40;
+        h4 {
+            font-size: 2.4rem;
+            color: $gray-90;
+            padding-bottom: 10px;
+            width: 120px;
+        }
+        .tech-line {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: $gray-60;
+            text-align: left;
+            strong {
+                color: $gray-80;
+            }
+            @include tabletMore {
+                width: 800px;
+            }
+        }
+        @include mobileMore {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+}
+
+.buy-more-cont4 {
+    &__flex {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 10px;
+        p {
+            text-align: start;
+        }
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
 .buy-review-wrap {
     background: $gray-10;
     .buy-review-header {

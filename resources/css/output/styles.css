@@ -3200,6 +3200,58 @@ sl-tab-panel::part(base) {
   display: block; /* 보이는 상태 */
 }
 
+.buy-more-cont1 ul {
+  list-style: disc;
+  padding: 24px 16px;
+}
+
+.buy-more-cont2__flex {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c6c6c6;
+}
+.buy-more-cont2__flex h4 {
+  font-size: 2.4rem;
+  color: #1d1d1d;
+  padding-bottom: 10px;
+  width: 120px;
+}
+.buy-more-cont2__flex .tech-line {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #717171;
+  text-align: left;
+}
+.buy-more-cont2__flex .tech-line strong {
+  color: #2d2d2d;
+}
+@media (min-width: 1024px) {
+  .buy-more-cont2__flex .tech-line {
+    width: 800px;
+  }
+}
+@media (min-width: 600px) {
+  .buy-more-cont2__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.buy-more-cont4__flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+.buy-more-cont4__flex p {
+  text-align: start;
+}
+.buy-more-cont4__flex i {
+  font-size: 2rem;
+}
+
 .buy-review-wrap {
   background: #f0f0f0;
 }
