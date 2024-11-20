@@ -139,6 +139,16 @@ $('.lang__list li').click(function () {
     $('.lang__list').hide();
 });
 
+const langBtn = document.querySelector('.lang__btn');
+const langList = document.querySelector('.lang__list');
+
+langList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        const selectedLang = event.target.textContent;
+        langBtn.textContent = selectedLang;
+    }
+});
+
 // ---------------------------------------------------------------------
 // ani
 document.querySelectorAll('.ani').forEach(function (item) {
@@ -284,9 +294,6 @@ document.querySelectorAll('.banner2.ani-snb3').forEach(function (item) {
     });
 });
 
-// shop-tab
-var tabs = new Tabby('[data-tabs]');
-
 //buying - clicked
 const btns = document.querySelectorAll('.buy-btn-size'); // 모든 버튼 선택
 
@@ -296,5 +303,16 @@ btns.forEach((button) => {
         btns.forEach((btn) => btn.classList.remove('selected'));
         // 클릭된 버튼에만 활성화 클래스 추가
         button.classList.add('selected');
+    });
+});
+
+const btns1 = document.querySelectorAll('.btn-circle'); // 모든 버튼 선택
+
+btns1.forEach((button) => {
+    button.addEventListener('click', () => {
+        // 모든 버튼의 활성화 클래스 제거
+        btns1.forEach((btn) => btn.classList.remove('color-clicked'));
+        // 클릭된 버튼에만 활성화 클래스 추가
+        button.classList.add('color-clicked');
     });
 });

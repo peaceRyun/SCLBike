@@ -2949,14 +2949,29 @@ sl-tab-panel::part(base) {
   color: #000;
 }
 
-.circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 36px;
+.btn-circle {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  margin-right: 4px;
+  padding: 2px;
+  transition: 250ms ease-in-out;
+}
+.btn-circle.color-clicked {
+  border: 2px solid rgb(37, 37, 37);
+}
+.btn-circle .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
 }
 
 .red {
   background: red;
+}
+
+.black {
+  background: #000;
 }
 
 .buy-txt-k1 {

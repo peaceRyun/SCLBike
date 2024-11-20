@@ -261,13 +261,28 @@
     font-weight: 900;
     color: $black;
 }
-.circle {
-    width: 36px;
-    height: 36px;
-    border-radius: 36px;
+.btn-circle {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    margin-right: 4px;
+    padding: 2px;
+    transition: 250ms ease-in-out;
+    &.color-clicked {
+        border: 2px solid rgb(37, 37, 37);
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
 }
+
 .red {
     background: red;
+}
+.black {
+    background: $black;
 }
 .buy-txt-k1 {
     font-size: 1.6rem;
