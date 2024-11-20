@@ -478,6 +478,24 @@
         font-size: 2.4rem;
     }
 }
+
+/* 초기 상태 */
+.la-minus-circle {
+    display: none; /* 기본적으로 숨김 */
+}
+
+/* 콘텐츠 */
+.buy-more-cont1,
+.buy-more-cont2,
+.buy-more-cont3,
+.buy-more-cont4 {
+    display: none; /* 처음에 숨김 */
+}
+
+.more-clicked {
+    display: block; /* 보이는 상태 */
+}
+
 .buy-review-wrap {
     background: $gray-10;
     .buy-review-header {

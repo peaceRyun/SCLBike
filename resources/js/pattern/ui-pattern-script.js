@@ -306,6 +306,7 @@ btns.forEach((button) => {
     });
 });
 
+// buying- color-clicked
 const btns1 = document.querySelectorAll('.btn-circle'); // 모든 버튼 선택
 
 btns1.forEach((button) => {
@@ -314,5 +315,25 @@ btns1.forEach((button) => {
         btns1.forEach((btn) => btn.classList.remove('color-clicked'));
         // 클릭된 버튼에만 활성화 클래스 추가
         button.classList.add('color-clicked');
+    });
+});
+
+//buying- more-clicked
+document.querySelectorAll('.buy-more-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+        const targetClass = button.dataset.target; // data-target 값 가져오기
+        const content = document.querySelector(`.${targetClass}`); // 관련 콘텐츠 찾기
+        const plusIcon = button.querySelector('.la-plus-circle');
+        const minusIcon = button.querySelector('.la-minus-circle');
+
+        // 콘텐츠 상태 토글
+        const isContentVisible = content.classList.toggle('more-clicked');
+
+        // 아이콘 상태 업데이트
+        plusIcon.style.display = isContentVisible ? 'none' : 'inline';
+        minusIcon.style.display = isContentVisible ? 'inline' : 'none';
+
+        // 콘텐츠 보이기/숨기기
+        content.style.display = isContentVisible ? 'block' : 'none';
     });
 });
