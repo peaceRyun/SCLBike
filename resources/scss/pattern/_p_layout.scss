@@ -547,7 +547,7 @@
     }
     #main {
         @include tabletMore {
-            width: 1280px;
+            max-width: 1280px;
             padding: 0 30px 80px;
         }
     }

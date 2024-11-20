@@ -43,9 +43,9 @@
             width: 70%;
             .shop-swiper-btn-wrap1 {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 width: 25%;
+                gap: 10px;
                 .swiper-button-prev {
                     position: relative;
                     transform: translate(-10px, 12px);
@@ -63,6 +63,7 @@
                     color: $gray-20;
                     font-size: 1.4rem;
                     font-weight: 400;
+                    white-space: nowrap;
                 }
                 .swiper-button-next {
                     position: relative;
@@ -79,6 +80,7 @@
             .swiper-pagination {
                 width: 300px;
                 position: relative;
+                height: 3px;
                 .swiper-pagination-progressbar-fill {
                     background-color: $gray-20;
                 }

@@ -59,6 +59,10 @@ var swiper = new Swiper('.shop-aside-swiper', {
             updateFraction(this);
         },
     },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
 });
 
 function updateFraction(swiper) {

@@ -911,7 +911,7 @@ caption {
 }
 @media (min-width: 1024px) {
   .buying #main {
-    width: 1280px;
+    max-width: 1280px;
     padding: 0 30px 80px;
   }
 }
@@ -2091,9 +2091,9 @@ img {
   }
   .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 25%;
+    gap: 10px;
   }
   .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .swiper-button-prev {
     position: relative;
@@ -2112,6 +2112,7 @@ img {
     color: #e4e4e4;
     font-size: 1.4rem;
     font-weight: 400;
+    white-space: nowrap;
   }
   .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .swiper-button-next {
     position: relative;
@@ -2127,6 +2128,7 @@ img {
   .shop-aside-swiper .shop-swiper-flex .swiper-pagination {
     width: 300px;
     position: relative;
+    height: 3px;
   }
   .shop-aside-swiper .shop-swiper-flex .swiper-pagination .swiper-pagination-progressbar-fill {
     background-color: #e4e4e4;
@@ -2689,21 +2691,27 @@ sl-tab-panel::part(base) {
 .buy-main-slide2 {
   height: 80%;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 80px;
   background: white;
+}
+@media (min-width: 600px) {
+  .buy-main-slide2 {
+    padding-top: 100px;
+  }
 }
 @media (min-width: 1024px) {
   .buy-main-slide2 {
     height: 100%;
+    padding-top: 200px;
     padding: 0 0 0 24px;
   }
 }
 .buy-main-slide2 .swiper-slide {
-  height: 220px;
+  height: 330px;
 }
 @media (min-width: 600px) {
   .buy-main-slide2 .swiper-slide {
-    height: 100%;
+    height: 600px;
   }
 }
 @media (min-width: 1024px) {
