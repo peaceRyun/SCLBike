@@ -384,6 +384,7 @@ br {
 sl-tab::part(base) {
     background-color: $white;
     color: $gray-80;
+    padding: 4px 12px;
 }
 
 sl-tab[active]::part(base) {
