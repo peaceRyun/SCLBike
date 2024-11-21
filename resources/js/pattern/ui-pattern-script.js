@@ -23,37 +23,39 @@ window.addEventListener(
         // 현재 스크롤 위치
         const currentScrollY = window.scrollY;
 
-        // 스크롤 다운
-        if (currentScrollY > lastScrollY) {
-            // Badge 요소 숨기기!
-            // gsap.to(요소, 시간, 옵션);
-            gsap.to(headerEl, {
-                opacity: 0,
-                display: 'none',
-                duration: 0.8,
-            });
-            // 상단으로 스크롤 버튼 보이기!
-            gsap.to(toTopE1, {
-                right: '30px',
-                // x: 0,
-                duration: 0.2,
-            });
+        // 현재 화면 너비 확인
+        const isWideScreen = window.innerWidth >= 1024;
 
-            // 스크롤 업
-        } else {
-            // Badge 요소 보이기!
-            gsap.to(headerEl, {
-                opacity: 1,
-                display: 'block',
-                duration: 0.8,
-            });
-            // 상단으로 스크롤 버튼 숨기기!
-            gsap.to(toTopE1, {
-                right: '-50px',
-                // x: 100,
-                duration: 0.2,
-            });
+        // 1024px 이상일 때만 header 관련 구문 실행
+        if (isWideScreen) {
+            if (currentScrollY > lastScrollY) {
+                // 스크롤 다운 - Badge 요소 숨기기
+                gsap.to(headerEl, {
+                    opacity: 0,
+                    display: 'none',
+                    duration: 0.8,
+                });
+                // 상단으로 스크롤 버튼 보이기
+                gsap.to(toTopE1, {
+                    right: '30px',
+                    duration: 0.2,
+                });
+            } else {
+                // 스크롤 업 - Badge 요소 보이기
+                gsap.to(headerEl, {
+                    opacity: 1,
+                    display: 'block',
+                    duration: 0.8,
+                });
+                // 상단으로 스크롤 버튼 숨기기
+                gsap.to(toTopE1, {
+                    right: '-50px',
+                    duration: 0.2,
+                });
+            }
         }
+
+        // toTopE2 및 fixedIcons 관련 로직은 모든 화면 크기에서 실행
         if (toTopE2 && fixedIcons) {
             if (window.scrollY === 0) {
                 gsap.to(toTopE2, {
@@ -81,10 +83,12 @@ window.addEventListener(
                 });
             }
         }
+
         // 이전 스크롤 위치 업데이트
         lastScrollY = currentScrollY;
     }, 300)
 );
+
 // 상단으로 스크롤 버튼을 클릭하면,
 if (toTopE1) {
     toTopE1.addEventListener('click', function () {
