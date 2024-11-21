@@ -2,12 +2,6 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-// 개발자를 위한 스크롤 값 표시
-// window.addEventListener('scroll', function () {
-//     const scrollTop = window.scrollY; // 현재 스크롤 위치
-//     console.log('Current scroll position:', scrollTop);
-// });
-
 // header 관련 js
 const headerEl = document.querySelector('#header');
 const toTopE1 = document.querySelector('.home-key');
@@ -20,34 +14,31 @@ let lastScrollY = window.scrollY;
 window.addEventListener(
     'scroll',
     _.throttle(function () {
-        // 현재 스크롤 위치
         const currentScrollY = window.scrollY;
 
-        // 현재 화면 너비 확인
         const isWideScreen = window.innerWidth >= 1024;
 
-        // 1024px 이상일 때만 header 관련 구문 실행
         if (isWideScreen) {
             if (currentScrollY > lastScrollY) {
-                // 스크롤 다운 - Badge 요소 숨기기
+                // 스크롤 다운
                 gsap.to(headerEl, {
                     opacity: 0,
                     display: 'none',
-                    duration: 0.8,
+                    duration: 0.5,
                 });
-                // 상단으로 스크롤 버튼 보이기
+                // '상단으로 스크롤' 버튼 보이기
                 gsap.to(toTopE1, {
                     right: '30px',
                     duration: 0.2,
                 });
             } else {
-                // 스크롤 업 - Badge 요소 보이기
+                // 스크롤 업
                 gsap.to(headerEl, {
                     opacity: 1,
                     display: 'block',
-                    duration: 0.8,
+                    duration: 0.3,
                 });
-                // 상단으로 스크롤 버튼 숨기기
+                // '상단으로 스크롤' 버튼 숨기기
                 gsap.to(toTopE1, {
                     right: '-50px',
                     duration: 0.2,
@@ -55,7 +46,6 @@ window.addEventListener(
             }
         }
 
-        // toTopE2 및 fixedIcons 관련 로직은 모든 화면 크기에서 실행
         if (toTopE2 && fixedIcons) {
             if (window.scrollY === 0) {
                 gsap.to(toTopE2, {

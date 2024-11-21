@@ -940,12 +940,8 @@ caption {
   margin-top: 100px;
 }
 
-.buying #header {
-  display: none;
-}
 @media (min-width: 1024px) {
   .buying #header {
-    display: block;
     background-color: #fff;
   }
 }
