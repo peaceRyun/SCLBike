@@ -2,10 +2,6 @@
 
 .main-content {
     background: #f4f3ef;
-    padding: 0 0 160px;
-    @include tabletMore {
-        padding: 0 0 200px;
-    }
 }
 
 img {
@@ -352,26 +348,37 @@ img {
     }
 }
 
-.sec-1::before {
-    content: '3';
-    position: absolute;
-    top: -530px;
-    right: -9%;
-    width: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 67rem;
-    font-weight: bold;
-    @include mobileMore {
-        top: -71.5rem;
-        right: -25%;
-        font-size: 117rem;
+.sec-1 {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -28%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../../resources/img/pattern/about/pave-road.png) no-repeat 0 0;
     }
-    @include tabletMore {
-        top: -150rem;
-        right: -46%;
-        font-size: 206rem;
+    &::before {
+        content: '3';
+        position: absolute;
+        top: -530px;
+        right: -9%;
+        width: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 67rem;
+        font-weight: bold;
+        @include mobileMore {
+            top: -71.5rem;
+            right: -25%;
+            font-size: 117rem;
+        }
+        @include tabletMore {
+            top: -150rem;
+            right: -46%;
+            font-size: 206rem;
+        }
     }
 }
 
@@ -680,6 +687,28 @@ img {
 
 // section 03
 .sec-3 {
+    padding-bottom: 160px;
+    @include tabletMore {
+        padding-bottom: 200px;
+    }
+    &::after {
+        content: '';
+        background: url(../../../resources/img/pattern/about/pave-road2.png) no-repeat 0 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        @include mobileMore {
+            top: 60%;
+            left: 2%;
+        }
+        @include tabletMore {
+            top: 80%;
+            left: 2%;
+        }
+        transform: rotate(90deg);
+    }
     &::before {
         background-image: url('../../../resources/img/pattern/about/sec3-bg-object1.jpg');
         background-position: -84rem 0;
