@@ -440,12 +440,18 @@ caption {
   position: relative;
   z-index: 1000;
 }
+@media (min-width: 1024px) {
+  #header {
+    padding: 0 60px 0 0;
+  }
+}
 #header.active {
   background: #fff !important;
 }
 #header.active::before {
-  height: 100vh;
+  display: block;
   opacity: 1;
+  height: 100vh;
 }
 @media (min-width: 1024px) {
   #header.active::before {
@@ -461,6 +467,7 @@ caption {
 }
 #header::before {
   content: "";
+  display: none;
   height: 100vh;
   opacity: 0;
   background: #fff;
@@ -2514,6 +2521,7 @@ sl-tab::part(base) {
   background-color: #fff;
   color: #2d2d2d;
   padding: 4px 12px;
+  font-size: 1.6rem;
 }
 
 sl-tab[active]::part(base) {
@@ -2978,7 +2986,7 @@ sl-tab-panel::part(base) {
 
 .buy-txt-wrap1 {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 8px;
 }
 
