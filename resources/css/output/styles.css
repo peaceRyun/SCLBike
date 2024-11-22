@@ -889,6 +889,9 @@ caption {
     gap: 144px;
     margin-top: 100px;
   }
+  #footer .info-list .info {
+    white-space: nowrap;
+  }
   #footer .info-list .info span {
     color: #454545;
     font-size: 14px;
