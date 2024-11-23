@@ -112,7 +112,6 @@ if (fadeElement) {
         },
     });
 }
-
 $('.all-menu').click(function () {
     $('#header').toggleClass('active');
     $('.gnb__depth1 > li > a > span').toggleClass('active');
@@ -143,7 +142,7 @@ langList.addEventListener('click', (event) => {
     }
 });
 
-// ---------------------------------------------------------------------
+// ============================================================
 // ani
 document.querySelectorAll('.ani').forEach(function (item) {
     ScrollTrigger.create({
