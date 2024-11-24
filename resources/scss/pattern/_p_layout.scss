@@ -381,6 +381,9 @@
         justify-content: center;
         align-items: center;
         z-index: 6500;
+        &.on {
+            display: none;
+        }
     }
     .qm-list {
         width: 100%;
@@ -398,30 +401,13 @@
                 margin-top: 0px;
             }
         }
-        &.on {
-            display: none;
-        }
+
         &.white {
             color: white;
         }
-        &__1 {
-            display: none;
-            &.on {
-                display: inline;
-            }
-        }
-        &__2 {
-            display: none;
-            &.on {
-                display: inline;
-            }
-        }
-        &__3 {
-            display: none;
-            &.on {
-                display: inline;
-            }
-        }
+        &__1,
+        &__2,
+        &__3,
         &__4 {
             display: none;
             &.on {
@@ -432,6 +418,7 @@
 }
 
 // main(about페이지 snb 관련)
+
 #main {
     position: relative;
     z-index: 5000;
@@ -448,14 +435,15 @@
     background: #0d0d0d;
     .footer-content {
         position: relative;
-        padding: 300px 20px 0px;
+        padding: 300px 0 0;
         color: #ebebeb;
         @include mobileMore {
-            padding: 400px 0px 120px;
+            padding: 500px 0 120px;
+            bottom: 10%;
         }
         @include tabletMore {
-            padding: 0px 60px;
-            margin: 300px auto;
+            padding: 0;
+            margin: 250px auto;
             max-width: 1304px;
         }
     }
@@ -469,11 +457,11 @@
         }
         overflow: hidden;
         @include mobileMore {
-            top: 110px;
+            top: 632px;
         }
         @include tabletMore {
             top: 0;
-            left: calc(50% + 264px);
+            left: 80%;
         }
         img {
             display: block;
@@ -488,10 +476,15 @@
     .ul-list-top {
         font-size: 26px;
         font-weight: 400;
-        text-decoration: underline;
+        text-decoration: underline solid 1px $white;
+        text-underline-offset: 5px;
         li {
             &:last-child {
                 margin-top: 16px;
+            }
+            a:hover {
+                color: $gray-40;
+                text-decoration: underline solid 1px $gray-40;
             }
         }
     }
@@ -552,19 +545,13 @@
             margin-top: 0px;
         }
         li {
-            &::before {
-                font-family: 'Line Awesome Brands';
-                color: #ebebeb;
+            a {
+                color: $gray-40;
                 font-size: 24px;
-            }
-            &:first-child::before {
-                content: '\f167';
-            }
-            &:nth-child(2)::before {
-                content: '\f16d';
-            }
-            &:last-child::before {
-                content: '\f39e';
+                font-weight: 500;
+                &:hover {
+                    color: #fff;
+                }
             }
         }
     }

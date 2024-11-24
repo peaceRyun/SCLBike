@@ -175,7 +175,7 @@ document.querySelectorAll('.ani-shop').forEach(function (item) {
 
 // snb
 document.querySelectorAll('.ani-snb').forEach(function (item) {
-    const targ = document.querySelector('.qm-list');
+    const targ = document.querySelector('.quick-menu');
 
     ScrollTrigger.create({
         trigger: item,
@@ -244,6 +244,7 @@ document.querySelectorAll('.ani-snb4').forEach(function (item) {
         markers: false,
     });
 });
+// 영역별로 글씨 하얗게 켰다 끄기
 document.querySelectorAll('.intro-slide-cont.ani-snb1').forEach(function (item) {
     const targ = document.querySelector('.qm-list');
 
