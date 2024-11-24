@@ -812,19 +812,16 @@ caption {
 }
 #footer .footer-logo {
   position: absolute;
-  top: 150px;
-  left: calc(50% + 30px);
-  width: 150px;
+  top: 470px;
+  left: 53%;
+  width: 100%;
   overflow: hidden;
 }
 @media (min-width: 600px) {
   #footer .footer-logo {
-    width: 206px;
-  }
-}
-@media (min-width: 600px) {
-  #footer .footer-logo {
     top: 632px;
+    position: absolute;
+    z-index: 1;
   }
 }
 @media (min-width: 1024px) {
@@ -837,12 +834,7 @@ caption {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 0px 0px 0px;
-}
-@media (min-width: 600px) {
-  #footer .footer-logo img {
-    margin: 0px 0px 0px;
-  }
+  margin: 0;
 }
 #footer .ul-list-top {
   font-size: 26px;

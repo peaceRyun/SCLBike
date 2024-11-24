@@ -449,15 +449,14 @@
     }
     .footer-logo {
         position: absolute;
-        top: 150px;
-        left: calc(50% + 30px);
-        width: 150px;
-        @include mobileMore {
-            width: 206px;
-        }
+        top: 470px;
+        left: 53%;
+        width: 100%;
         overflow: hidden;
         @include mobileMore {
             top: 632px;
+            position: absolute;
+            z-index: 1;
         }
         @include tabletMore {
             top: 0;
@@ -466,10 +465,7 @@
         img {
             display: block;
             object-fit: cover;
-            margin: 0px 0px 0px;
-            @include mobileMore {
-                margin: 0px 0px 0px;
-            }
+            margin: 0;
         }
     }
 
