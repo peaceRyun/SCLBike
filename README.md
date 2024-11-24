@@ -47,7 +47,11 @@
 
 ## **🔗 링크**
 
-**링크:** [https://peaceryun.github.io/SCLBike/pages/](https://peaceryun.github.io/SCLBike/pages/)
+**링크1-main(about):** [https://peaceryun.github.io/SCLBike/pages/](https://peaceryun.github.io/SCLBike/pages/)
+
+**링크2-shopping:** [https://peaceryun.github.io/SCLBike/pages/shopping.html](https://peaceryun.github.io/SCLBike/pages/shopping.html)
+
+**링크3-buying:** [https://peaceryun.github.io/SCLBike/pages/buying.html](https://peaceryun.github.io/SCLBike/pages/buying.html)
 
 <br />
 
