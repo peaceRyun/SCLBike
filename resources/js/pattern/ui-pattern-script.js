@@ -2,6 +2,43 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+//loading 관련
+document.addEventListener('DOMContentLoaded', function () {
+    const progress = document.querySelector('.loading-progress');
+    const progressText = document.querySelector('.progressText');
+    const loadingScreen = document.querySelector('.loadingScreen');
+
+    // 스크롤 이벤트 방지
+    loadingScreen.addEventListener(
+        'touchmove',
+        function (e) {
+            e.preventDefault();
+        },
+        { passive: false }
+    );
+
+    loadingScreen.addEventListener(
+        'wheel',
+        function (e) {
+            e.preventDefault();
+        },
+        { passive: false }
+    );
+
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
+        } else {
+            width++;
+            progress.style.width = width + '%';
+            progressText.textContent = width + '%';
+        }
+    }, 30);
+});
 // header 관련 js
 const headerEl = document.querySelector('#header');
 const toTopE1 = document.querySelector('.home-key');
