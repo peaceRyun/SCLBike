@@ -65,7 +65,7 @@
 
 ### **1. GSAP Scroll Trigger**
 
-<img width="100%" alt="라이트/다크모드" src="https://user-images.githubusercontent.com/51189962/136142455-dd9bbdf1-4676-408c-bdc2-009f133e92db.gif" />
+<img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/gsapST.gif" />
 
 -   viewpoint의 50%를 기준으로 애니메이션이 트리거 되게 하였음.
 
