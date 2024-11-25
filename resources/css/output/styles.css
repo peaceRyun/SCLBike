@@ -2309,9 +2309,8 @@ img {
   background: #959f87;
 }
 .art-0-grid-slide .ss0iw5 img {
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
   width: 100px;
+  margin: auto;
 }
 .art-0-grid-slide .ss0iw6 {
   background: #8686a9;
@@ -2326,9 +2325,9 @@ img {
   background: #ffa326;
 }
 .art-0-grid-slide .ss0iw8 img {
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
   width: 100px;
+  margin: auto;
+  transform: translateY(10px);
 }
 .art-0-grid-slide .ss0iw9 {
   background: #f2c894;
@@ -2336,8 +2335,9 @@ img {
 .art-0-grid-slide .ss0iw9 img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 110%;
-     object-position: 110%;
+  -o-object-position: 120%;
+     object-position: 120%;
+  transform: translateX(14%);
 }
 
 .shop-sec0-txt {

@@ -196,8 +196,8 @@
     .ss0iw5 {
         background: #959f87;
         img {
-            object-position: 50% 50%;
             width: 100px;
+            margin: auto;
         }
     }
     .ss0iw6 {
@@ -212,15 +212,17 @@
     .ss0iw8 {
         background: #ffa326;
         img {
-            object-position: 50% 50%;
             width: 100px;
+            margin: auto;
+            transform: translateY(10px);
         }
     }
     .ss0iw9 {
         background: #f2c894;
         img {
             object-fit: cover;
-            object-position: 110%;
+            object-position: 120%;
+            transform: translateX(14%);
         }
     }
 }

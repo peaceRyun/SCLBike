@@ -67,7 +67,7 @@
 
 <img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/gsapST.gif" />
 
--   viewpoint의 50%를 기준으로 애니메이션이 트리거 되게 하였음.
+-   viewpoint의 50%를 기준으로 애니메이션이 트리거 되게 하였습니다.
 
 ```javascript
 //ui-pattern-script.js
@@ -90,9 +90,19 @@ document.querySelectorAll('.ani').forEach(function (item) {
 
 ### **3. 반응형 웹**
 
-<img width="100%" alt="반응형" src="https://user-images.githubusercontent.com/51189962/136144110-0a5cb56e-1dcf-4bc8-b7d8-b93bbb100744.gif" />
-
--   KRDS를 참고하여 3개의 endpoint를 두고 반응형을 구현하였음
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/index.html.gif" />
+<br/>
+<br/>
+<br/>
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/shopping.html.gif" />
+<br/>
+<br/>
+<br/>
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/buying.html.gif" />
+<br/>
+<br/>
+<br/>
+-   KRDS를 참고하여 3개의 endpoint를 두고 반응형을 구현하였습니다.
 
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/반응형_krds.png"/>
 
@@ -127,9 +137,7 @@ $breakpoints: (
 }
 ```
 
-<img width="100%" alt="반응형 네비게이션" src="https://user-images.githubusercontent.com/51189962/136144313-2a67d258-3ec1-4517-80fc-3f67b957dff5.gif" />
-
--   네비게이션 메뉴의 경우 mobile(768px)을 기준으로 그 이상일 경우 상단바, 이하일 경우 햄버거메뉴로 변경
+-   네비게이션 메뉴의 경우 tablet(1024px)을 기준으로 그 이상일 경우 gnb 메뉴 전체, 이하일 경우 검색과 햄버거메뉴만 보이게 하였습니다.
 
 <br />
 
