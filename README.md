@@ -103,7 +103,8 @@ document.querySelectorAll('.ani').forEach(function (item) {
 <br/>
 <br/>
 -   KRDS를 참고하여 3개의 endpoint를 두고 반응형을 구현하였습니다.
-
+<br/>
+<br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/반응형_krds.png"/>
 
 ```scss
