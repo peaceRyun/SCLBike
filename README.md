@@ -87,8 +87,8 @@ document.querySelectorAll('.ani').forEach(function (item) {
 ```
 
 ### **2. scss 활용**
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/파일구조.png" />
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/파일구조2.png" />
+<img width="200px" alt="반응형" src="./resources/img/pattern/common/readme/파일구조.png" />
+<img width="200px" alt="반응형" src="./resources/img/pattern/common/readme/파일구조2.png" />
 
 ### **3. 반응형 웹**
 
