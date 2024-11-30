@@ -19,7 +19,7 @@
 
 ## **📝 포트폴리오 개요**
 
-<img width="100%" alt="메인 페이지" src="./resources/img/pattern/common/썸네일_sclbike.png" />
+<img width="100%" alt="메인 페이지" src="./resources/img/pattern/common/readme/썸네일_sclbike.png" />
 
 > **프로젝트:** 기존 사이트 리메이크
 >
@@ -57,7 +57,7 @@
 
 ## **✨ 업데이트**
 
--   index페이지에 로딩페이지 추가(24.??.??)
+-   index페이지에 로딩페이지 추가(24.11.25)
 
 <br />
 
@@ -65,7 +65,7 @@
 
 ### **1. GSAP Scroll Trigger**
 
-<img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/gsapST.gif" />
+<img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/readme/gsapST.gif" />
 
 -   viewpoint의 50%를 기준으로 애니메이션이 트리거 되게 하였습니다.
 
@@ -87,25 +87,27 @@ document.querySelectorAll('.ani').forEach(function (item) {
 ```
 
 ### **2. scss 활용**
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/파일구조.png" />
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/파일구조2.png" />
 
 ### **3. 반응형 웹**
 
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/index.html.gif" />
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/index.html.gif" />
 <br/>
 <br/>
 <br/>
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/shopping.html.gif" />
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/shopping.html.gif" />
 <br/>
 <br/>
 <br/>
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/buying.html.gif" />
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/buying.html.gif" />
 <br/>
 <br/>
 <br/>
--   KRDS를 참고하여 3개의 endpoint를 두고 반응형을 구현하였습니다.
+-   KRDS를 참고하여 3개의 대표화면(1920px, 768px, 390px)을 만들며 반응형을 구현하였습니다.
 <br/>
 <br/>
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/반응형_krds.png"/>
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/반응형_krds.png"/>
 
 ```scss
 //_variables.scss
