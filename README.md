@@ -19,7 +19,7 @@
 
 ## **📝 포트폴리오 개요**
 
-<img width="50%" alt="메인 페이지" src="./resources/img/pattern/common/readme/썸네일_sclbike.png" />
+<img width="100%" alt="메인 페이지" src="./resources/img/pattern/common/readme/썸네일_sclbike.png" />
 
 > **프로젝트:** 기존 사이트 리메이크
 >
