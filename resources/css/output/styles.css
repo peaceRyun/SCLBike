@@ -2140,6 +2140,7 @@ img {
 @media (min-width: 1024px) {
   .art-0-grid-slide .swiper-pagination {
     display: block;
+    top: 96.5%;
   }
 }
 

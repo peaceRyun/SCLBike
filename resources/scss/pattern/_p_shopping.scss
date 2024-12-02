@@ -26,6 +26,7 @@
         display: none;
         @include tabletMore {
             display: block;
+            top: 96.5%;
         }
     }
 }
