@@ -3142,28 +3142,19 @@ sl-tab-panel::part(base) {
   font-size: 1.6rem;
 }
 
-.buy-sort-wrap {
-  position: relative;
-  z-index: 1;
+.buy-review-btn {
+  width: 160px !important;
+  margin-right: auto;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.buy-sort-wrap .buy-label1 {
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  font-size: 1.6rem;
-  line-height: 16px;
-  background: #fff;
-}
-
-#sort {
-  font-size: 16px;
-  line-height: 16px;
-  height: 48px;
-  width: 100%;
-  border-radius: 6px;
-  padding: 0px 30px;
-  border: 1px solid rgb(37, 37, 37);
-  background: url(../../../resources/img/pattern/buying/expand-more-icon.svg) calc(100% - 10px) center/20px no-repeat rgb(255, 255, 255);
+@media (min-width: 600px) {
+  .buy-review-btn {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 
 .buy-btn-mc1 {
@@ -3264,6 +3255,18 @@ sl-tab-panel::part(base) {
   display: none; /* 처음에 숨김 */
 }
 
+.buy-more-cont3 {
+  font-size: 1.3rem;
+}
+@media (min-width: 600px) {
+  .buy-more-cont3 {
+    font-size: 1.7rem;
+  }
+}
+.buy-more-cont3 td {
+  text-align: center;
+}
+
 .more-clicked {
   display: block; /* 보이는 상태 */
 }
@@ -3285,15 +3288,22 @@ sl-tab-panel::part(base) {
   width: 120px;
 }
 .buy-more-cont2__flex .tech-line {
-  width: 450px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   color: #717171;
   text-align: left;
+  font-size: 1.4rem;
+  white-space: normal;
 }
 .buy-more-cont2__flex .tech-line strong {
   color: #2d2d2d;
+}
+@media (min-width: 600px) {
+  .buy-more-cont2__flex .tech-line {
+    font-size: 1.7rem;
+  }
 }
 @media (min-width: 1024px) {
   .buy-more-cont2__flex .tech-line {
@@ -3328,6 +3338,20 @@ sl-tab-panel::part(base) {
   flex-direction: column;
   gap: 10px;
   padding: 24px;
+}
+.buy-review-wrap .buy-review-header .buy-review-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+@media (min-width: 600px) {
+  .buy-review-wrap .buy-review-header .buy-review-btns {
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+  }
 }
 .buy-review-wrap .buy-review-header form {
   display: flex;
