@@ -67,7 +67,7 @@
 
 ### **1. GSAP Scroll Trigger**
 
-<img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/readme/gsapST.gif" />
+<img width="100%" alt="gsap" src="./resources/img/pattern/common/readme/gsapST.gif" />
 
 -   main 애니메이션 기준, viewpoint의 65%를 기준으로 애니메이션이 트리거 되게 하였습니다.
 
@@ -279,21 +279,33 @@ document.querySelectorAll('.ani').forEach(function (item) {
 ### **3. 반응형 웹**
 
 -   KRDS를 참고하여 3개의 대표화면(1920px, 768px, 390px)을 만들며 반응형을 구현하였습니다.
+-   네비게이션 메뉴의 경우 tablet(1024px)을 기준으로 그 이상일 경우 gnb 메뉴 전체, 이하일 경우 검색과 햄버거메뉴만 보이게 하여 메뉴의 편리성과 검색의 기능을 강조하였습니다.
 
-<br/>
 <br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/반응형_krds.png"/>
 <br/>
 <br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/index.html.gif" />
-<br/>
-<br/>
+
+-   1620px 이상 1920 이하 => snb 추가, 데스크톱 화면(1단에서 2단, 뉴스기사는 1단에서 3단)
+-   768px 이상 1024px 이하 => tablet 화면(문단은 2단에서 1단, 뉴스기사는 3단에서 1단)
+-   390px 이상 768 이하 => mobile 화면(배경 이미지, 글꼴 사이즈 조절, footer 및 header 간소화)
+
 <br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/shopping.html.gif" />
-<br/>
-<br/>
+
+-   1620px 이상 1920 이하 => 메인섹션 여백 추가
+-   1024px 이상 => 메인화면 구현(왼쪽에 main, 오른쪽에 aside로 구성, flex를 통해 구현)
+-   768px 이상 1024px 이하 => tablet 화면(flex를 row에서 col로 수정하여 aside를 위쪽, main을 아래로 구현, 2단, 태블릿 최적화 패딩 30px)
+-   390px 이상 768 이하 => mobile 화면(2단에서 1단, 글꼴 사이즈 조절, footer 및 header 간소화, 모바일 최적화 패딩 20px)
+
 <br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/buying.html.gif" />
+
+-   1024px 이상 => 메인화면 구현(왼쪽 상단 swiper, 왼쪽하단 main, 오른쪽에 aside 구성. grid를 통해 구현. 리뷰 3단)
+-   768px 이상 1024px 이하 => tablet 화면(grid를 flex-col로 수정하여 맨 위 swiper, aside 중간, main을 아래 구성, 태블릿 최적화 패딩 30px, 리뷰 2단)
+-   390px 이상 768 이하 => mobile 화면(글꼴 사이즈 조절, footer 및 header 간소화, 모바일 최적화 패딩 20px, 리뷰 1단)
+
 <br/>
 
 ```scss
@@ -326,8 +338,6 @@ $breakpoints: (
     }
 }
 ```
-
--   네비게이션 메뉴의 경우 tablet(1024px)을 기준으로 그 이상일 경우 gnb 메뉴 전체, 이하일 경우 검색과 햄버거메뉴만 보이게 하였습니다.
 
 <br />
 
