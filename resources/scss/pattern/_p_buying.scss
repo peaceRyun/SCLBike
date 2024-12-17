@@ -375,28 +375,18 @@
         font-size: 1.6rem;
     }
 }
-.buy-sort-wrap {
-    position: relative;
-    z-index: 1;
-    .buy-label1 {
-        position: absolute;
-        top: -10px;
-        left: 10px;
-        font-size: 1.6rem;
-        line-height: 16px;
-        background: $white;
+
+.buy-review-btn {
+    width: 160px !important;
+    margin-right: auto;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobileMore {
+        margin-left: auto;
+        margin-right: 0;
     }
-}
-#sort {
-    font-size: 16px;
-    line-height: 16px;
-    height: 48px;
-    width: 100%;
-    border-radius: 6px;
-    padding: 0px 30px;
-    border: 1px solid rgb(37, 37, 37);
-    background: url(../../../resources/img/pattern/buying/expand-more-icon.svg) calc(100% - 10px) center / 20px
-        no-repeat rgb(255, 255, 255);
 }
 .buy-btn-mc1 {
     background: $gray-90;
@@ -491,6 +481,15 @@
 .buy-more-cont4 {
     display: none; /* 처음에 숨김 */
 }
+.buy-more-cont3 {
+    font-size: 1.3rem;
+    @include mobileMore {
+        font-size: 1.7rem;
+    }
+    td {
+        text-align: center;
+    }
+}
 
 .more-clicked {
     display: block; /* 보이는 상태 */
@@ -515,14 +514,19 @@
             width: 120px;
         }
         .tech-line {
-            width: 450px;
+            width: 350px;
             display: flex;
             flex-direction: column;
             gap: 15px;
             color: $gray-60;
             text-align: left;
+            font-size: 1.4rem;
+            white-space: normal;
             strong {
                 color: $gray-80;
+            }
+            @include mobileMore {
+                font-size: 1.7rem;
             }
             @include tabletMore {
                 width: 800px;
@@ -557,6 +561,18 @@
         flex-direction: column;
         gap: 10px;
         padding: 24px;
+        .buy-review-btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 10px;
+            @include mobileMore {
+                flex-direction: row;
+                align-items: center;
+                gap: 0px;
+            }
+        }
         form {
             display: flex;
             flex-direction: column;

@@ -4,40 +4,46 @@ gsap.registerPlugin(ScrollToPlugin);
 
 //loading 관련
 document.addEventListener('DOMContentLoaded', function () {
-    const progress = document.querySelector('.loading-progress');
-    const progressText = document.querySelector('.progressText');
-    const loadingScreen = document.querySelector('.loadingScreen');
+    // 현재 페이지의 URL을 확인합니다.
+    const currentPage = window.location.pathname;
 
-    // 스크롤 이벤트 방지
-    loadingScreen.addEventListener(
-        'touchmove',
-        function (e) {
-            e.preventDefault();
-        },
-        { passive: false }
-    );
+    // index.html 또는 루트 경로('/')인 경우에만 로딩 화면을 표시합니다.
+    if (currentPage.includes('index.html') || currentPage === '/') {
+        const progress = document.querySelector('.loading-progress');
+        const progressText = document.querySelector('.progressText');
+        const loadingScreen = document.querySelector('.loadingScreen');
 
-    loadingScreen.addEventListener(
-        'wheel',
-        function (e) {
-            e.preventDefault();
-        },
-        { passive: false }
-    );
+        // 스크롤 이벤트 방지
+        loadingScreen.addEventListener(
+            'touchmove',
+            function (e) {
+                e.preventDefault();
+            },
+            { passive: false }
+        );
 
-    let width = 0;
-    const interval = setInterval(() => {
-        if (width >= 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                loadingScreen.remove();
-            }, 500);
-        } else {
-            width++;
-            progress.style.width = width + '%';
-            progressText.textContent = width + '%';
-        }
-    }, 30);
+        loadingScreen.addEventListener(
+            'wheel',
+            function (e) {
+                e.preventDefault();
+            },
+            { passive: false }
+        );
+
+        let width = 0;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    loadingScreen.remove();
+                }, 500);
+            } else {
+                width++;
+                progress.style.width = width + '%';
+                progressText.textContent = width + '%';
+            }
+        }, 30);
+    }
 });
 // header 관련 js
 const headerEl = document.querySelector('#header');
