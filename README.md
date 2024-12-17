@@ -67,7 +67,7 @@
 
 <img width="100%" alt="라이트/다크모드" src="./resources/img/pattern/common/readme/gsapST.gif" />
 
--   viewpoint의 50%를 기준으로 애니메이션이 트리거 되게 하였습니다.
+-   main 애니메이션 기준, viewpoint의 65%를 기준으로 애니메이션이 트리거 되게 하였습니다.
 
 ```javascript
 //ui-pattern-script.js
@@ -87,11 +87,41 @@ document.querySelectorAll('.ani').forEach(function (item) {
 ```
 
 ### **2. scss 활용**
-<img width="200px" alt="반응형" src="./resources/img/pattern/common/readme/파일구조.png" />
-<img width="200px" alt="반응형" src="./resources/img/pattern/common/readme/파일구조2.png" />
+```
+├─pages
+│  └─layout
+└─resources
+    ├─css
+    │  └─output
+    ├─img
+    │  ├─component
+    │  │  └─common
+    │  ├─pattern
+    │  │  ├─about
+    │  │  ├─buying
+    │  │  ├─common
+    │  │  │  └─readme
+    │  │  └─shopping
+    │  └─test
+    ├─js
+    │  └─pattern
+    └─scss
+        ├─component
+        │  └─mixins
+        └─pattern
+```
+<img width="200px" alt="파일구조" src="./resources/img/pattern/common/readme/파일구조.png" />
+<img width="200px" alt="파일구조2" src="./resources/img/pattern/common/readme/파일구조2.png" />
 
 ### **3. 반응형 웹**
 
+-   KRDS를 참고하여 3개의 대표화면(1920px, 768px, 390px)을 만들며 반응형을 구현하였습니다.
+
+<br/>
+<br/>
+<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/반응형_krds.png"/>
+<br/>
+<br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/index.html.gif" />
 <br/>
 <br/>
@@ -102,12 +132,6 @@ document.querySelectorAll('.ani').forEach(function (item) {
 <br/>
 <img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/buying.html.gif" />
 <br/>
-<br/>
-<br/>
--   KRDS를 참고하여 3개의 대표화면(1920px, 768px, 390px)을 만들며 반응형을 구현하였습니다.
-<br/>
-<br/>
-<img width="100%" alt="반응형" src="./resources/img/pattern/common/readme/반응형_krds.png"/>
 
 ```scss
 //_variables.scss
