@@ -89,6 +89,15 @@ document.querySelectorAll('.ani').forEach(function (item) {
 ```
 
 ### **2. scss 활용**
+
+-   효율적인 css 디버깅을 위하여 SCSS 전처리기를 사용했습니다.
+-   page와 resource 두 폴더로 나누어, page에는 html 파일들을 모아두고, resource에는 scss, js, 이미지 각각 폴더에 나누어 관리하였습니다.
+-   font, reset설정, 변수, mixin(breakpoint, util-속기 커마)를 컴포넌트 단위로 각기 다른 scss파일로 정리한 후 include.scss에 모아 가독성과 재사용성을 높인 파일 구조를 만들기 위해 노력하였습니다.
+-   krds와 대기업의 웹사이트에서 개발자 옵션에 들어가 파일구조를 참고해보았습니다. pattern이라는 폴더를 만들어, 빠른 수정을 하기 위해 페이지별 style과 공통으로 반복되는 컴포넌트들을 파일별로 나누어 정리하였습니다.
+
+<details>
+<summary>파일 구조 보기</summary>
+
 ```
 │  .gitignore
 │  README.md
@@ -264,10 +273,9 @@ document.querySelectorAll('.ani').forEach(function (item) {
                 _p_layout.scss
                 _p_shopping.scss
 ```
-- 효율적인 css 디버깅을 하기 위하여 SCSS 전처리기를 사용했습니다.
-- page와 resource 두 폴더로 나누어, page에는 html 파일들을 모아두고, resource에는 scss, js, 이미지 각각 폴더에 나누어 관리하였습니다. 
-- font, reset설정, 변수, mixin(breakpoint, util-속기 커마)를 컴포넌트 단위로 각기 다른 scss파일로 정리한 후 include.scss에 모아 가독성과 재사용성을 높인 파일 구조를 만들기 위해 노력하였습니다.
-- krds와 대기업의 웹사이트에서 개발자 옵션에 들어가 파일구조를 참고해보았습니다. pattern이라는 폴더를 만들어, 빠른 수정을 하기 위해 페이지별 style과 공통으로 반복되는 컴포넌트들을 파일별로 나누어 정리하였습니다.
+
+</details>
+
 ### **3. 반응형 웹**
 
 -   KRDS를 참고하여 3개의 대표화면(1920px, 768px, 390px)을 만들며 반응형을 구현하였습니다.
