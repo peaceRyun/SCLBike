@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentPage = window.location.pathname;
 
     // index.html 또는 루트 경로('/')인 경우에만 로딩 화면을 표시합니다.
-    if (currentPage.includes('index.html') || currentPage === '/') {
+    if (currentPage.includes('index.html') || currentPage === '/SCLBike/' || currentPage === '/SCLBike/index.html') {
         const progress = document.querySelector('.loading-progress');
         const progressText = document.querySelector('.progressText');
         const loadingScreen = document.querySelector('.loadingScreen');
