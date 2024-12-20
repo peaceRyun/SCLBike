@@ -4,54 +4,85 @@ gsap.registerPlugin(ScrollToPlugin);
 
 console.log(window.location.pathname);
 
-//loading 관련
-document.addEventListener('DOMContentLoaded', function () {
-    // 현재 페이지의 URL을 확인합니다.
-    const currentPage = window.location.pathname;
-
-    // index.html 또는 루트 경로('/')인 경우에만 로딩 화면을 표시합니다.
-    if (
-        currentPage.includes('index.html') ||
-        currentPage === '/' ||
-        currentPage === '/pages/' ||
-        currentPage === '/SCLBike/' ||
-        currentPage === '/SCLBike/index.html'
-    ) {
-        const progress = document.querySelector('.loading-progress');
-        const progressText = document.querySelector('.progressText');
-        const loadingScreen = document.querySelector('.loadingScreen');
-
-        // 스크롤 이벤트 방지
-        loadingScreen.addEventListener(
-            'touchmove',
-            function (e) {
-                e.preventDefault();
-            },
-            { passive: false }
-        );
-
-        loadingScreen.addEventListener(
-            'wheel',
-            function (e) {
-                e.preventDefault();
-            },
-            { passive: false }
-        );
-
-        let width = 0;
-        const interval = setInterval(() => {
-            if (width >= 100) {
-                clearInterval(interval);
-                setTimeout(() => {
-                    loadingScreen.remove();
-                }, 500);
-            } else {
-                width++;
-                progress.style.width = width + '%';
-                progressText.textContent = width + '%';
-            }
-        }, 30);
+// 로딩 진행률을 관리하는 클래스
+class LoadingScreen {
+    constructor() {
+        this.progressBar = document.querySelector('.loading-progress');
+        this.progressText = document.querySelector('.progressText');
+        this.loadingScreen = document.querySelector('.loadingScreen');
+        this.progress = 0;
+        this.initialize();
     }
+
+    // 초기화 및 이벤트 리스너 설정
+    initialize() {
+        this.trackLoadingProgress();
+
+        // 페이지가 완전히 로드되었을 때
+        window.addEventListener('load', () => {
+            this.setProgress(100);
+            this.hideLoadingScreen();
+        });
+    }
+
+    // 로딩 진행률 추적
+    trackLoadingProgress() {
+        const resources = document.querySelectorAll('img, video, script, link[rel="stylesheet"]');
+        let loadedResources = 0;
+        const totalResources = resources.length;
+
+        // 이미 로드된 리소스 확인
+        resources.forEach((resource) => {
+            if (resource.complete || resource.readyState === 4) {
+                loadedResources++;
+                this.updateProgress(loadedResources, totalResources);
+            }
+
+            // 리소스 로드 완료 이벤트
+            resource.addEventListener('load', () => {
+                loadedResources++;
+                this.updateProgress(loadedResources, totalResources);
+            });
+
+            // 리소스 로드 실패 이벤트
+            resource.addEventListener('error', () => {
+                loadedResources++;
+                this.updateProgress(loadedResources, totalResources);
+            });
+        });
+    }
+
+    // 진행률 업데이트
+    updateProgress(loaded, total) {
+        const progress = Math.round((loaded / total) * 100);
+        this.setProgress(progress);
+
+        if (progress === 100) {
+            this.hideLoadingScreen();
+        }
+    }
+
+    // 진행률 표시 업데이트
+    setProgress(progress) {
+        this.progress = progress;
+        this.progressBar.style.width = `${progress}%`;
+        this.progressText.textContent = `${progress}%`;
+    }
+
+    // 로딩 화면 숨기기
+    hideLoadingScreen() {
+        setTimeout(() => {
+            this.loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                this.loadingScreen.style.display = 'none';
+            }, 500); // 페이드 아웃 애니메이션 후 제거
+        }, 500); // 잠시 대기 후 페이드 아웃 시작
+    }
+}
+
+// 페이지 로드 시 로딩 스크린 초기화
+document.addEventListener('DOMContentLoaded', () => {
+    new LoadingScreen();
 });
 // header 관련 js
 const headerEl = document.querySelector('#header');
