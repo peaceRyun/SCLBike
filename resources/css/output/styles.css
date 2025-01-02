@@ -2013,11 +2013,24 @@ img {
     overflow: hidden;
     margin: 265px 0px 0px;
   }
-}
-.multiple__slide1 {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  .multiple .slick-slide {
+    padding: 0 15px;
+  }
+  .multiple__slide1 {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .multiple__slide1 img {
+    width: 100%;
+    height: auto;
+  }
+  .multiple__slide1 .txt-wrap {
+    width: 100%;
+  }
 }
 
 .home-key {

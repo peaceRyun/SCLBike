@@ -833,11 +833,29 @@ img {
         display: block;
         overflow: hidden;
         margin: 265px 0px 0px;
-    }
-    &__slide1 {
-        opacity: 0;
-        transform: translateY(80px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
+
+        .slick-slide {
+            padding: 0 15px; // 고정된 gap 설정
+        }
+
+        // 슬라이드 내부 컨텐츠 크기 조절
+        &__slide1 {
+            width: 100%;
+            max-width: 380px; // 적절한 최대 너비 설정
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(80px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .txt-wrap {
+                width: 100%;
+            }
+        }
     }
 }
 
