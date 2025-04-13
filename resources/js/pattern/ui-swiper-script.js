@@ -51,6 +51,21 @@ var swiper = new Swiper('.shop-aside-swiper', {
     },
 });
 
+var playPauseBtn = document.querySelector('.slide-control-btn');
+if (playPauseBtn) {
+    playPauseBtn.addEventListener('click', function () {
+        if (swiper.autoplay.running) {
+            swiper.autoplay.stop();
+            this.classList.remove('slide-pause');
+            this.classList.add('slide-play');
+        } else {
+            swiper.autoplay.start();
+            this.classList.remove('slide-play');
+            this.classList.add('slide-pause');
+        }
+    });
+}
+
 function updateFraction(swiper) {
     const fractionEl = swiper.el.querySelector('.swiper-fraction');
     if (fractionEl) {

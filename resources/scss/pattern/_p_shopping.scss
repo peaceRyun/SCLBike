@@ -77,6 +77,36 @@
                         color: $gray-40;
                     }
                 }
+                .slide-control-btn {
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1;
+                    &.slide-pause {
+                        position: relative;
+                        &::before {
+                            content: '\f04c';
+                            font-family: 'Line Awesome Free';
+                            font-weight: 900;
+                            font-size: 2rem;
+                            color: $gray-40;
+                        }
+                    }
+                    &.slide-play {
+                        position: relative;
+                        &::before {
+                            content: '\f04b';
+                            font-family: 'Line Awesome Free';
+                            font-weight: 900;
+                            font-size: 2rem;
+                            color: $gray-40;
+                        }
+                    }
+                }
             }
             .swiper-pagination {
                 width: 300px;

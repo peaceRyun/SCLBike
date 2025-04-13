@@ -2217,6 +2217,36 @@ img {
     font-size: 2rem;
     color: #c6c6c6;
   }
+  .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .slide-control-btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .slide-control-btn.slide-pause {
+    position: relative;
+  }
+  .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .slide-control-btn.slide-pause::before {
+    content: "\f04c";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #c6c6c6;
+  }
+  .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .slide-control-btn.slide-play {
+    position: relative;
+  }
+  .shop-aside-swiper .shop-swiper-flex .shop-swiper-btn-wrap1 .slide-control-btn.slide-play::before {
+    content: "\f04b";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #c6c6c6;
+  }
   .shop-aside-swiper .shop-swiper-flex .swiper-pagination {
     width: 300px;
     position: relative;
