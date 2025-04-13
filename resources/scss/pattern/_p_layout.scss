@@ -545,6 +545,9 @@
                 color: $gray-40;
                 font-size: 24px;
                 font-weight: 500;
+                span {
+                    @include sr-only;
+                }
                 &:hover {
                     color: #fff;
                 }
