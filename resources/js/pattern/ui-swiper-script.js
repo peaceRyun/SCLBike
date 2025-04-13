@@ -1,4 +1,4 @@
-var swiper = new Swiper('.slide-intro', {
+var introSwiper = new Swiper('.slide-intro', {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
@@ -8,7 +8,7 @@ var swiper = new Swiper('.slide-intro', {
         clickable: true,
     },
 });
-var swiper = new Swiper('.slide-studio', {
+var studioSwiper = new Swiper('.slide-studio', {
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: {
@@ -27,7 +27,7 @@ var swiper = new Swiper('.slide-studio', {
     },
 });
 
-var swiper = new Swiper('.shop-aside-swiper', {
+var shopAsideSwiper = new Swiper('.shop-aside-swiper', {
     loop: true,
     pagination: {
         el: '.swiper-pagination',
@@ -54,12 +54,12 @@ var swiper = new Swiper('.shop-aside-swiper', {
 var playPauseBtn = document.querySelector('.slide-control-btn');
 if (playPauseBtn) {
     playPauseBtn.addEventListener('click', function () {
-        if (swiper.autoplay.running) {
-            swiper.autoplay.stop();
+        if (shopAsideSwiper.autoplay.running) {
+            shopAsideSwiper.autoplay.stop();
             this.classList.remove('slide-pause');
             this.classList.add('slide-play');
         } else {
-            swiper.autoplay.start();
+            shopAsideSwiper.autoplay.start();
             this.classList.remove('slide-play');
             this.classList.add('slide-pause');
         }
@@ -73,7 +73,7 @@ function updateFraction(swiper) {
     }
 }
 
-var swiper = new Swiper('.art-0-grid-slide', {
+var artGridSwiper = new Swiper('.art-0-grid-slide', {
     slidesPerView: 2,
     grid: {
         rows: 3,
@@ -85,24 +85,24 @@ var swiper = new Swiper('.art-0-grid-slide', {
     spaceBetween: 10,
 });
 
-var swiper = new Swiper('.buy-main-slide', {
+var buyMainThumbSwiper = new Swiper('.buy-main-slide', {
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
 });
-var swiper2 = new Swiper('.buy-main-slide2', {
+var buyMainSwiper = new Swiper('.buy-main-slide2', {
     loop: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     thumbs: {
-        swiper: swiper,
+        swiper: buyMainThumbSwiper,
     },
 });
 
-var swiper = new Swiper('.buy-main-slide3', {
+var buyMainSwiper3 = new Swiper('.buy-main-slide3', {
     spaceBetween: 30,
     pagination: {
         el: '.swiper-pagination',
@@ -110,7 +110,7 @@ var swiper = new Swiper('.buy-main-slide3', {
     },
 });
 
-var swiper = new Swiper('.buy-review-slide', {
+var buyReviewSwiper = new Swiper('.buy-review-slide', {
     slidesPerView: 1.3,
     spaceBetween: 30,
     loop: false,
