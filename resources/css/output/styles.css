@@ -715,6 +715,7 @@ caption {
 .util .all-menu .all-menu-icon .bar1,
 .util .all-menu .all-menu-icon .bar2,
 .util .all-menu .all-menu-icon .bar3 {
+  display: block;
   width: 30px;
   height: 3px;
   background-color: #1d1d1d;
