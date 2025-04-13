@@ -406,11 +406,11 @@
 //main
 .buy-txt-wrap2 {
     padding: 24px 10px 0px;
-    h4 {
+    h3 {
         font-size: 1.2rem;
         font-weight: 400;
     }
-    h3 {
+    h4 {
         font-size: 2.4rem;
         font-weight: 500;
     }
@@ -561,6 +561,9 @@
         flex-direction: column;
         gap: 10px;
         padding: 24px;
+        .heading {
+            font-size: 2.5rem;
+        }
         .buy-review-btns {
             display: flex;
             flex-direction: column;

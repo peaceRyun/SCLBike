@@ -3201,11 +3201,11 @@ sl-tab-panel::part(base) {
 .buy-txt-wrap2 {
   padding: 24px 10px 0px;
 }
-.buy-txt-wrap2 h4 {
+.buy-txt-wrap2 h3 {
   font-size: 1.2rem;
   font-weight: 400;
 }
-.buy-txt-wrap2 h3 {
+.buy-txt-wrap2 h4 {
   font-size: 2.4rem;
   font-weight: 500;
 }
@@ -3363,6 +3363,9 @@ sl-tab-panel::part(base) {
   flex-direction: column;
   gap: 10px;
   padding: 24px;
+}
+.buy-review-wrap .buy-review-header .heading {
+  font-size: 2.5rem;
 }
 .buy-review-wrap .buy-review-header .buy-review-btns {
   display: flex;
