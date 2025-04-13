@@ -3085,6 +3085,7 @@ sl-tab-panel::part(base) {
   border: 2px solid rgb(37, 37, 37);
 }
 .btn-circle .circle {
+  display: block;
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -3277,6 +3278,7 @@ sl-tab-panel::part(base) {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .buy-main-cont {
@@ -3378,8 +3380,6 @@ sl-tab-panel::part(base) {
   display: flex;
   gap: 15px;
   padding-bottom: 10px;
-}
-.buy-more-cont4__flex p {
   text-align: start;
 }
 .buy-more-cont4__flex i {
