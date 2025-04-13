@@ -7,7 +7,7 @@ function includeHTML() {
     for (i = 0; i < z.length; i++) {
         elmnt = z[i];
         /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute('include-html');
+        file = elmnt.getAttribute('data-include-html'); // 여기를 수정
         if (file) {
             /* Make an HTTP request using the attribute value as the file name: */
             xhttp = new XMLHttpRequest();
@@ -20,7 +20,7 @@ function includeHTML() {
                         elmnt.innerHTML = 'Page not found.';
                     }
                     /* Remove the attribute, and call this function once more: */
-                    elmnt.removeAttribute('include-html');
+                    elmnt.removeAttribute('data-include-html'); // 여기도 수정
                     includeHTML();
                 }
             };
